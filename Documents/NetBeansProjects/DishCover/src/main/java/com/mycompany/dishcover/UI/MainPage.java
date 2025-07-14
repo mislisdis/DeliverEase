@@ -1,7 +1,7 @@
-
 package com.mycompany.dishcover.UI;
 
 import com.mycompany.dishcover.Recipe.Recipe;
+import com.mycompany.dishcover.Recipe.RecipeFilter;
 import com.mycompany.dishcover.Recipe.RecipeService;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import com.mycompany.dishcover.UI.Component.*;
@@ -99,33 +99,27 @@ public class MainPage extends VBox {
         int cookTime = cookTimeSelector.getCookTimeMinutes();
         String searchQuery = searchBar.getText();
 
-        List<Recipe> searchResults;
+        // Build the filter
+        RecipeFilter filter = new RecipeFilter();
 
-        // Determine which search to perform based on provided criteria
         if (!searchQuery.isEmpty()) {
-            // If search text provided, search by name
-            searchResults = recipeService.searchByName(searchQuery);
-
-            // Further filter by ingredients and cook time if provided
-            if (!ingredients.isEmpty()) {
-                searchResults = searchResults.stream()
-                        .filter(recipe -> recipeService.searchByIngredients(ingredients).contains(recipe))
-                        .collect(Collectors.toList());
-            }
-
-            // Filter by cook time
-            searchResults = searchResults.stream()
-                    .filter(recipe -> recipe.matchesPrepTime(cookTime))
-                    .collect(Collectors.toList());
-        } else if (!ingredients.isEmpty()) {
-            // Search by ingredients and cook time
-            searchResults = recipeService.searchByIngredientsAndPrepTime(ingredients, cookTime);
-        } else {
-            // Only filter by cook time
-            searchResults = recipeService.searchByPrepTime(cookTime);
+            filter.setName(searchQuery);
         }
 
-        // Display search results
+        if (!ingredients.isEmpty()) {
+            filter.setIngredients(ingredients);
+        }
+
+        if (cookTime > 0) {
+            filter.setMaxCookTime(cookTime);
+        }
+
+        // You can also add filter.setMaxPrepTime(...) if you have prep time input
+
+        // Get filtered results
+        List<Recipe> searchResults = recipeService.searchByFilter(filter);
+
+        // Display results
         recipeGrid.displayRecipes(searchResults);
     }
 }

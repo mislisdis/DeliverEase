@@ -1,5 +1,3 @@
-
-
 package com.mycompany.dishcover;
 
 import com.mycompany.dishcover.Recipe.Recipe;
@@ -13,32 +11,30 @@ import javafx.scene.control.ScrollPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
-
 public class MainApplication extends Application {
 
-    
     private static MainApplication instance;
     private Stage primaryStage;
-    
-    public static MainApplication getInstance(){
-        return instance;
-     }
 
-    public void showLogin(){
+    public static MainApplication getInstance() {
+        return instance;
+    }
+
+    public void showLogin() {
         LoginPage lp = new LoginPage();
         Scene scene = new Scene(lp);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    public void showSplashScreen(){
+    public void showSplashScreen() {
         SplashScreen ss = new SplashScreen();
         Scene scene = new Scene(ss);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    public void showMainPage(){
+    public void showMainPage() {
         MainPage mp = new MainPage();
         mp.setPrefHeight(Screen.getPrimary().getVisualBounds().getHeight());
 
@@ -51,7 +47,7 @@ public class MainApplication extends Application {
         primaryStage.show();
     }
 
-    public void showRecipeDisplay(Recipe r){
+    public void showRecipeDisplay(Recipe r) {
         RecipeDisplay rd = new RecipeDisplay(r);
 
         ScrollPane scrollPane = new ScrollPane(rd);
@@ -62,7 +58,6 @@ public class MainApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 
     @Override
     public void start(Stage primaryStage) {
@@ -77,4 +72,3 @@ public class MainApplication extends Application {
         launch(args);
     }
 }
-

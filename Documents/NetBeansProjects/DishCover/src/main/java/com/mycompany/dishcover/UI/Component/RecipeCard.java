@@ -7,35 +7,26 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.shape.Circle;
+import javafx.scene.layout.*;
 import javafx.scene.shape.Rectangle;
 
 import java.util.Objects;
 
 public class RecipeCard extends StackPane {
 
-    private Recipe recipe;
+    private final Recipe recipe;
 
     public RecipeCard(Recipe recipe) {
         this.recipe = recipe;
 
         ThemeManager.getInstance().registerComponent(this);
-
-        // Apply recipe-card style
         this.getStyleClass().add("recipe-card");
 
-        // Set fixed dimensions for the card
-        this.setPrefWidth(150);
-        this.setPrefHeight(150);
-        this.setMaxWidth(150);
-        this.setMaxHeight(150);
-
-        // Add padding to the card
+        // Set dimensions
+        this.setPrefSize(150, 150);
+        this.setMaxSize(150, 150);
         this.setPadding(new Insets(5));
 
-        // Create the card content
         createCardContent();
     }
 
@@ -47,33 +38,28 @@ public class RecipeCard extends StackPane {
         // Load recipe image
         ImageView recipeImageView = createRecipeImageView();
 
-        // Create overlay for the recipe name
-        VBox textOverlay = createTextOverlay();
+        // Overlay with name and dietary tags
+        VBox overlay = createOverlay();
 
-        // Create non-visual indicator if present
-        createNonVisualIndicator();
-
-        // Add components to the StackPane
-        this.getChildren().addAll(recipeImageView, textOverlay);
+        this.getChildren().addAll(recipeImageView, overlay);
     }
 
     private ImageView createRecipeImageView() {
-        ImageView recipeImageView = new ImageView();
-        recipeImageView.setFitWidth(150);
-        recipeImageView.setFitHeight(150);
-        recipeImageView.setPreserveRatio(true);
+        ImageView imageView = new ImageView();
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
 
         try {
-            String imagePath = "images/recipes" + recipe.getImage_path();
-            Image recipeImage = new Image(Objects.requireNonNull(
-                    getClass().getResourceAsStream(imagePath)));
-            recipeImageView.setImage(recipeImage);
+            String imagePath = "/images/recipes/" + recipe.getImage_path();
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
+            imageView.setImage(image);
         } catch (Exception e) {
             System.err.println("Could not load recipe image: " + e.getMessage());
             try {
                 Image defaultImage = new Image(Objects.requireNonNull(
-                        getClass().getResourceAsStream("/com/hci/javafx/image/recipes/default.jpg")));
-                recipeImageView.setImage(defaultImage);
+                        getClass().getResourceAsStream("/images/recipes/default.jpg")));
+                imageView.setImage(defaultImage);
             } catch (Exception ex) {
                 System.err.println("Could not load default image: " + ex.getMessage());
             }
@@ -82,41 +68,43 @@ public class RecipeCard extends StackPane {
         Rectangle clip = new Rectangle(150, 150);
         clip.setArcWidth(20);
         clip.setArcHeight(20);
-        recipeImageView.setClip(clip);
+        imageView.setClip(clip);
 
-        return recipeImageView;
+        return imageView;
     }
 
-    private VBox createTextOverlay() {
-        VBox textOverlay = new VBox();
-        textOverlay.setAlignment(Pos.BOTTOM_LEFT);
-        textOverlay.setPadding(new Insets(10));
-        textOverlay.setStyle("-fx-background-color: linear-gradient(to top, rgba(0,0,0,0.7), transparent);");
+    private VBox createOverlay() {
+        VBox overlay = new VBox(5);
+        overlay.setAlignment(Pos.BOTTOM_LEFT);
+        overlay.setPadding(new Insets(10));
+        overlay.setStyle("-fx-background-color: linear-gradient(to top, rgba(0,0,0,0.6), transparent);");
 
         Label nameLabel = new Label(recipe.getName());
         nameLabel.getStyleClass().add("recipe-card-title");
         nameLabel.setStyle("-fx-text-fill: white;");
 
-        textOverlay.getChildren().add(nameLabel);
-        return textOverlay;
-    }
+        HBox tags = new HBox(5);
+        tags.setAlignment(Pos.CENTER_LEFT);
 
-    private void createNonVisualIndicator() {
-        VBox nonVisualBox = new VBox();
-        nonVisualBox.setAlignment(Pos.BOTTOM_RIGHT);
-        nonVisualBox.setPadding(new Insets(5));
+        if (recipe.isVegan()) {
+            Label veganTag = new Label("🌱 Vegan");
+            veganTag.getStyleClass().add("recipe-tag");
+            veganTag.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
+            tags.getChildren().add(veganTag);
+        }
 
-        Label nonVisualLabel = new Label("Icon Visual");
-        nonVisualLabel.getStyleClass().add("non-visual-text");
-        nonVisualLabel.setStyle("-fx-text-fill: white;");
+        if (recipe.isVegetarian()) {
+            Label vegTag = new Label("🥗 Vegetarian");
+            vegTag.getStyleClass().add("recipe-tag");
+            vegTag.setStyle("-fx-text-fill: white; -fx-font-size: 10px;");
+            tags.getChildren().add(vegTag);
+        }
 
-        Circle circle = new Circle(10);
-        circle.setStyle("-fx-fill: white; -fx-opacity: 0.7;");
+        overlay.getChildren().add(nameLabel);
+        if (!tags.getChildren().isEmpty()) {
+            overlay.getChildren().add(tags);
+        }
 
-        StackPane iconContainer = new StackPane(circle, nonVisualLabel);
-        iconContainer.setAlignment(Pos.CENTER);
-
-        nonVisualBox.getChildren().add(iconContainer);
-        this.getChildren().add(nonVisualBox);
+        return overlay;
     }
 }

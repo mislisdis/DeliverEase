@@ -1,6 +1,4 @@
-
 package com.mycompany.dishcover.Theme;
-
 
 import com.mycompany.dishcover.Session.AppSession;
 import javafx.beans.property.BooleanProperty;
@@ -13,8 +11,9 @@ import java.util.Objects;
 
 public class ThemeManager {
 
-    private static final String LIGHT_STYLE = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\DishCover\\src\\main\\resources\\CSS\\styles.css";
-    private static final String DARK_STYLE = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\DishCover\\src\\main\\resources\\CSS\\dark-styles.css";
+    // ✅ Use resource-relative paths (must be under src/main/resources)
+    private static final String LIGHT_STYLE = "/CSS/styles.css";
+    private static final String DARK_STYLE = "/CSS/dark-styles.css";
 
     private static ThemeManager instance;
     private final BooleanProperty brightModeProperty;
@@ -25,12 +24,9 @@ public class ThemeManager {
         brightModeProperty = new SimpleBooleanProperty(AppSession.getInstance().isBrightMode());
         registeredComponents = new ArrayList<>();
 
-        // Add a listener to update all components when the theme changes
+        // Update components when the theme changes
         brightModeProperty.addListener((observable, oldValue, newValue) -> {
-            // Update AppSession
             AppSession.getInstance().setBrightMode(newValue);
-
-            // Update all registered components
             applyThemeToAllComponents();
         });
     }
@@ -74,9 +70,15 @@ public class ThemeManager {
     private void applyThemeToComponent(Parent component) {
         String styleResource = brightModeProperty.get() ? LIGHT_STYLE : DARK_STYLE;
 
-        component.getStylesheets().clear();
-        component.getStylesheets().add(Objects.requireNonNull(
-                getClass().getResource(styleResource)).toExternalForm());
+        try {
+            component.getStylesheets().clear();
+            component.getStylesheets().add(
+                Objects.requireNonNull(getClass().getResource(styleResource),
+                    "Stylesheet not found: " + styleResource
+                ).toExternalForm()
+            );
+        } catch (NullPointerException e) {
+            System.err.println("❌ Error applying theme: " + e.getMessage());
+        }
     }
 }
-

@@ -1,6 +1,4 @@
-
 package com.mycompany.dishcover.UI;
-
 
 import com.mycompany.dishcover.Recipe.Recipe;
 import com.mycompany.dishcover.Theme.ThemeManager;
@@ -12,10 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.Text;
 
 import java.util.List;
 import java.util.Objects;
@@ -27,28 +23,23 @@ public class RecipeDisplay extends VBox {
     public RecipeDisplay(Recipe recipe) {
         this.recipe = recipe;
 
-        // Register with theme manager
         ThemeManager.getInstance().registerComponent(this);
 
-        // Set styling for the page
         this.getStyleClass().add("recipe-display");
         this.setPadding(new Insets(20));
         this.setSpacing(15);
 
-        // Create and add components
         createHeader();
         createDetailsSection();
         createIngredientsSection();
         createInstructionsSection();
         createBackButton();
 
-        // Footer
         Footer ft = new Footer();
         this.getChildren().add(ft);
     }
 
     private void createHeader() {
-        // app Header
         HeaderCard hdc = new HeaderCard();
         ThemeManager.getInstance().registerComponent(hdc);
         this.getChildren().add(hdc);
@@ -58,44 +49,52 @@ public class RecipeDisplay extends VBox {
         headerBox.setSpacing(15);
         headerBox.getStyleClass().add("recipe-header");
 
-        // Recipe image
         ImageView recipeImage = new ImageView();
-        // recipe has an image, set it here
         try {
-            String imagePath = "/com/mycompany/dishcover" + recipe.getImage_path();
-            System.out.println(imagePath);
-            Image image = new Image(Objects.requireNonNull(
-                    getClass().getResourceAsStream(imagePath)
-            ));
-            recipeImage.setImage(image);
+            String imagePath = "/images/recipes/" + recipe.getImage_path();
+            var imageStream = getClass().getResourceAsStream(imagePath);
+            if (imageStream != null) {
+                recipeImage.setImage(new Image(imageStream));
+            } else {
+                System.err.println("Image not found: " + imagePath);
+            }
         } catch (Exception e) {
-            System.err.println(e);
+            System.err.println("Error loading image: " + e.getMessage());
         }
 
         recipeImage.setFitWidth(150);
         recipeImage.setFitHeight(150);
         recipeImage.getStyleClass().add("recipe-image");
 
-        // Recipe title and basic info
         VBox titleBox = new VBox();
         titleBox.setSpacing(5);
 
         Label titleLabel = new Label(recipe.getName());
         titleLabel.getStyleClass().add("recipe-title");
 
-        Label prepTimeLabel = new Label("Prep Time: " + recipe.getPrep_time() + " minutes");
+        Label prepTimeLabel = new Label("Prep Time: " + recipe.getPrep_time());
         prepTimeLabel.getStyleClass().add("recipe-prep-time");
+
+        Label cookTimeLabel = new Label("Cook Time: " + recipe.getCook_time());
+        cookTimeLabel.getStyleClass().add("recipe-prep-time");
 
         Label difficultyLabel = new Label("Difficulty: " + recipe.getDifficulty());
         difficultyLabel.getStyleClass().add("recipe-difficulty");
 
-        titleBox.getChildren().addAll(titleLabel, prepTimeLabel, difficultyLabel);
-
+        // Add vegetarian and vegan labels
         if (recipe.isVegetarian()) {
             Label vegetarianLabel = new Label("Vegetarian ✅");
-            vegetarianLabel.getStyleClass().add("recipe-difficulty");
-            titleBox.getChildren().addAll(vegetarianLabel);
+            vegetarianLabel.getStyleClass().add("recipe-tag");
+            titleBox.getChildren().add(vegetarianLabel);
         }
+
+        if (recipe.isVegan()) {
+            Label veganLabel = new Label("Vegan 🌱");
+            veganLabel.getStyleClass().add("recipe-tag");
+            titleBox.getChildren().add(veganLabel);
+        }
+
+        titleBox.getChildren().addAll(titleLabel, prepTimeLabel, cookTimeLabel, difficultyLabel);
 
         headerBox.getChildren().addAll(recipeImage, titleBox);
         this.getChildren().add(headerBox);
@@ -109,16 +108,15 @@ public class RecipeDisplay extends VBox {
         Label descriptionLabel = new Label("Description");
         descriptionLabel.getStyleClass().add("section-title");
 
-        Label descriptionText = new Label("Coming soon...");
+        Label descriptionText = new Label(recipe.getDescription());
         descriptionText.getStyleClass().add("recipe-description");
         descriptionText.setWrapText(true);
 
-        // Add serving size, calories, etc. if available
         HBox nutritionBox = new HBox();
         nutritionBox.setSpacing(15);
         nutritionBox.getStyleClass().add("nutrition-box");
 
-        Label servingsLabel = new Label("Servings: 1");
+        Label servingsLabel = new Label("Servings: " + recipe.getServings());
         servingsLabel.getStyleClass().add("nutrition-item");
 
         Label caloriesLabel = new Label("Calories: " + recipe.getCalories() + " kcal");
@@ -138,14 +136,12 @@ public class RecipeDisplay extends VBox {
         Label ingredientsTitle = new Label("Ingredients");
         ingredientsTitle.getStyleClass().add("section-title");
 
-        // Create a flow pane for ingredients
         FlowPane ingredientsPane = new FlowPane();
         ingredientsPane.setHgap(10);
         ingredientsPane.setVgap(10);
         ingredientsPane.setPrefWrapLength(600);
 
-        List<String> ingredients = recipe.getIngredients();
-        for (String ingredient : ingredients) {
+        for (String ingredient : recipe.getIngredients()) {
             Label ingredientLabel = new Label(ingredient);
             ingredientLabel.getStyleClass().add("ingredient-item");
             ingredientsPane.getChildren().add(ingredientLabel);
@@ -196,7 +192,6 @@ public class RecipeDisplay extends VBox {
         Button backButton = new Button("Back to Recipes");
         backButton.getStyleClass().add("minor-button");
         backButton.setOnAction(event -> {
-            // Go back to the main page with recipe list
             com.mycompany.dishcover.MainApplication.getInstance().showMainPage();
         });
 
