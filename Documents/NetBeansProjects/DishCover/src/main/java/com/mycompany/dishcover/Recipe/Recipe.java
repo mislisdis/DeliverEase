@@ -1,13 +1,10 @@
 package com.mycompany.dishcover.Recipe;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter @Setter
 public class Recipe {
 
     private int id;
@@ -32,10 +29,100 @@ public class Recipe {
         this.steps = new ArrayList<>();
     }
 
+    // ===== Getter and Setter Methods =====
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String newname){
+        this.name = newname;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public boolean isVegetarian() {
+        return this.vegetarian;
+    }
+
+    public void setVegetarian(boolean vegetarian) {
+        this.vegetarian = vegetarian;
+    }
+
+    public boolean isVegan() {
+        return this.vegan;
+    }
+
+    public void setVegan(boolean vegan) {
+        this.vegan = vegan;
+    }
+    
+    public int getCalories() {
+    return this.calories;
+}
+
+public void setCalories(int calories) {
+    this.calories = calories;
+}
+
+    public int getPrep_time() {
+        return this.prepTime;
+    }
+
+    public void setPrep_time(int prepTime) {
+        this.prepTime = prepTime;
+    }
+
+    public String getDifficulty() {
+        return this.difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public List<String> getIngredients() {
+        return this.ingredients;
+    }
+
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public List<String> getSteps() {
+        return this.steps;
+    }
+
+    public void setSteps(List<String> steps) {
+        this.steps = steps;
+    }
+
+    public String getImage_path() {
+        return this.imagePath;
+    }
+
+    public void setImage_path(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    // ===== Utility Method =====
+
     public boolean matchesPrepTime(int cookTime) {
         return cookTime <= prepTime;
     }
 }
-
-
-    

@@ -62,7 +62,7 @@ public class RecipeDisplay extends VBox {
         ImageView recipeImage = new ImageView();
         // recipe has an image, set it here
         try {
-            String imagePath = "/com/hci/javafx" + recipe.getImage_path();
+            String imagePath = "/com/mycompany/dishcover" + recipe.getImage_path();
             System.out.println(imagePath);
             Image image = new Image(Objects.requireNonNull(
                     getClass().getResourceAsStream(imagePath)
@@ -197,7 +197,7 @@ public class RecipeDisplay extends VBox {
         backButton.getStyleClass().add("minor-button");
         backButton.setOnAction(event -> {
             // Go back to the main page with recipe list
-            com.hci.javafx.MainApplication.getInstance().showMainPage();
+            com.mycompany.dishcover.MainApplication.getInstance().showMainPage();
         });
 
         buttonBox.getChildren().add(backButton);

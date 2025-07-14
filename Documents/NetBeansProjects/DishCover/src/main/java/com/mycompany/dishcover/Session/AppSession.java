@@ -1,11 +1,5 @@
-
 package com.mycompany.dishcover.Session;
 
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter @Setter
 public class AppSession {
 
     private static AppSession instance;
@@ -24,6 +18,27 @@ public class AppSession {
         return instance;
     }
 
+    // ===== Getter methods for final fields =====
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getFName() {
+        return this.fName;
+    }
+
+    public String getLName() {
+        return this.lName;
+    }
+
+    // ===== Getter and Setter for brightMode =====
+    public boolean isBrightMode() {
+        return this.brightMode;
+    }
+
+    public void setBrightMode(boolean brightMode) {
+        this.brightMode = brightMode;
+    }
 }
 
     

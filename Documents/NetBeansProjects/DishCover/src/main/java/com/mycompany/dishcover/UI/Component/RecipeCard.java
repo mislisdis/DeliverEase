@@ -1,6 +1,4 @@
-
 package com.mycompany.dishcover.UI.Component;
-
 
 import com.mycompany.dishcover.Recipe.Recipe;
 import com.mycompany.dishcover.Theme.ThemeManager;
@@ -13,11 +11,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import lombok.Getter;
 
 import java.util.Objects;
 
-@Getter
 public class RecipeCard extends StackPane {
 
     private Recipe recipe;
@@ -43,6 +39,10 @@ public class RecipeCard extends StackPane {
         createCardContent();
     }
 
+    public Recipe getRecipe() {
+        return this.recipe;
+    }
+
     private void createCardContent() {
         // Load recipe image
         ImageView recipeImageView = createRecipeImageView();
@@ -61,19 +61,15 @@ public class RecipeCard extends StackPane {
         ImageView recipeImageView = new ImageView();
         recipeImageView.setFitWidth(150);
         recipeImageView.setFitHeight(150);
-        recipeImageView.setPreserveRatio(true); // Add this to maintain aspect ratio
+        recipeImageView.setPreserveRatio(true);
 
         try {
-            // Try to load the image from the path in the recipe
             String imagePath = "images/recipes" + recipe.getImage_path();
-
             Image recipeImage = new Image(Objects.requireNonNull(
                     getClass().getResourceAsStream(imagePath)));
             recipeImageView.setImage(recipeImage);
-
         } catch (Exception e) {
             System.err.println("Could not load recipe image: " + e.getMessage());
-            // Load a default image if the recipe image is not available
             try {
                 Image defaultImage = new Image(Objects.requireNonNull(
                         getClass().getResourceAsStream("/com/hci/javafx/image/recipes/default.jpg")));
@@ -83,10 +79,9 @@ public class RecipeCard extends StackPane {
             }
         }
 
-        // Apply rounded corners with the correct approach
         Rectangle clip = new Rectangle(150, 150);
-        clip.setArcWidth(20);  // Control the corner radius
-        clip.setArcHeight(20); // Control the corner radius
+        clip.setArcWidth(20);
+        clip.setArcHeight(20);
         recipeImageView.setClip(clip);
 
         return recipeImageView;
@@ -96,11 +91,8 @@ public class RecipeCard extends StackPane {
         VBox textOverlay = new VBox();
         textOverlay.setAlignment(Pos.BOTTOM_LEFT);
         textOverlay.setPadding(new Insets(10));
-
-        // Create semi-transparent background for the text
         textOverlay.setStyle("-fx-background-color: linear-gradient(to top, rgba(0,0,0,0.7), transparent);");
 
-        // Create recipe name label
         Label nameLabel = new Label(recipe.getName());
         nameLabel.getStyleClass().add("recipe-card-title");
         nameLabel.setStyle("-fx-text-fill: white;");
@@ -110,7 +102,6 @@ public class RecipeCard extends StackPane {
     }
 
     private void createNonVisualIndicator() {
-        // Create non-visual indicator at the bottom of the card
         VBox nonVisualBox = new VBox();
         nonVisualBox.setAlignment(Pos.BOTTOM_RIGHT);
         nonVisualBox.setPadding(new Insets(5));
@@ -128,5 +119,4 @@ public class RecipeCard extends StackPane {
         nonVisualBox.getChildren().add(iconContainer);
         this.getChildren().add(nonVisualBox);
     }
-
 }

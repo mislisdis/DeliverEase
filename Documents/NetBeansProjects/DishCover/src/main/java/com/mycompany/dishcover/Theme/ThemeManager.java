@@ -13,8 +13,8 @@ import java.util.Objects;
 
 public class ThemeManager {
 
-    private static final String LIGHT_STYLE = "/com/hci/javafx/styles.css";
-    private static final String DARK_STYLE = "/com/hci/javafx/dark-styles.css";
+    private static final String LIGHT_STYLE = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\DishCover\\src\\main\\resources\\CSS\\styles.css";
+    private static final String DARK_STYLE = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\DishCover\\src\\main\\resources\\CSS\\dark-styles.css";
 
     private static ThemeManager instance;
     private final BooleanProperty brightModeProperty;

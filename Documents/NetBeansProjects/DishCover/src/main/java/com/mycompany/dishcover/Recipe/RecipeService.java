@@ -4,14 +4,13 @@ package com.mycompany.dishcover.Recipe;
 import com.mycompany.dishcover.Recipe.Recipe;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Getter;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Getter
+
 public class RecipeService {
 
     private List<Recipe> recipes;
@@ -32,6 +31,14 @@ public class RecipeService {
             System.err.println("Error loading recipes: " + e.getMessage());
             recipes = new ArrayList<>();
         }
+    }
+    
+       public List<Recipe> getRecipes() {
+        return this.recipes;
+    }
+
+    public void setRecipes(List<Recipe> newRecipes) {
+        this.recipes = newRecipes;
     }
 
     public List<Recipe> searchByIngredients(List<String> ingredients) {

@@ -135,7 +135,6 @@ public class LoginPage extends VBox {
                 statusLabel.setText("Error navigating to splash screen");
                 statusLabel.getStyleClass().remove("status-success");
                 statusLabel.getStyleClass().add("status-error");
-                e.printStackTrace();
             }
         } else {
             statusLabel.setText("Login Failed, please try again");
