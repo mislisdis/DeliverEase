@@ -1,0 +1,396 @@
+/* Recipe App JavaFX CSS - DishCovery - Dark Mode */
+
+/* Main Background Gradient */
+.gradient-background {
+    -fx-background-color: linear-gradient(to bottom, #2b1b3d 50%, #4a0080 100%);
+}
+
+/* Search Bar */
+.search-bar {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10px 15px 10px 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+.search-icon {
+    -fx-fill: #a64dff;
+}
+
+/* Filter Section */
+.filter-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+}
+
+.filter-icon {
+    -fx-fill: #9370db;
+}
+
+/* Cook Time Section */
+.cook-time-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+}
+
+.cook-time-icon {
+    -fx-fill: #9370db;
+}
+
+.cook-time-input {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+/* Ingredients Section */
+.ingredients-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a64dff;
+}
+
+.ingredient-input {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.ingredient-placeholder {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #9c9c9c;
+    -fx-border-color: #9370db;
+    -fx-border-width: 2;
+    -fx-border-radius: 20;
+}
+
+.add-more-ingredients {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #b8b8b8;
+}
+
+.add-ingredient-icon {
+    -fx-fill: #b8b8b8;
+}
+
+/* Get Started Button */
+.major-button {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #8a2be2;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 15px 20px 15px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Find Recipe Button - Rainbow Gradient Button */
+.rainbow-button {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: linear-gradient(to right, #6a0dad, #a64dff);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 12px 25px 12px 25px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 6, 0, 0, 2);
+}
+
+.rainbow-button:hover {
+    -fx-background-color: linear-gradient(to right, #7b2cbf, #b366ff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 3);
+}
+
+.rainbow-button:pressed {
+    -fx-background-color: linear-gradient(to right, #5c0b99, #9933ff);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+/* Nav Buttons - Secondary Navigation Buttons */
+.minor-button {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-text-fill: #b388ff;
+    -fx-background-color: rgba(58, 43, 85, 0.8);
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #b388ff;
+    -fx-border-width: 1;
+    -fx-padding: 8px 15px 8px 15px;
+    -fx-cursor: hand;
+}
+
+.minor-button:hover {
+    -fx-background-color: rgba(90, 70, 130, 0.8);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 1);
+}
+
+.minor-button:pressed {
+    -fx-background-color: rgba(138, 43, 226, 0.2);
+}
+
+/* Recipe Category Cards */
+.recipe-card {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.recipe-card-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+}
+
+.recipe-card-icon {
+    -fx-fill: #9370db;
+}
+
+.non-visual-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 12px;
+    -fx-text-fill: #b8b8b8;
+}
+
+/* Footer Links */
+.footer-link {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #d8c5ff;
+    -fx-underline: false;
+    -fx-cursor: hand;
+}
+
+.footer-link:hover {
+    -fx-underline: true;
+}
+
+/* Toggle button - Light & Dark Mode */
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #b8b8b8;
+    -fx-font-size: 12px;
+    -fx-font-family: Calibri;
+    -fx-underline: true;
+    -fx-cursor: hand;
+    -fx-padding: 5 0 0 0;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Recipe Display Styles - Dark Theme */
+
+.recipe-display {
+    -fx-background-color: linear-gradient(to bottom, #2b1b3d 50%, #4a0080 100%);
+}
+
+/* Recipe Header */
+.recipe-header {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.recipe-image {
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0, 0, 1);
+}
+
+.recipe-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a64dff;
+}
+
+.recipe-prep-time, .recipe-difficulty {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-text-fill: #f0f0f0;
+}
+
+/* Details Section */
+.recipe-details-section {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.section-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a64dff;
+}
+
+.recipe-description {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-text-fill: #f0f0f0;
+    -fx-wrap-text: true;
+}
+
+.nutrition-box {
+    -fx-padding: 10 0 0 0;
+}
+
+.nutrition-item {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #2d2041;
+    -fx-background-radius: 15;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-text-fill: #b388ff;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.ingredient-item {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #2d2041;
+    -fx-background-radius: 15;
+    -fx-padding: 8 12;
+    -fx-text-fill: #f0f0f0;
+    -fx-border-color: #4e3d6b;
+    -fx-border-width: 1;
+    -fx-border-radius: 15;
+}
+
+/* Instructions Section */
+.instructions-section {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.step-number {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a64dff;
+    -fx-min-width: 30;
+}
+
+.step-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-text-fill: #f0f0f0;
+    -fx-wrap-text: true;
+}
+
+.instructions-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.instructions-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.instructions-scroll > .scroll-bar:vertical {
+    -fx-background-color: #2d2041;
+    -fx-background-radius: 0 5 5 0;
+}
+
+.instructions-scroll > .scroll-bar:vertical > .thumb {
+    -fx-background-color: #8a2be2;
+    -fx-background-radius: 5;
+}
+
+/* Login Page Styles - Dark Theme */
+.login-container {
+    -fx-background-color: linear-gradient(to bottom, #2b1b3d 50%, #4a0080 100%);
+}
+
+.login-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #a64dff;
+}
+
+.login-form {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+.login-label {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+}
+
+.login-input {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #2d2041;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #4e3d6b;
+    -fx-border-width: 1;
+    -fx-padding: 8px 15px 8px 15px;
+    -fx-prompt-text-fill: #9c9c9c;
+}
+
+.login-input:focused {
+    -fx-border-color: #a64dff;
+    -fx-border-width: 2;
+}
+
+.status-label {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 0px 5px 0px;
+    -fx-text-fill: #b8b8b8;
+}
+
+.status-error {
+    -fx-text-fill: #ff6b81;
+    -fx-font-weight: bold;
+}
+
+.status-success {
+    -fx-text-fill: #69f0ae;
+    -fx-font-weight: bold;
+}

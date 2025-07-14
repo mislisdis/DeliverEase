@@ -1,0 +1,3428 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Jollof Rice",
+      "description": "West African classic spiced rice cooked in tomato sauce.",
+      "ingredients": [
+        "2 cups long-grain parboiled rice",
+        "1/4 cup vegetable oil",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "1 red bell pepper, blended",
+        "2 tomatoes, blended",
+        "2 tsp tomato paste",
+        "1 tsp thyme",
+        "1 tsp curry powder",
+        "1 scotch bonnet pepper (optional)",
+        "4 cups vegetable broth",
+        "Salt to taste"
+      ],
+      "steps": [
+        "Heat oil; sauté onion and garlic until translucent.",
+        "Add blended pepper, tomatoes, tomato paste, thyme, curry powder; cook 10 mins.",
+        "Stir in rice to coat.",
+        "Add broth & scotch bonnet; bring to boil, reduce heat, cover and simmer 20–25 mins.",
+        "Fluff rice and adjust seasoning. Serve hot."
+      ],
+      "difficulty": "Medium",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "servings": 4,
+      "tags": ["West African", "African", "Vegetarian", "Vegan"],
+      "vegetarian": true,
+      "vegan": true,
+      "image": "jollof_rice.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Efo Riro",
+      "description": "Nigerian spinach stew with tomatoes and peppers, can be veganized.",
+      "ingredients": [
+        "1 lb spinach (or kale), chopped",
+        "1/2 cup palm oil or vegetable oil",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "1 red bell pepper, blended",
+        "2 tomatoes, blended",
+        "1 scotch bonnet pepper, blended",
+        "1 tsp crayfish powder (omit for vegan)",
+        "Salt and pepper to taste"
+      ],
+      "steps": [
+        "Heat oil; sauté onion and garlic until soft.",
+        "Add blended peppers and tomatoes; simmer 10–15 mins.",
+        "Stir in chopped spinach; cook until wilted.",
+        "Season with salt, pepper (and crayfish powder if using).",
+        "Serve with rice, fufu, or yam."
+      ],
+      "difficulty": "Medium",
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "servings": 4,
+      "tags": ["West African", "African", "Vegetarian", "Vegan"],
+      "vegetarian": true,
+      "vegan": true,
+      "image": "efo_riro.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Injera with Misir Wat",
+      "description": "Ethiopian spiced lentil stew served on injera.",
+      "ingredients": [
+        "2 cups red lentils, rinsed",
+        "1 onion, finely chopped",
+        "2 cloves garlic, minced",
+        "1 tbsp berbere spice blend",
+        "2 tbsp tomato paste",
+        "3 cups vegetable broth",
+        "2 tbsp oil",
+        "Salt to taste",
+        "Injera bread for serving"
+      ],
+      "steps": [
+        "Heat oil; sauté onion and garlic until soft.",
+        "Stir in berbere and tomato paste; cook 2 mins.",
+        "Add lentils and broth; bring to boil, then simmer 20–25 mins until thick.",
+        "Season with salt.",
+        "Serve hot over injera."
+      ],
+      "difficulty": "Easy",
+      "prepTime": "10 min",
+      "cookTime": "25 min",
+      "servings": 4,
+      "tags": ["East African", "African", "Vegetarian", "Vegan"],
+      "vegetarian": true,
+      "vegan": true,
+      "image": "misir_wat.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tagine with Vegetables",
+      "description": "Moroccan vegetable tagine with aromatic spices.",
+      "ingredients": [
+        "2 carrots, cut into chunks",
+        "2 potatoes, peeled and chunked",
+        "1 zucchini, sliced",
+        "1 onion, chopped",
+        "2 cloves garlic, minced",
+        "1 tsp ground cumin",
+        "1 tsp ground ginger",
+        "1 tsp paprika",
+        "1/2 tsp cinnamon",
+        "1 cup tomato sauce",
+        "2 cups vegetable broth",
+        "2 tbsp olive oil",
+        "Salt and pepper to taste"
+      ],
+      "steps": [
+        "Heat oil; sauté onion and garlic until fragrant.",
+        "Add carrots and potatoes; stir to coat with spices.",
+        "Pour in tomato sauce and broth; simmer 10 mins.",
+        "Add zucchini; cook another 10–15 mins until veggies are tender.",
+        "Season, garnish with parsley, and serve with couscous or bread."
+      ],
+      "difficulty": "Medium",
+      "prepTime": "15 min",
+      "cookTime": "30 min",
+      "servings": 4,
+      "tags": ["North African", "African", "Vegetarian", "Vegan"],
+      "vegetarian": true,
+      "vegan": true,
+      "image": "veg_tagine.jpg"
+    },
+    {
+  "id": 5,
+  "title": "Kachumbari",
+  "description": "A fresh East African salad of tomatoes, onions, and chili.",
+  "ingredients": [
+    "2 tomatoes, diced",
+    "1 red onion, finely sliced",
+    "1 green chili, chopped",
+    "Juice of 1 lime",
+    "Salt to taste",
+    "Fresh coriander leaves"
+  ],
+  "steps": [
+    "Combine tomatoes, onion, and chili in a bowl.",
+    "Squeeze in lime juice and add salt.",
+    "Toss well and garnish with chopped coriander.",
+    "Serve chilled or at room temperature."
+  ],
+  "difficulty": "Easy",
+  "prepTime": "10 min",
+  "cookTime": "0 min",
+  "servings": 2,
+  "tags": ["East African", "African", "Vegetarian", "Vegan"],
+  "vegetarian": true,
+  "vegan": true,
+  "image": "kachumbari.jpg"
+},
+{
+  "id": 6,
+  "title": "Chapati (Kenyan)",
+  "description": "Flaky, layered flatbread enjoyed across East Africa.",
+  "ingredients": [
+    "2 cups all-purpose flour",
+    "1 tsp salt",
+    "3 tbsp oil",
+    "3/4 cup warm water"
+  ],
+  "steps": [
+    "Mix flour and salt in a bowl.",
+    "Add water and oil gradually, kneading into a soft dough.",
+    "Let dough rest 30 minutes, then divide and roll into circles.",
+    "Cook on a hot skillet until golden brown on both sides.",
+    "Brush with oil and keep warm."
+  ],
+  "difficulty": "Medium",
+  "prepTime": "15 min",
+  "cookTime": "15 min",
+  "servings": 4,
+  "tags": ["East African", "African", "Vegetarian", "Vegan"],
+  "vegetarian": true,
+  "vegan": true,
+  "image": "chapati_kenya.jpg"
+},
+{
+  "id": 7,
+  "title": "Githeri",
+  "description": "Traditional Kenyan dish of beans and maize cooked together.",
+  "ingredients": [
+    "1 cup dry maize",
+    "1 cup dry beans",
+    "1 onion, chopped",
+    "2 tomatoes, chopped",
+    "1 tsp curry powder",
+    "2 tbsp oil",
+    "Salt to taste"
+  ],
+  "steps": [
+    "Soak maize and beans overnight, then boil until tender.",
+    "In a separate pan, sauté onion and tomatoes in oil.",
+    "Add curry powder and cooked maize-bean mix.",
+    "Simmer for 10–15 minutes, stirring occasionally.",
+    "Serve hot as main or side dish."
+  ],
+  "difficulty": "Medium",
+  "prepTime": "20 min",
+  "cookTime": "60 min",
+  "servings": 4,
+  "tags": ["East African", "African", "Vegetarian", "Vegan"],
+  "vegetarian": true,
+  "vegan": true,
+  "image": "githeri.jpg"
+},
+  {
+    "id": 8,
+    "title": "Vegetable Fried Rice",
+    "description": "Chinese-style fried rice loaded with vegetables and flavor.",
+    "ingredients": [
+      "2 cups cooked rice (day-old preferred)",
+      "1/2 cup diced carrots",
+      "1/2 cup peas",
+      "1/2 onion, chopped",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 tsp minced garlic",
+      "1 spring onion, sliced"
+    ],
+    "steps": [
+      "Heat oil in a wok and sauté garlic and onion.",
+      "Add carrots and peas, stir-fry for 3-4 minutes.",
+      "Add cooked rice and mix well.",
+      "Drizzle soy sauce and stir until evenly combined.",
+      "Garnish with spring onion and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Chinese", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "vegetable_fried_rice.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Vegetable Samosas",
+    "description": "Deep-fried Indian pastry pockets filled with spiced potatoes and peas.",
+    "ingredients": [
+      "2 potatoes, boiled and mashed",
+      "1/2 cup peas",
+      "1 tsp garam masala",
+      "1/2 tsp turmeric",
+      "1/2 tsp cumin seeds",
+      "1 tsp grated ginger",
+      "Salt to taste",
+      "Ready-made samosa pastry or phyllo dough",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Heat oil and fry cumin seeds, then add ginger, peas, and mashed potatoes.",
+      "Add spices and salt, mix well and cool the filling.",
+      "Fill pastry with spoonful of mixture and seal edges.",
+      "Deep fry until golden brown.",
+      "Serve with chutney."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "15 min",
+    "servings": 4,
+    "tags": ["Indian", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "vegetable_samosas.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Pad Thai (Vegan)",
+    "description": "A vegan version of Thailand’s most famous stir-fried noodle dish.",
+    "ingredients": [
+      "200g rice noodles",
+      "1 tbsp tamarind paste",
+      "2 tbsp soy sauce",
+      "1 tbsp brown sugar",
+      "1 tbsp oil",
+      "1 cup bean sprouts",
+      "1/2 cup tofu cubes",
+      "2 cloves garlic, minced",
+      "Crushed peanuts and lime wedges"
+    ],
+    "steps": [
+      "Soak rice noodles in warm water until soft.",
+      "Mix tamarind, soy sauce, and sugar to make sauce.",
+      "Fry garlic and tofu until golden.",
+      "Add noodles and sauce, stir well.",
+      "Toss in bean sprouts, garnish with peanuts and lime."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Thai", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "pad_thai.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Miso Soup",
+    "description": "A classic Japanese soup made with miso paste and tofu.",
+    "ingredients": [
+      "4 cups water",
+      "2 tbsp miso paste",
+      "1/2 cup soft tofu, cubed",
+      "2 tbsp chopped green onions",
+      "1/4 cup wakame seaweed"
+    ],
+    "steps": [
+      "Soak wakame in water for 5 minutes.",
+      "Bring water to a simmer, add wakame and tofu.",
+      "Dissolve miso paste in a small amount of hot broth, then stir into soup.",
+      "Do not boil after adding miso.",
+      "Serve with green onions."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Japanese", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "miso_soup.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Chana Masala",
+    "description": "A spicy Indian curry made with chickpeas.",
+    "ingredients": [
+      "1 can chickpeas, drained",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "1 tsp cumin",
+      "1 tsp garam masala",
+      "1/2 tsp turmeric",
+      "1 tsp garlic paste",
+      "Salt to taste",
+      "2 tbsp oil"
+    ],
+    "steps": [
+      "Sauté onion and garlic in oil until golden.",
+      "Add tomatoes and spices, cook until soft.",
+      "Add chickpeas and simmer for 15 minutes.",
+      "Adjust salt and serve with rice or naan."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Indian", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "chana_masala.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Stir-fried Tofu with Vegetables",
+    "description": "Healthy Chinese-style stir-fry with tofu and colorful vegetables.",
+    "ingredients": [
+      "1 block firm tofu, cubed",
+      "1 carrot, julienned",
+      "1 bell pepper, sliced",
+      "1/2 broccoli head, chopped",
+      "2 tbsp soy sauce",
+      "1 tsp garlic",
+      "1 tbsp oil"
+    ],
+    "steps": [
+      "Fry tofu until golden and set aside.",
+      "Stir-fry garlic, carrot, bell pepper, and broccoli.",
+      "Add tofu and soy sauce, mix well.",
+      "Cook for 2-3 more minutes and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["Chinese", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "tofu_stirfry.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Dal Tadka",
+    "description": "Indian yellow lentil stew with aromatic spices.",
+    "ingredients": [
+      "1 cup yellow lentils (toor dal)",
+      "1/2 onion, chopped",
+      "1 tomato, chopped",
+      "1 tsp cumin seeds",
+      "2 cloves garlic, minced",
+      "1/2 tsp turmeric",
+      "1 tsp ghee or oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Boil lentils until soft.",
+      "In a pan, sauté cumin, garlic, onion, and tomato.",
+      "Add turmeric and mix with cooked dal.",
+      "Simmer for 5 minutes and serve hot with rice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Indian", "Asian", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "dal_tadka.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Japchae",
+    "description": "Korean glass noodles stir-fried with vegetables.",
+    "ingredients": [
+      "200g sweet potato noodles",
+      "1 carrot, julienned",
+      "1/2 onion, sliced",
+      "1 cup spinach",
+      "1 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "1 tsp sugar",
+      "1 clove garlic, minced"
+    ],
+    "steps": [
+      "Boil noodles and set aside.",
+      "Sauté vegetables and garlic in sesame oil.",
+      "Add noodles, soy sauce, and sugar.",
+      "Toss until mixed and serve warm."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Korean", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "japchae.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Nasi Goreng (Vegan)",
+    "description": "Spicy Indonesian fried rice with veggies and sweet soy sauce.",
+    "ingredients": [
+      "2 cups cold cooked rice",
+      "1/2 cup cabbage, chopped",
+      "1 carrot, grated",
+      "1 onion, chopped",
+      "2 tbsp kecap manis (sweet soy sauce)",
+      "1 tsp chili paste",
+      "1 clove garlic",
+      "2 tbsp oil"
+    ],
+    "steps": [
+      "Fry garlic, onion, and veggies until soft.",
+      "Add rice and stir well.",
+      "Add chili paste and kecap manis, toss until coated.",
+      "Serve hot with cucumber slices."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Indonesian", "Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "nasi_goreng.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Spring Rolls",
+    "description": "Crispy Asian-style vegan rolls filled with vegetables.",
+    "ingredients": [
+      "Spring roll wrappers",
+      "1 cup shredded cabbage",
+      "1 carrot, grated",
+      "1/2 cup bean sprouts",
+      "1 tbsp soy sauce",
+      "1 tsp garlic",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Sauté vegetables with garlic and soy sauce.",
+      "Cool filling and wrap in spring roll wrappers.",
+      "Deep fry until golden brown.",
+      "Serve with dipping sauce."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "10 min",
+    "servings": 4,
+    "tags": ["Asian", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "spring_rolls.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Pilau",
+    "description": "A fragrant Swahili rice dish made with spices and sometimes vegetables or meat.",
+    "ingredients": [
+      "2 cups basmati rice",
+      "1 large onion, sliced",
+      "3 cloves garlic, minced",
+      "1 tbsp pilau masala",
+      "1 cinnamon stick",
+      "2 cardamom pods",
+      "4 cups vegetable broth",
+      "2 tbsp oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Heat oil in a pot and sauté onions until golden brown.",
+      "Add garlic, pilau masala, and whole spices; stir until aromatic.",
+      "Add rice and mix well to coat.",
+      "Pour in broth, bring to a boil, then reduce heat and simmer covered for 20–25 minutes.",
+      "Fluff and serve hot."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "pilau.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Mandazi",
+    "description": "Sweet, fluffy deep-fried dough from East Africa — a breakfast favorite.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1/2 cup sugar",
+      "1 tsp cardamom powder",
+      "1 tsp cinnamon powder",
+      "1 tsp baking powder",
+      "1/2 cup milk",
+      "1 tbsp oil",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Mix dry ingredients in a bowl.",
+      "Add milk and oil; knead into soft dough.",
+      "Let rest 30 minutes, then roll and cut into triangles.",
+      "Deep fry until golden brown. Drain and serve warm."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "15 min",
+    "servings": 6,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Dessert", "Snack", "BreakFast"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "mandazi.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Mukimo",
+    "description": "A mashed Kenyan dish made with potatoes, maize, beans, and greens.",
+    "ingredients": [
+      "4 potatoes, peeled and chopped",
+      "1 cup cooked maize",
+      "1 cup cooked beans",
+      "1 bunch pumpkin leaves or spinach, chopped",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Boil potatoes until soft.",
+      "Add maize, beans, and greens; continue cooking until greens are tender.",
+      "Mash all together until combined.",
+      "Season with salt and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "mukimo.jpg"
+  },
+  {
+    "id": 21,
+    "title": "Sukuma Wiki",
+    "description": "Sautéed collard greens served with ugali or chapati.",
+    "ingredients": [
+      "1 bunch sukuma wiki (collard greens), sliced",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "2 tbsp oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Heat oil in a pan and sauté onions until soft.",
+      "Add tomatoes and cook until soft.",
+      "Add greens and stir-fry until wilted but still bright.",
+      "Season with salt.",
+      "Serve hot with ugali."
+
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 3,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "sukuma_wiki.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Viazi Karai",
+    "description": "Coated and deep-fried potatoes popular at the Kenyan coast.",
+    "ingredients": [
+      "4 potatoes, boiled and sliced",
+      "1/2 cup all-purpose flour",
+      "1/2 tsp turmeric",
+      "Salt to taste",
+      "1/2 cup water",
+      "Oil for deep frying"
+    ],
+    "steps": [
+      "Mix flour, turmeric, salt, and water to form a thick batter.",
+      "Dip potato slices into batter.",
+      "Deep fry until golden brown.",
+      "Drain and serve with tamarind sauce or chutney."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 4,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan", "Potato"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "viazi_karai.jpg"
+  },
+  {
+    "id": 23,
+    "title": "Ndengu (Green Gram Stew)",
+    "description": "Nutritious Kenyan green gram stew served with rice or chapati.",
+    "ingredients": [
+      "1 cup green grams (mung beans), soaked overnight",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "1 clove garlic, minced",
+      "1 tsp curry powder",
+      "2 tbsp oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Boil green grams until soft.",
+      "In a pan, sauté onions, garlic, and tomatoes.",
+      "Add curry powder and cooked ndengu.",
+      "Simmer for 10 minutes and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 3,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "ndengu.jpg"
+  },
+  {
+    "id": 24,
+    "title": "Matoke",
+    "description": "Stewed green bananas with onions, tomatoes, and spices.",
+    "ingredients": [
+      "6 green bananas (matoke), peeled and chopped",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "1 tsp curry powder",
+      "2 tbsp oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Heat oil and sauté onion until soft.",
+      "Add tomatoes and curry powder; cook 5 mins.",
+      "Add chopped bananas and water to cover.",
+      "Simmer until bananas are soft and stew is thick.",
+      "Serve hot with rice."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "matoke.jpg"
+  },
+  {
+    "id": 25,
+    "title": "Ugali",
+    "description": "Kenya's national staple — a dense cornmeal porridge served with vegetables or stews.",
+    "ingredients": [
+      "2 cups maize flour",
+      "4 cups water"
+    ],
+    "steps": [
+      "Bring water to a boil in a saucepan.",
+      "Gradually add flour while stirring continuously.",
+      "Stir vigorously until thick and smooth.",
+      "Cover and let steam for 3–5 minutes before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 4,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "ugali.jpg"
+  },
+  {
+    "id": 26,
+    "title": "Sweet Potato with Peanut Sauce",
+    "description": "Soft-boiled sweet potatoes topped with creamy peanut sauce.",
+    "ingredients": [
+      "4 sweet potatoes, peeled and cubed",
+      "1/2 cup peanut butter",
+      "1/4 cup water",
+      "1 tsp salt",
+      "1 tsp lemon juice"
+    ],
+    "steps": [
+      "Boil sweet potatoes until tender.",
+      "In another pan, mix peanut butter, water, salt, and lemon juice; heat gently.",
+      "Pour sauce over sweet potatoes and serve warm."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "sweet_potato_peanut.jpg"
+  },
+  {
+    "id": 27,
+    "title": "Kamande (Lentil Stew)",
+    "description": "Kenyan lentil stew cooked in tomato-onion base, often served with rice or chapati.",
+    "ingredients": [
+      "1 cup lentils",
+      "1 onion, chopped",
+      "2 tomatoes, chopped",
+      "1 tsp garlic paste",
+      "1 tsp cumin",
+      "2 tbsp oil",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Boil lentils until soft.",
+      "Sauté onion, garlic, and tomatoes in oil.",
+      "Add cumin and boiled lentils.",
+      "Simmer for 10 minutes.",
+      "Serve hot with rice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "30 min",
+    "servings": 3,
+    "tags": ["Kenyan", "East African", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "kamande.jpg"
+  },
+  {
+    "id": 28,
+    "title": "Ratatouille",
+    "description": "A classic French Provençal vegetable stew.",
+    "ingredients": [
+      "1 eggplant, diced",
+      "1 zucchini, sliced",
+      "1 bell pepper, chopped",
+      "1 onion, sliced",
+      "2 tomatoes, chopped",
+      "2 cloves garlic, minced",
+      "2 tbsp olive oil",
+      "Salt and herbs (thyme, rosemary) to taste"
+    ],
+    "steps": [
+      "Heat olive oil and sauté onions and garlic.",
+      "Add eggplant, zucchini, bell pepper and cook for 5 minutes.",
+      "Add tomatoes, herbs, and salt. Simmer for 20 minutes until soft.",
+      "Serve hot or chilled with bread or rice."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 4,
+    "tags": ["French", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "ratatouille.jpg"
+  },
+  {
+    "id": 29,
+    "title": "Pasta Primavera",
+    "description": "Italian-style pasta with mixed spring vegetables and herbs.",
+    "ingredients": [
+      "200g pasta",
+      "1 zucchini, sliced",
+      "1 bell pepper, sliced",
+      "1 carrot, julienned",
+      "1/2 cup peas",
+      "2 tbsp olive oil",
+      "1 garlic clove, minced",
+      "Salt and black pepper"
+    ],
+    "steps": [
+      "Boil pasta until al dente and drain.",
+      "Sauté garlic and vegetables in olive oil for 5–7 minutes.",
+      "Toss in pasta, season, and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["Italian", "European", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "pasta_primavera.jpg"
+  },
+  {
+    "id": 30,
+    "title": "Spanish Gazpacho",
+    "description": "A chilled raw tomato soup perfect for hot summer days.",
+    "ingredients": [
+      "4 tomatoes, chopped",
+      "1 cucumber, peeled and diced",
+      "1 bell pepper, chopped",
+      "1 small onion",
+      "2 tbsp olive oil",
+      "1 tbsp vinegar",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "Blend all vegetables until smooth.",
+      "Add olive oil, vinegar, salt, and pepper.",
+      "Chill in fridge for 1 hour before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "15 min",
+    "cookTime": "0 min",
+    "servings": 3,
+    "tags": ["Spanish", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "gazpacho.jpg"
+  },
+  {
+    "id": 31,
+    "title": "Greek Stuffed Peppers",
+    "description": "Bell peppers stuffed with herbed rice and vegetables.",
+    "ingredients": [
+      "4 bell peppers, tops removed",
+      "1 cup cooked rice",
+      "1 tomato, diced",
+      "1/2 onion, diced",
+      "1 tbsp olive oil",
+      "1 tsp dried oregano",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Sauté onion and tomato in olive oil.",
+      "Mix with rice, herbs, salt, and pepper.",
+      "Stuff into peppers and bake at 180°C for 25 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "tags": ["Greek", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "stuffed_peppers.jpg"
+  },
+  {
+    "id": 32,
+    "title": "German Potato Salad",
+    "description": "Warm potato salad with mustard vinaigrette.",
+    "ingredients": [
+      "4 potatoes, boiled and sliced",
+      "1 onion, chopped",
+      "2 tbsp vinegar",
+      "1 tbsp mustard",
+      "2 tbsp oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix vinegar, mustard, oil, salt, and pepper to make dressing.",
+      "Toss with warm potatoes and onions.",
+      "Let sit 10 minutes before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["German", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "potato_salad_german.jpg"
+  },
+  {
+    "id": 33,
+    "title": "Minestrone Soup",
+    "description": "A hearty Italian vegetable soup with beans and pasta.",
+    "ingredients": [
+      "1 onion, chopped",
+      "1 carrot, diced",
+      "1 zucchini, diced",
+      "1/2 cup pasta",
+      "1 cup beans",
+      "1 tomato, chopped",
+      "3 cups vegetable broth",
+      "1 tbsp olive oil"
+    ],
+    "steps": [
+      "Sauté onion and vegetables in olive oil.",
+      "Add beans, tomatoes, and broth.",
+      "Bring to a boil, add pasta, and simmer until tender."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 4,
+    "tags": ["Italian", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "minestrone.jpg"
+  },
+  {
+    "id": 34,
+    "title": "Swedish Cucumber Salad",
+    "description": "Refreshing salad with vinegar-marinated cucumbers.",
+    "ingredients": [
+      "2 cucumbers, thinly sliced",
+      "2 tbsp vinegar",
+      "1 tbsp sugar",
+      "Salt to taste",
+      "Fresh dill (optional)"
+    ],
+    "steps": [
+      "Mix vinegar, sugar, and salt.",
+      "Toss with cucumbers and refrigerate for 30 minutes.",
+      "Garnish with dill before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Swedish", "European", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "cucumber_salad_swedish.jpg"
+  },
+  {
+    "id": 35,
+    "title": "Vegetarian Shepherd's Pie",
+    "description": "A British classic with lentils and mashed potatoes.",
+    "ingredients": [
+      "1 cup cooked lentils",
+      "1 onion, chopped",
+      "1 carrot, chopped",
+      "2 tomatoes, chopped",
+      "2 cups mashed potatoes",
+      "1 tbsp oil",
+      "Salt and herbs"
+    ],
+    "steps": [
+      "Sauté onion, carrot, and tomato in oil.",
+      "Add lentils and cook until thickened.",
+      "Transfer to a baking dish, top with mashed potatoes.",
+      "Bake at 180°C for 25 minutes until golden."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "25 min",
+    "servings": 4,
+    "tags": ["British", "European", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "shepherds_pie.jpg"
+  },
+  {
+    "id": 36,
+    "title": "Hungarian Cabbage Noodles",
+    "description": "Comforting dish of sautéed cabbage and wide noodles.",
+    "ingredients": [
+      "200g egg noodles",
+      "2 cups shredded cabbage",
+      "1 onion, sliced",
+      "2 tbsp butter or oil",
+      "Salt and black pepper"
+    ],
+    "steps": [
+      "Boil noodles and set aside.",
+      "Sauté cabbage and onion in butter until soft.",
+      "Mix in noodles, season, and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Hungarian", "European", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "cabbage_noodles.jpg"
+  },
+  {
+    "id": 37,
+    "title": "Belgian Endive Gratin",
+    "description": "Endives wrapped in cheese sauce, baked until golden.",
+    "ingredients": [
+      "4 endives",
+      "2 tbsp butter",
+      "1 tbsp flour",
+      "1 cup milk",
+      "1/2 cup grated cheese",
+      "Salt, pepper, nutmeg"
+    ],
+    "steps": [
+      "Steam endives until tender.",
+      "Make cheese sauce by melting butter, stirring in flour, milk, and cheese.",
+      "Wrap endives in sauce and bake at 190°C for 20 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "20 min",
+    "servings": 4,
+    "tags": ["Belgian", "European", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "endive_gratin.jpg"
+  },
+  {
+    "id": 38,
+    "title": "Vegetarian Chili",
+    "description": "A hearty American-style chili packed with beans and veggies.",
+    "ingredients": [
+      "1 onion, chopped",
+      "2 cloves garlic, minced",
+      "1 bell pepper, chopped",
+      "1 zucchini, chopped",
+      "1 can black beans",
+      "1 can kidney beans",
+      "1 can diced tomatoes",
+      "1 tbsp chili powder",
+      "1 tsp cumin",
+      "Salt and pepper",
+      "2 tbsp olive oil"
+    ],
+    "steps": [
+      "Sauté onion, garlic, and bell pepper in olive oil.",
+      "Add zucchini, beans, tomatoes, and spices.",
+      "Simmer for 25 minutes until thick.",
+      "Serve hot with cornbread or rice."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 4,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "vegetarian_chili.jpg"
+  },
+  {
+    "id": 39,
+    "title": "Mac and Cheese",
+    "description": "Classic American comfort food with creamy cheese sauce.",
+    "ingredients": [
+      "200g elbow macaroni",
+      "2 tbsp butter",
+      "2 tbsp flour",
+      "2 cups milk",
+      "1.5 cups shredded cheddar cheese",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Boil pasta and drain.",
+      "In another pan, melt butter, whisk in flour, then slowly add milk.",
+      "Stir in cheese until melted and smooth.",
+      "Mix with macaroni and serve warm."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["American", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "mac_and_cheese.jpg"
+  },
+  {
+    "id": 40,
+    "title": "Cornbread",
+    "description": "Moist, golden cornbread — perfect as a side for soups and stews.",
+    "ingredients": [
+      "1 cup cornmeal",
+      "1 cup flour",
+      "1 tbsp baking powder",
+      "1/2 tsp salt",
+      "1 cup milk",
+      "1/3 cup oil",
+      "2 tbsp sugar"
+    ],
+    "steps": [
+      "Preheat oven to 180°C.",
+      "Mix all dry ingredients, then stir in milk and oil.",
+      "Pour into greased pan and bake for 25 minutes.",
+      "Let cool slightly before slicing."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 6,
+    "tags": ["American", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "cornbread.jpg"
+  },
+  {
+    "id": 41,
+    "title": "Sloppy Joe Lentil Sandwiches",
+    "description": "A plant-based twist on a classic American sandwich.",
+    "ingredients": [
+      "1 cup cooked lentils",
+      "1/2 onion, chopped",
+      "1/2 bell pepper, chopped",
+      "1/2 cup tomato sauce",
+      "1 tbsp ketchup",
+      "1 tbsp soy sauce",
+      "1 tsp paprika",
+      "Burger buns"
+    ],
+    "steps": [
+      "Sauté onion and bell pepper.",
+      "Add lentils, sauces, and spices. Simmer 10 mins.",
+      "Serve on toasted buns."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 3,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "sloppy_joe_lentil.jpg"
+  },
+  {
+    "id": 42,
+    "title": "Avocado Toast",
+    "description": "A modern American brunch favorite.",
+    "ingredients": [
+      "2 slices whole grain bread",
+      "1 ripe avocado",
+      "Salt and pepper",
+      "Chili flakes or lemon juice (optional)"
+    ],
+    "steps": [
+      "Toast the bread.",
+      "Mash avocado and spread on toast.",
+      "Season with salt, pepper, and optional toppings."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "2 min",
+    "servings": 1,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "avocado_toast.jpg"
+  },
+  {
+    "id": 43,
+    "title": "Grilled Cheese Sandwich",
+    "description": "A melty cheese sandwich toasted to golden perfection.",
+    "ingredients": [
+      "2 slices sandwich bread",
+      "2 slices cheddar cheese",
+      "Butter"
+    ],
+    "steps": [
+      "Butter one side of each bread slice.",
+      "Place cheese between unbuttered sides.",
+      "Grill on pan until golden and melted."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["American", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "grilled_cheese.jpg"
+  },
+  {
+    "id": 44,
+    "title": "Sweet Potato Hash",
+    "description": "Healthy and colorful breakfast hash with sweet potatoes and veggies.",
+    "ingredients": [
+      "1 sweet potato, cubed",
+      "1/2 onion, chopped",
+      "1 bell pepper, chopped",
+      "1 tbsp oil",
+      "Salt, pepper, paprika"
+    ],
+    "steps": [
+      "Sauté sweet potato in oil until tender.",
+      "Add onion and bell pepper, cook until soft.",
+      "Season and serve with avocado or eggs."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 2,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "sweet_potato_hash.jpg"
+  },
+  {
+    "id": 45,
+    "title": "Peanut Butter Banana Smoothie",
+    "description": "Creamy and energizing breakfast smoothie.",
+    "ingredients": [
+      "1 ripe banana",
+      "1 tbsp peanut butter",
+      "1 cup plant milk",
+      "1 tsp honey (optional)"
+    ],
+    "steps": [
+      "Blend all ingredients until smooth.",
+      "Serve chilled."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "pb_banana_smoothie.jpg"
+  },
+  {
+    "id": 46,
+    "title": "Vegan Pancakes",
+    "description": "Fluffy dairy-free pancakes for breakfast or brunch.",
+    "ingredients": [
+      "1 cup flour",
+      "1 tbsp sugar",
+      "1 tbsp baking powder",
+      "1 cup plant milk",
+      "1 tbsp oil",
+      "1/2 tsp vanilla"
+    ],
+    "steps": [
+      "Mix dry ingredients, then add wet and stir until smooth.",
+      "Cook on greased pan until bubbles form, flip and cook other side.",
+      "Serve with syrup or fruit."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 3,
+    "tags": ["American", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "vegan_pancakes.jpg"
+  },
+  {
+    "id": 47,
+    "title": "Classic Coleslaw",
+    "description": "Creamy shredded cabbage and carrot salad.",
+    "ingredients": [
+      "2 cups shredded cabbage",
+      "1 carrot, grated",
+      "1/4 cup mayonnaise (or vegan mayo)",
+      "1 tsp vinegar",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix cabbage and carrot in a bowl.",
+      "Stir in mayo, vinegar, salt, and pepper.",
+      "Chill before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 3,
+    "tags": ["American", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "coleslaw.jpg"
+  },
+
+  {
+    "id": 48,
+    "title": "Meat Samosas",
+    "description": "Deep-fried triangular pastry filled with seasoned minced meat.",
+    "ingredients": [
+      "200g minced beef or lamb",
+      "1 onion, chopped",
+      "1 tsp garlic paste",
+      "1 tsp ginger paste",
+      "1 tsp cumin",
+      "1 tsp coriander powder",
+      "Salt, pepper",
+      "Samosa wrappers",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Cook minced meat with onions, garlic, ginger, and spices until browned.",
+      "Cool slightly and fill samosa wrappers.",
+      "Fold into triangles and seal with flour paste.",
+      "Deep fry until golden brown."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "20 min",
+    "servings": 6,
+    "tags": ["Kenyan", "Street Food", "Non-Vegetarian"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "meat_samosas.jpg"
+  },
+  {
+    "id": 49,
+    "title": "Creamy Mashed Potatoes",
+    "description": "Smooth and fluffy mashed potatoes — a versatile side dish.",
+    "ingredients": [
+      "4 medium potatoes, peeled and cubed",
+      "1/2 cup milk (or warm water for vegan version)",
+      "2 tbsp butter or margarine",
+      "Salt to taste",
+      "Optional: pinch of black pepper or garlic powder"
+    ],
+    "steps": [
+      "Boil potatoes in salted water until fork tender (15–20 minutes).",
+      "Drain and mash thoroughly.",
+      "Add butter and slowly mix in warm milk until smooth.",
+      "Season with salt and optional pepper or garlic.",
+      "Serve hot with stew or vegetables."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 3,
+    "tags": ["Side", "Potato", "Comfort Food"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "mashed_potatoes.jpg"
+  },
+
+  {
+    "id": 50,
+    "title": "Vegetarian Dumplings",
+    "description": "Asian-style steamed dumplings filled with vegetables.",
+    "ingredients": [
+      "1 cup cabbage, finely chopped",
+      "1/2 cup carrots, grated",
+      "1/2 cup mushrooms, diced",
+      "1 tsp soy sauce",
+      "Dumpling wrappers",
+      "Salt, pepper"
+    ],
+    "steps": [
+      "Mix vegetables with soy sauce and seasoning.",
+      "Place a spoonful into each wrapper and seal.",
+      "Steam for 10–12 minutes until translucent."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "25 min",
+    "cookTime": "10 min",
+    "servings": 4,
+    "tags": ["Asian", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "vegetarian_dumplings.jpg"
+  },
+  {
+    "id": 51,
+    "title": "Chicken Dumplings",
+    "description": "Juicy dumplings filled with seasoned minced chicken.",
+    "ingredients": [
+      "200g minced chicken",
+      "1 tbsp soy sauce",
+      "1 garlic clove, minced",
+      "1/2 tsp ginger",
+      "Dumpling wrappers",
+      "Salt, pepper"
+    ],
+    "steps": [
+      "Mix chicken with soy sauce and spices.",
+      "Spoon into wrappers, seal tightly.",
+      "Steam or pan-fry until cooked through."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "20 min",
+    "cookTime": "10 min",
+    "servings": 4,
+    "tags": ["Asian", "Street Food", "Non-Vegetarian"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "chicken_dumplings.jpg"
+  },
+  {
+    "id": 52,
+    "title": "Bhajia",
+    "description": "Kenyan-style crispy potato fritters in chickpea batter.",
+    "ingredients": [
+      "4 potatoes, thinly sliced",
+      "1 cup gram flour (besan)",
+      "1 tsp turmeric",
+      "1 tsp chili powder",
+      "Salt to taste",
+      "Water to make batter",
+      "Oil for frying"
+    ],
+    "steps": [
+      "Make a thick batter from flour and spices.",
+      "Dip potato slices and deep fry until golden.",
+      "Serve with chutney or ketchup."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "15 min",
+    "cookTime": "15 min",
+    "servings": 4,
+    "tags": ["Kenyan", "Vegetarian", "Street Food", "Potato"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "bhajia.jpg"
+  },
+  {
+    "id": 53,
+    "title": "French Fries",
+    "description": "Golden, crispy fries — the classic snack.",
+    "ingredients": [
+      "4 large potatoes, peeled and cut into fries",
+      "Oil for frying",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Soak fries in cold water 30 minutes, then drain and dry.",
+      "Fry in hot oil until golden.",
+      "Drain and season with salt."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 4,
+    "tags": ["Global", "Vegetarian", "Vegan", "Potato"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "french_fries.jpg"
+  },
+  {
+    "id": 54,
+    "title": "Chips Masala",
+    "description": "Kenyan-style fries coated in spicy tomato masala.",
+    "ingredients": [
+      "3 cups French fries",
+      "1 onion, chopped",
+      "2 tomatoes, blended",
+      "1 tbsp tomato paste",
+      "1 tsp chili powder",
+      "1 tsp garam masala",
+      "1 tbsp oil",
+      "Salt"
+    ],
+    "steps": [
+      "Sauté onions, add blended tomatoes, paste, and spices.",
+      "Cook until thick. Toss fries in the sauce.",
+      "Serve hot with ketchup or lemon."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 3,
+    "tags": ["Kenyan", "Street Food", "Vegetarian", "Potato"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "chips_masala.jpg"
+  },
+  {
+    "id": 55,
+    "title": "Classic Hot Dog",
+    "description": "Grilled sausage in a bun with your choice of toppings.",
+    "ingredients": [
+      "4 hot dog buns",
+      "4 beef or veggie sausages",
+      "Mustard, ketchup, onions, BBQ sauce, Chilli sauce (optional)"
+    ],
+    "steps": [
+      "Grill sausages until browned.",
+      "Warm buns and place sausage inside.",
+      "Add preferred toppings and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 4,
+    "tags": ["American", "Street Food", "Non-Vegetarian"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "hot_dog.jpg"
+  },
+  {
+    "id": 56,
+    "title": "Veggie Burger",
+    "description": "A healthy plant-based burger loaded with flavor.",
+    "ingredients": [
+      "1 veggie burger patty",
+      "1 burger bun",
+      "Lettuce, tomato, onion",
+      "Ketchup, mayo (optional)"
+    ],
+    "steps": [
+      "Grill or pan-fry veggie patty.",
+      "Toast bun and assemble with veggies and sauce.",
+      "Serve with fries or salad."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["American", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "veggie_burger.jpg"
+  },
+  {
+    "id": 57,
+    "title": "Classic Cheeseburger",
+    "description": "Grilled beef patty topped with cheese in a soft bun.",
+    "ingredients": [
+      "1 beef burger patty",
+      "1 slice cheese",
+      "1 burger bun",
+      "Lettuce, tomato, onion",
+      "Ketchup, mustard"
+    ],
+    "steps": [
+      "Grill patty and top with cheese.",
+      "Assemble with bun and veggies.",
+      "Serve hot with fries or chips."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["American", "Non-Vegetarian"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "cheeseburger.jpg"
+  },
+  
+  {
+    "id": 58,
+    "title": "Chocolate Muffins",
+    "description": "Moist and rich chocolate muffins perfect for snacking.",
+    "ingredients": [
+      "1 1/2 cups flour",
+      "1/2 cup cocoa powder",
+      "1 tsp baking powder",
+      "1/2 tsp baking soda",
+      "1/2 cup sugar",
+      "1/2 cup vegetable oil",
+      "3/4 cup milk",
+      "1 egg",
+      "1 tsp vanilla extract"
+    ],
+    "steps": [
+      "Preheat oven to 180°C.",
+      "Mix dry ingredients in one bowl and wet ingredients in another.",
+      "Combine both, pour into muffin cups, and bake for 20 minutes."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 6,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "chocolate_muffins.jpg"
+  },
+  {
+    "id": 59,
+    "title": "Classic Brownies",
+    "description": "Fudgy and chocolaty brownies that melt in your mouth.",
+    "ingredients": [
+      "1/2 cup butter",
+      "1 cup sugar",
+      "2 eggs",
+      "1/3 cup cocoa powder",
+      "1/2 cup flour",
+      "1/4 tsp salt",
+      "1/4 tsp baking powder",
+      "1 tsp vanilla extract"
+    ],
+    "steps": [
+      "Preheat oven to 175°C.",
+      "Melt butter, mix in sugar, eggs, and vanilla.",
+      "Stir in dry ingredients, pour into pan, and bake 25 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "25 min",
+    "servings": 9,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "brownies.jpg"
+  },
+  {
+    "id": 60,
+    "title": "Chocolate Chip Cookies",
+    "description": "Crispy on the edges, chewy in the center — cookie perfection.",
+    "ingredients": [
+      "1 cup flour",
+      "1/2 tsp baking soda",
+      "1/4 tsp salt",
+      "1/2 cup butter",
+      "1/3 cup brown sugar",
+      "1/3 cup white sugar",
+      "1 egg",
+      "1 tsp vanilla extract",
+      "3/4 cup chocolate chips"
+    ],
+    "steps": [
+      "Preheat oven to 180°C.",
+      "Cream butter and sugars, add egg and vanilla.",
+      "Stir in dry ingredients and chocolate chips.",
+      "Scoop onto baking sheet and bake 10–12 minutes."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "12 min",
+    "servings": 12,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "chocolate_chip_cookies.jpg"
+  },
+  {
+    "id": 61,
+    "title": "Simple Vanilla Cake",
+    "description": "A soft and fluffy vanilla cake — perfect for any occasion.",
+    "ingredients": [
+      "1 1/2 cups flour",
+      "1/2 cup sugar",
+      "1/2 cup butter",
+      "2 eggs",
+      "1 tsp vanilla extract",
+      "1 tsp baking powder",
+      "1/2 cup milk"
+    ],
+    "steps": [
+      "Preheat oven to 180°C.",
+      "Cream butter and sugar, beat in eggs and vanilla.",
+      "Add dry ingredients alternately with milk.",
+      "Pour into pan and bake 30–35 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 8,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "vanilla_cake.jpg"
+  },
+  {
+    "id": 62,
+    "title": "Banana Bread",
+    "description": "Moist, sweet banana bread with a hint of cinnamon.",
+    "ingredients": [
+      "2 ripe bananas",
+      "1 1/2 cups flour",
+      "1/2 cup sugar",
+      "1/4 cup oil or melted butter",
+      "1 egg",
+      "1 tsp baking soda",
+      "1/2 tsp cinnamon",
+      "1/4 tsp salt"
+    ],
+    "steps": [
+      "Preheat oven to 175°C.",
+      "Mash bananas and mix with sugar, egg, and oil.",
+      "Add dry ingredients and stir until combined.",
+      "Pour into loaf pan and bake 40–45 minutes."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "45 min",
+    "servings": 8,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "banana_bread.jpg"
+  },
+  {
+    "id": 63,
+    "title": "Lemon Drizzle Cake",
+    "description": "Tangy lemon cake with a sweet lemon glaze.",
+    "ingredients": [
+      "1 cup flour",
+      "1/2 cup butter",
+      "2/3 cup sugar",
+      "2 eggs",
+      "1 tsp baking powder",
+      "Zest and juice of 1 lemon",
+      "1/4 cup powdered sugar (for glaze)"
+    ],
+    "steps": [
+      "Cream butter and sugar, beat in eggs, lemon zest and juice.",
+      "Add flour and baking powder, pour into pan.",
+      "Bake 25–30 mins. Mix lemon juice with powdered sugar for glaze and pour over warm cake."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "30 min",
+    "servings": 6,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "lemon_drizzle_cake.jpg"
+  },
+  {
+    "id": 64,
+    "title": "No-Bake Chocolate Oat Bars",
+    "description": "Quick chocolatey bars made without an oven.",
+    "ingredients": [
+      "2 cups oats",
+      "1/2 cup peanut butter",
+      "1/2 cup melted chocolate",
+      "1/4 cup honey or syrup",
+      "1 tsp vanilla"
+    ],
+    "steps": [
+      "Mix all ingredients in a bowl.",
+      "Press into a lined tray and refrigerate for 1 hour.",
+      "Cut into bars and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 8,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "no_bake_oat_bars.jpg"
+  },
+  {
+    "id": 65,
+    "title": "Fruit Salad",
+    "description": "Colorful mix of fresh fruits in a light honey dressing.",
+    "ingredients": [
+      "1 banana, sliced",
+      "1 apple, diced",
+      "1 cup grapes",
+      "1 orange, peeled and chopped",
+      "1 tbsp honey",
+      "1 tsp lemon juice"
+    ],
+    "steps": [
+      "Mix all fruits in a bowl.",
+      "Stir in honey and lemon juice.",
+      "Chill and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 4,
+    "tags": ["Dessert", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "fruit_salad.jpg"
+  },
+  {
+    "id": 66,
+    "title": "Peanut Butter Cookies",
+    "description": "Crunchy and rich cookies with the taste of roasted peanuts.",
+    "ingredients": [
+      "1 cup flour",
+      "1/2 cup sugar",
+      "1/2 cup peanut butter",
+      "1/4 cup oil",
+      "1/2 tsp baking powder",
+      "1/4 tsp salt"
+    ],
+    "steps": [
+      "Mix all ingredients into a dough.",
+      "Form balls, flatten, and bake at 175°C for 12–15 minutes.",
+      "Cool before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "12 min",
+    "servings": 12,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "peanut_butter_cookies.jpg"
+  },
+  {
+    "id": 67,
+    "title": "Carrot Cake",
+    "description": "Moist cake made with carrots and topped with cream cheese frosting.",
+    "ingredients": [
+      "1 1/2 cups flour",
+      "1 cup grated carrot",
+      "2/3 cup sugar",
+      "1/2 cup oil",
+      "2 eggs",
+      "1 tsp cinnamon",
+      "1 tsp baking soda",
+      "1/2 tsp salt"
+    ],
+    "steps": [
+      "Mix wet ingredients with grated carrots.",
+      "Add dry ingredients and mix well.",
+      "Pour into pan and bake at 175°C for 35–40 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "40 min",
+    "servings": 8,
+    "tags": ["Dessert", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "carrot_cake.jpg"
+  },
+
+  {
+    "id": 68,
+    "title": "Scrambled Eggs",
+    "description": "Creamy, fluffy scrambled eggs made in minutes.",
+    "ingredients": [
+      "2 eggs",
+      "1 tbsp milk or cream",
+      "Salt and pepper",
+      "1 tsp butter or oil"
+    ],
+    "steps": [
+      "Crack eggs into a bowl, add milk, and beat lightly.",
+      "Heat butter in a pan, pour in eggs, and stir gently.",
+      "Cook until just set and fluffy. Season and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "2 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "scrambled_eggs.jpg"
+  },
+  {
+    "id": 69,
+    "title": "Boiled Eggs",
+    "description": "Perfect soft or hard-boiled eggs every time.",
+    "ingredients": [
+      "2 eggs",
+      "Water"
+    ],
+    "steps": [
+      "Place eggs in a saucepan and cover with water.",
+      "Bring to a boil, then reduce heat.",
+      "Simmer 6 min for soft, 10 min for hard-boiled.",
+      "Cool in ice water and peel."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "1 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Egg", "Vegetarian", "Vegan (if excluded)"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "boiled_eggs.jpg"
+  },
+  {
+    "id": 70,
+    "title": "Omelette",
+    "description": "Fluffy omelette with your choice of fillings.",
+    "ingredients": [
+      "2 eggs",
+      "1 tbsp milk",
+      "Salt and pepper",
+      "1 tsp oil or butter",
+      "Optional: cheese, tomatoes, onions, herbs"
+    ],
+    "steps": [
+      "Beat eggs with milk, salt, and pepper.",
+      "Heat pan with oil, pour in mixture.",
+      "Add fillings on one side when nearly set.",
+      "Fold and cook another minute, then serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "omelette.jpg"
+  },
+  {
+    "id": 71,
+    "title": "Spanish Omelette (Tortilla Española)",
+    "description": "Hearty Spanish-style omelette with potatoes and onions.",
+    "ingredients": [
+      "3 eggs",
+      "1 potato, thinly sliced",
+      "1/2 onion, chopped",
+      "3 tbsp oil",
+      "Salt"
+    ],
+    "steps": [
+      "Fry potato slices and onions until soft.",
+      "Beat eggs, add cooked veggies, and mix.",
+      "Pour into pan and cook on both sides until set.",
+      "Slice and serve warm or cold."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["Spanish", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "spanish_omelette.jpg"
+  },
+  {
+    "id": 72,
+    "title": "Egg Curry",
+    "description": "Boiled eggs simmered in a rich tomato-spiced curry.",
+    "ingredients": [
+      "4 boiled eggs",
+      "1 onion, chopped",
+      "2 tomatoes, blended",
+      "1 tsp garlic ginger paste",
+      "1/2 tsp turmeric",
+      "1/2 tsp chili powder",
+      "1/2 tsp cumin",
+      "1/2 tsp coriander",
+      "Salt and oil"
+    ],
+    "steps": [
+      "Sauté onions, add spices, and cook till fragrant.",
+      "Add tomato puree and simmer.",
+      "Add eggs (whole or halved) and simmer 5–10 minutes.",
+      "Serve hot with rice or chapati."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 2,
+    "tags": ["Indian", "Main Dish", "Egg", "Non-Vegetarian (for some diets)"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_curry.jpg"
+  },
+  {
+    "id": 73,
+    "title": "Deviled Eggs",
+    "description": "Classic party snack made by filling boiled eggs with a creamy yolk mix.",
+    "ingredients": [
+      "4 boiled eggs",
+      "2 tbsp mayonnaise",
+      "1 tsp mustard",
+      "Salt and paprika"
+    ],
+    "steps": [
+      "Cut eggs in half, remove yolks.",
+      "Mash yolks with mayo, mustard, salt.",
+      "Spoon or pipe back into egg whites.",
+      "Sprinkle with paprika."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 4,
+    "tags": ["Snack", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "deviled_eggs.jpg"
+  },
+  {
+    "id": 74,
+    "title": "Egg Fried Rice",
+    "description": "Quick stir-fry with rice, scrambled eggs, and veggies.",
+    "ingredients": [
+      "2 cups cooked rice",
+      "2 eggs, beaten",
+      "1/2 cup peas and carrots",
+      "2 tbsp soy sauce",
+      "1 tbsp oil"
+    ],
+    "steps": [
+      "Scramble eggs in oil and set aside.",
+      "Sauté veggies, then add rice and soy sauce.",
+      "Mix in scrambled eggs and stir well.",
+      "Serve hot."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Asian", "Egg", "Main Dish", "Non-Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_fried_rice.jpg"
+  },
+  {
+    "id": 75,
+    "title": "Shakshuka",
+    "description": "North African spiced tomato sauce with poached eggs.",
+    "ingredients": [
+      "2 eggs",
+      "1/2 onion, chopped",
+      "1 garlic clove, minced",
+      "1 cup tomatoes, blended",
+      "1/2 tsp cumin",
+      "1/2 tsp paprika",
+      "Salt, pepper, oil"
+    ],
+    "steps": [
+      "Sauté onions and garlic in oil.",
+      "Add spices and tomatoes, simmer until thick.",
+      "Make wells and crack eggs into sauce.",
+      "Cover and cook until whites are set.",
+      "Serve with bread."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["North African", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "shakshuka.jpg"
+  },
+  {
+    "id": 76,
+    "title": "Egg Sandwich",
+    "description": "A classic egg salad sandwich for breakfast or lunch.",
+    "ingredients": [
+      "2 boiled eggs, chopped",
+      "1 tbsp mayonnaise",
+      "Salt and pepper",
+      "2 slices bread"
+    ],
+    "steps": [
+      "Mash eggs with mayo, salt, and pepper.",
+      "Spread on one slice of bread and top with the other.",
+      "Cut in half and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_sandwich.jpg"
+  },
+  {
+    "id": 77,
+    "title": "Tomato Egg Stir Fry",
+    "description": "Quick and flavorful Chinese-style egg stir fry with tomatoes.",
+    "ingredients": [
+      "2 eggs, beaten",
+      "2 tomatoes, chopped",
+      "1 tsp sugar",
+      "Salt, pepper",
+      "1 tbsp oil"
+    ],
+    "steps": [
+      "Scramble eggs and set aside.",
+      "Stir-fry tomatoes with sugar and salt.",
+      "Add eggs back in and stir to combine.",
+      "Serve with rice or noodles."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Asian", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "tomato_egg_stirfry.jpg"
+  },
+
+  {
+    "id": 78,
+    "title": "Fresh Mango Juice",
+    "description": "Sweet, tropical mango juice perfect for a hot day.",
+    "ingredients": [
+      "2 ripe mangoes, peeled and chopped",
+      "1 cup cold water",
+      "1 tbsp sugar (optional)",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Blend mangoes with water until smooth.",
+      "Strain if desired.",
+      "Add sugar to taste and serve chilled with ice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Juice", "Kenyan", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "mango_juice.jpg"
+  },
+  {
+    "id": 79,
+    "title": "Pineapple Mint Juice",
+    "description": "Refreshing juice made with pineapple and fresh mint.",
+    "ingredients": [
+      "1/2 pineapple, chopped",
+      "1/2 cup cold water",
+      "A few fresh mint leaves",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Blend pineapple with water and mint.",
+      "Strain and serve chilled with ice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Juice", "Tropical", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "pineapple_mint_juice.jpg"
+  },
+  {
+    "id": 80,
+    "title": "Dawa Drink",
+    "description": "Popular Kenyan honey, lemon, and ginger drink known for its healing properties.",
+    "ingredients": [
+      "1 tbsp honey",
+      "1 lemon, juiced",
+      "1 tsp grated ginger",
+      "1/2 cup hot water",
+      "1 stick of honey dipper or stirrer"
+    ],
+    "steps": [
+      "Place honey, lemon juice, and ginger in a glass.",
+      "Add hot water and stir with honey stick until well mixed.",
+      "Serve warm for best effect."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "2 min",
+    "servings": 1,
+    "tags": ["Kenyan", "Traditional", "Healthy", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "dawa.jpg"
+  },
+  {
+    "id": 81,
+    "title": "Tamarind Juice (Ukwaju)",
+    "description": "Tangy East African tamarind drink sweetened with sugar.",
+    "ingredients": [
+      "1/2 cup tamarind pulp",
+      "2 cups water",
+      "2 tbsp sugar (or honey to taste)",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Soak tamarind pulp in warm water for 10 minutes.",
+      "Mash and strain to remove seeds and fibers.",
+      "Add sugar, stir, and serve over ice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "15 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Kenyan", "Juice", "Vegan", "Traditional"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "tamarind_juice.jpg"
+  },
+  {
+    "id": 82,
+    "title": "Tropical Smoothie",
+    "description": "A chilled blend of mango, banana, and pineapple.",
+    "ingredients": [
+      "1 banana",
+      "1/2 cup chopped pineapple",
+      "1/2 cup mango",
+      "1/2 cup yogurt",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Blend all ingredients until smooth.",
+      "Serve chilled in a glass with a straw."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Smoothie", "Tropical", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "tropical_smoothie.jpg"
+  },
+  {
+    "id": 83,
+    "title": "Passion Fruit Juice",
+    "description": "Tangy and aromatic passion fruit juice.",
+    "ingredients": [
+      "4 passion fruits",
+      "1 cup cold water",
+      "1 tbsp sugar (optional)",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Scoop pulp into a blender, pulse gently.",
+      "Strain to remove seeds, mix with water and sugar.",
+      "Serve over ice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Juice", "Tropical", "Kenyan", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "passion_juice.jpg"
+  },
+  {
+    "id": 84,
+    "title": "Sugarcane Juice",
+    "description": "Naturally sweet sugarcane juice popular in many parts of Africa.",
+    "ingredients": [
+      "Fresh sugarcane stalks (juiced)",
+      "1/2 tsp ginger juice (optional)",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Extract juice from sugarcane using a juicer.",
+      "Mix with ginger juice if desired.",
+      "Serve chilled over ice."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Kenyan", "Juice", "Vegan", "Street Drink"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "sugarcane_juice.jpg"
+  },
+  {
+    "id": 85,
+    "title": "Watermelon Juice",
+    "description": "Hydrating and naturally sweet watermelon juice.",
+    "ingredients": [
+      "2 cups chopped watermelon (seedless)",
+      "1/2 lime, juiced",
+      "Ice cubes"
+    ],
+    "steps": [
+      "Blend watermelon until smooth.",
+      "Strain if needed. Add lime juice.",
+      "Serve chilled over ice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Juice", "Vegan", "Tropical", "Kenyan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "watermelon_juice.jpg"
+  },
+
+  {
+    "id": 86,
+    "title": "Cucumber Avocado Salad",
+    "description": "Creamy avocado with refreshing cucumber and lime.",
+    "ingredients": [
+      "1 cucumber, sliced",
+      "1 avocado, diced",
+      "Juice of 1 lime",
+      "Salt and pepper to taste"
+    ],
+    "steps": [
+      "Mix cucumber and avocado in a bowl.",
+      "Add lime juice, salt, and pepper.",
+      "Serve chilled."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "cucumber_avocado_salad.jpg"
+  },
+  {
+    "id": 87,
+    "title": "Simple Garden Salad",
+    "description": "Fresh lettuce, tomatoes, and cucumber with olive oil dressing.",
+    "ingredients": [
+      "1 cup lettuce, chopped",
+      "1 tomato, diced",
+      "1/2 cucumber, sliced",
+      "1 tbsp olive oil",
+      "1 tsp vinegar",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Combine veggies in a bowl.",
+      "Drizzle with olive oil and vinegar.",
+      "Toss gently and season to taste."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegan", "Healthy"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "garden_salad.jpg"
+  },
+  {
+    "id": 88,
+    "title": "Chickpea Salad",
+    "description": "Protein-packed salad with chickpeas, veggies, and lemon dressing.",
+    "ingredients": [
+      "1 cup cooked chickpeas",
+      "1 tomato, diced",
+      "1/4 onion, chopped",
+      "1 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Combine chickpeas and veggies in a bowl.",
+      "Add olive oil, lemon juice, salt, and pepper.",
+      "Toss well and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegan", "Healthy"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "chickpea_salad.jpg"
+  },
+  {
+    "id": 89,
+    "title": "Fruit Salad with Yogurt",
+    "description": "Sweet fruit medley served with creamy yogurt.",
+    "ingredients": [
+      "1 banana, sliced",
+      "1 apple, diced",
+      "1/2 cup grapes",
+      "1/2 cup yogurt",
+      "1 tsp honey (optional)"
+    ],
+    "steps": [
+      "Mix fruits in a bowl.",
+      "Top with yogurt and drizzle honey.",
+      "Serve immediately."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegetarian", "Dessert"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "fruit_yogurt_salad.jpg"
+  },
+  {
+    "id": 90,
+    "title": "Quinoa Vegetable Salad",
+    "description": "Wholesome salad with quinoa, veggies, and lemon dressing.",
+    "ingredients": [
+      "1 cup cooked quinoa",
+      "1/2 cup bell peppers, diced",
+      "1/2 cucumber, diced",
+      "1 tbsp lemon juice",
+      "1 tbsp olive oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Combine quinoa and vegetables.",
+      "Drizzle lemon juice and olive oil.",
+      "Toss gently and season."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "15 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegan", "Healthy"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "quinoa_salad.jpg"
+  },
+  {
+    "id": 91,
+    "title": "Egg Salad",
+    "description": "Chopped boiled eggs with creamy mayo dressing.",
+    "ingredients": [
+      "2 boiled eggs, chopped",
+      "1 tbsp mayonnaise",
+      "1/2 tsp mustard",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix chopped eggs with mayo and mustard.",
+      "Season to taste and serve on toast or in a sandwich."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Salad", "Egg", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_salad.jpg"
+  },
+  {
+    "id": 92,
+    "title": "Avocado Tomato Salad",
+    "description": "Creamy avocado with juicy tomatoes and lemon.",
+    "ingredients": [
+      "1 avocado, diced",
+      "2 tomatoes, chopped",
+      "Juice of 1 lemon",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix avocado and tomatoes.",
+      "Add lemon juice, salt, and pepper.",
+      "Serve fresh with chapati or toast."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegetarian", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "avocado_tomato_salad.jpg"
+  },
+  {
+    "id": 93,
+    "title": "Cabbage Carrot Slaw (No Mayo)",
+    "description": "Light and crunchy cabbage slaw dressed with lemon and oil.",
+    "ingredients": [
+      "1 cup cabbage, shredded",
+      "1/2 cup carrot, grated",
+      "1 tbsp lemon juice",
+      "1 tbsp olive oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix cabbage and carrots in a bowl.",
+      "Drizzle lemon juice and oil, then toss well.",
+      "Season and chill before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegan", "Healthy"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "cabbage_slaw.jpg"
+  },
+  {
+  "id": 94,
+  "title": "Grilled Chicken Salad",
+  "description": "A hearty and healthy salad with grilled chicken, veggies, and a light dressing.",
+  "ingredients": [
+    "1 grilled chicken breast, sliced",
+    "2 cups lettuce or mixed greens",
+    "1/2 cucumber, sliced",
+    "1 tomato, chopped",
+    "1/4 red onion, thinly sliced",
+    "1 tbsp olive oil",
+    "1 tbsp lemon juice",
+    "Salt and pepper"
+  ],
+  "steps": [
+    "Grill or pan-sear the chicken breast, then slice it thinly.",
+    "In a bowl, combine lettuce, cucumber, tomato, and onion.",
+    "Add the grilled chicken on top.",
+    "Drizzle with olive oil and lemon juice.",
+    "Season with salt and pepper, toss lightly, and serve."
+  ],
+  "difficulty": "Easy",
+  "prepTime": "10 min",
+  "cookTime": "10 min",
+  "servings": 2,
+  "tags": ["Salad", "Chicken", "High Protein", "Non-Vegetarian"],
+  "vegetarian": false,
+  "vegan": false,
+  "image": "chicken_salad.jpg"
+},
+
+  {
+    "id": 95,
+    "title": "Tuna Salad",
+    "description": "Quick and filling salad with tuna, veggies, and lemon dressing.",
+    "ingredients": [
+      "1 can tuna in water, drained",
+      "1/2 cucumber, chopped",
+      "1/2 tomato, chopped",
+      "1/4 onion, finely chopped",
+      "1 tbsp olive oil",
+      "1 tbsp lemon juice",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "In a bowl, combine tuna, cucumber, tomato, and onion.",
+      "Drizzle with olive oil and lemon juice.",
+      "Toss gently and season to taste."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Tuna", "Protein", "Low-Carb"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "tuna_salad.jpg"
+  },
+  {
+    "id": 96,
+    "title": "Tofu Salad",
+    "description": "A refreshing plant-based salad with crispy tofu and fresh veggies.",
+    "ingredients": [
+      "1/2 block firm tofu, cubed",
+      "1 cup lettuce or spinach",
+      "1/2 carrot, shredded",
+      "1/4 cucumber, sliced",
+      "1 tbsp soy sauce",
+      "1 tsp sesame oil",
+      "1 tsp vinegar"
+    ],
+    "steps": [
+      "Lightly pan-fry tofu cubes until golden and set aside.",
+      "Mix greens and veggies in a bowl.",
+      "Top with tofu, drizzle soy sauce, sesame oil, and vinegar.",
+      "Toss and serve chilled."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "5 min",
+    "servings": 2,
+    "tags": ["Salad", "Tofu", "Vegan", "High Protein"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "tofu_salad.jpg"
+  },
+  {
+    "id": 97,
+    "title": "Bean Salad",
+    "description": "Colorful protein-rich salad with kidney beans, corn, and bell peppers.",
+    "ingredients": [
+      "1 cup cooked or canned kidney beans",
+      "1/2 cup corn kernels",
+      "1/4 bell pepper, diced",
+      "1/4 onion, chopped",
+      "1 tbsp olive oil",
+      "1 tbsp vinegar or lemon juice",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Mix beans, corn, peppers, and onion in a bowl.",
+      "Drizzle with olive oil and vinegar or lemon.",
+      "Toss well and season to taste."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Vegan", "Protein", "African-Inspired"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "bean_salad.jpg"
+  },
+  {
+    "id": 98,
+    "title": "Egg & Bacon Salad",
+    "description": "Savory salad with boiled eggs, crispy bacon, and greens.",
+    "ingredients": [
+      "2 boiled eggs, chopped",
+      "2 slices of bacon, cooked and crumbled",
+      "1 cup lettuce or spinach",
+      "1 tbsp mayonnaise or yogurt",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Place greens in a bowl.",
+      "Top with chopped eggs and crumbled bacon.",
+      "Add dressing, toss gently, and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "5 min",
+    "servings": 2,
+    "tags": ["Salad", "Protein", "Non-Vegetarian"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "egg_bacon_salad.jpg"
+  },
+  {
+    "id": 99,
+    "title": "Chickpea Tuna Salad",
+    "description": "High-protein combo of chickpeas and tuna, great for lunch or meal prep.",
+    "ingredients": [
+      "1/2 cup cooked chickpeas",
+      "1/2 can tuna",
+      "1/4 onion, chopped",
+      "1 tbsp lemon juice",
+      "1 tbsp olive oil",
+      "Salt, pepper, parsley"
+    ],
+    "steps": [
+      "Mix chickpeas, tuna, and onion in a bowl.",
+      "Add lemon juice, olive oil, and seasonings.",
+      "Toss well and chill before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 2,
+    "tags": ["Salad", "Tuna", "Protein", "Meal Prep"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "chickpea_tuna_salad.jpg"
+  },
+
+  {
+    "id": 100,
+    "title": "Fried Egg Sandwich",
+    "description": "Simple sandwich with a seasoned fried egg and tomato.",
+    "ingredients": [
+      "2 slices of bread",
+      "1 egg",
+      "1 tomato, sliced",
+      "1 tsp oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Fry the egg with salt and pepper.",
+      "Toast the bread (optional).",
+      "Place egg and tomato slices between bread slices.",
+      "Serve hot or packed."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Egg", "Kenyan", "Protein"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "fried_egg_sandwich.jpg"
+  },
+  {
+    "id": 101,
+    "title": "Minced Meat Sandwich",
+    "description": "Flavorful minced beef or chicken served between slices of bread.",
+    "ingredients": [
+      "1/2 cup cooked minced meat (beef or chicken)",
+      "1/4 onion, chopped",
+      "2 slices of bread",
+      "1 tsp tomato paste or ketchup",
+      "1 tsp oil",
+      "Salt and spices"
+    ],
+    "steps": [
+      "Sauté onion and add minced meat with tomato paste and spices.",
+      "Cook until done and slightly dry.",
+      "Spread between slices of bread and serve hot."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Beef", "Chicken", "Kenyan", "Protein"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "mince_sandwich.jpg"
+  },
+  {
+    "id": 102,
+    "title": "Beans and Avocado Sandwich",
+    "description": "Healthy sandwich with mashed beans and creamy avocado.",
+    "ingredients": [
+      "1/2 cup cooked beans, mashed",
+      "1/2 avocado, sliced or mashed",
+      "Salt and pepper",
+      "2 slices brown or white bread"
+    ],
+    "steps": [
+      "Mash beans with a pinch of salt and pepper.",
+      "Spread mashed beans and avocado on bread.",
+      "Close sandwich and serve chilled or warm."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Vegan", "Protein", "Kenyan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "beans_avocado_sandwich.jpg"
+  },
+  {
+    "id": 103,
+    "title": "Grilled Chicken Sandwich",
+    "description": "Juicy grilled chicken sandwich with fresh vegetables.",
+    "ingredients": [
+      "1/2 grilled chicken breast, sliced",
+      "2 slices of bread",
+      "Lettuce or spinach",
+      "1 slice tomato",
+      "1 tbsp mayonnaise or chili sauce"
+    ],
+    "steps": [
+      "Place grilled chicken on one bread slice.",
+      "Top with lettuce, tomato, and mayo or sauce.",
+      "Close sandwich and serve grilled or plain."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Chicken", "Protein", "Kenyan"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "grilled_chicken_sandwich.jpg"
+  },
+  {
+    "id": 104,
+    "title": "Boiled Egg & Cabbage Sandwich",
+    "description": "Affordable and filling sandwich with chopped egg and stir-fried cabbage.",
+    "ingredients": [
+      "1 boiled egg, chopped",
+      "1/4 cup cooked cabbage",
+      "Salt and black pepper",
+      "2 slices of bread",
+      "1 tsp mayonnaise or margarine (optional)"
+    ],
+    "steps": [
+      "Chop boiled egg and mix with cabbage.",
+      "Season with salt, pepper, and optional mayo.",
+      "Spread on bread and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Egg", "Kenyan", "Protein"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_cabbage_sandwich.jpg"
+  },
+
+  {
+    "id": 105,
+    "title": "Smocha (Smokie Wrap)",
+    "description": "Popular Kenyan street snack: a smokie wrapped in a samosa sheet.",
+    "ingredients": [
+      "1 smokie (beef or chicken sausage)",
+      "1 large chapati",
+      "Tomato sauce, choma sauce or chili sauce",
+      "Onions, avocado and kachumbari (optional)"
+    ],
+    "steps": [
+      "Cook smokie until heated through.",
+      "Place smokie on chapati.",
+      "Add sauce and optional kachumbari.",
+      "Wrap tightly and serve warm."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Kenyan", "Street Food", "Beef"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "smocha.jpg"
+  },
+  {
+    "id": 106,
+    "title": "Kenyan Boerwors Hotdog",
+    "description": "Kenyan twist on the classic hotdog using local boerwors sausage.",
+    "ingredients": [
+      "1 boerwors sausage, grilled or pan-fried",
+      "1 hotdog bun or soft roll",
+      "Tomato and onion salsa (kachumbari)",
+      "Mustard or ketchup"
+    ],
+    "steps": [
+      "Grill or fry boerwors until cooked through.",
+      "Place inside bun with tomato-onion salsa.",
+      "Add ketchup or mustard and serve hot."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Kenyan", "Hotdog", "Beef"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "kenyan_hotdog.jpg"
+  },
+  {
+    "id": 107,
+    "title": "BLT Sandwich",
+    "description": "Classic sandwich with crispy bacon, lettuce, and tomato.",
+    "ingredients": [
+      "2 slices bread (toasted)",
+      "2 slices crispy bacon",
+      "Lettuce leaves",
+      "2 slices tomato",
+      "1 tbsp mayonnaise"
+    ],
+    "steps": [
+      "Toast bread slices.",
+      "Spread mayonnaise on one or both sides.",
+      "Layer bacon, lettuce, and tomato.",
+      "Close sandwich and serve warm or cold."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Bacon", "Classic", "Protein"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "blt_sandwich.jpg"
+  },
+  {
+    "id": 108,
+    "title": "Veggie Club Sandwich",
+    "description": "Triple-decker sandwich packed with fresh vegetables and spread.",
+    "ingredients": [
+      "3 slices of bread (toasted)",
+      "1/2 avocado, mashed",
+      "1/4 cucumber, sliced",
+      "1 tomato, sliced",
+      "Lettuce leaves",
+      "Salt, pepper"
+    ],
+    "steps": [
+      "Toast the 3 bread slices.",
+      "Spread mashed avocado on bottom slice, top with cucumber.",
+      "Add second slice of bread, then tomato and lettuce.",
+      "Top with third slice, press gently, and cut in half."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "0 min",
+    "servings": 1,
+    "tags": ["Sandwich", "Vegetarian", "Healthy", "Layered"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "veggie_club.jpg"
+  },
+
+  {
+    "id": 109,
+    "title": "Creamy Mushroom Soup",
+    "description": "Rich and velvety soup made with mushrooms, cream, and herbs.",
+    "ingredients": [
+      "200g mushrooms, chopped",
+      "1 small onion, diced",
+      "2 cloves garlic, minced",
+      "1 cup milk or cream",
+      "2 tbsp flour",
+      "2 tbsp butter or oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Sauté onions and garlic in butter until soft.",
+      "Add mushrooms and cook until browned.",
+      "Stir in flour to thicken.",
+      "Add milk or cream and simmer until creamy.",
+      "Season and blend for a smooth texture (optional)."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 2,
+    "tags": ["Soup", "Mushroom", "Creamy", "Vegetarian"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "creamy_mushroom_soup.jpg"
+  },
+  {
+    "id": 110,
+    "title": "Bone Broth",
+    "description": "Nutritious slow-cooked broth from beef or chicken bones.",
+    "ingredients": [
+      "500g beef or chicken bones",
+      "1 carrot, chopped",
+      "1 onion, chopped",
+      "2 cloves garlic",
+      "Salt, pepper",
+      "Water to cover"
+    ],
+    "steps": [
+      "Place bones and vegetables in a large pot.",
+      "Cover with water and bring to a boil.",
+      "Simmer for 2–3 hours (or more) on low heat.",
+      "Strain and season to taste before serving."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "3 hrs",
+    "servings": 4,
+    "tags": ["Soup", "Bone Broth", "Kenyan", "Non-Vegetarian", "Healthy"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "bone_broth.jpg"
+  },
+  {
+    "id": 111,
+    "title": "Tomato Basil Soup",
+    "description": "Bright and flavorful soup with tomatoes and fresh basil.",
+    "ingredients": [
+      "4 ripe tomatoes, chopped",
+      "1 onion, chopped",
+      "2 cloves garlic",
+      "1 tbsp tomato paste",
+      "1 cup water or broth",
+      "Fresh basil leaves",
+      "Salt, pepper, sugar (optional)"
+    ],
+    "steps": [
+      "Sauté onion and garlic until golden.",
+      "Add tomatoes and cook until soft.",
+      "Stir in tomato paste and add water or broth.",
+      "Simmer for 15 minutes, then blend until smooth.",
+      "Stir in chopped basil and serve."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 2,
+    "tags": ["Soup", "Tomato", "Vegan", "Light"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "tomato_basil_soup.jpg"
+  },
+  {
+    "id": 112,
+    "title": "Pumpkin Soup",
+    "description": "Smooth and nourishing pumpkin soup spiced with garlic and herbs.",
+    "ingredients": [
+      "2 cups pumpkin, peeled and cubed",
+      "1 small onion, chopped",
+      "2 cloves garlic",
+      "1 tbsp oil or butter",
+      "1/2 tsp nutmeg or curry powder",
+      "1 cup water or broth",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Sauté onions and garlic in oil.",
+      "Add pumpkin cubes and spices.",
+      "Add water or broth and cook until soft.",
+      "Blend until smooth and adjust seasoning.",
+      "Serve hot with bread or crackers."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "20 min",
+    "servings": 2,
+    "tags": ["Soup", "Pumpkin", "Vegetarian", "Comfort Food"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "pumpkin_soup.jpg"
+  },
+  {
+    "id": 113,
+    "title": "Chicken Noodle Soup",
+    "description": "Comforting chicken soup with noodles and vegetables.",
+    "ingredients": [
+      "1 chicken breast, shredded",
+      "1/2 cup noodles",
+      "1 carrot, sliced",
+      "1/2 onion, chopped",
+      "1 clove garlic",
+      "1 tsp oil",
+      "3 cups water or broth",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Cook chicken, shred and set aside.",
+      "Sauté onion, garlic, and carrot in oil.",
+      "Add water or broth and bring to boil.",
+      "Add noodles and cook until soft.",
+      "Stir in shredded chicken, season, and simmer 5 minutes."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 2,
+    "tags": ["Soup", "Chicken", "Noodles", "Comfort Food"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "chicken_noodle_soup.jpg"
+  },
+
+  {
+    "id": 114,
+    "title": "Kenyan Uji (Millet Porridge)",
+    "description": "Traditional fermented millet porridge, served warm and slightly tangy.",
+    "ingredients": [
+      "1/2 cup millet flour",
+      "3 cups water",
+      "2 tbsp sugar or honey (optional)",
+      "1/2 tsp grated ginger (optional)"
+    ],
+    "steps": [
+      "In a bowl, mix millet flour with 1 cup of cold water to make a slurry.",
+      "Bring the remaining 2 cups of water to a boil.",
+      "Pour in the slurry while stirring constantly to avoid lumps.",
+      "Simmer for 10–15 minutes, stirring often.",
+      "Add sugar or honey and optional ginger before serving."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "15 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Kenyan", "Hot Drink", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "kenyan_uji.jpg"
+  },
+  {
+    "id": 115,
+    "title": "Kenyan Chai (Spiced Tea)",
+    "description": "Milky black tea infused with spices like ginger, cardamom, and cinnamon.",
+    "ingredients": [
+      "2 cups water",
+      "2 black tea bags or 2 tsp loose tea",
+      "1 cup milk",
+      "2 tbsp sugar (or to taste)",
+      "1/2 inch ginger, crushed",
+      "2 cardamom pods (optional)"
+    ],
+    "steps": [
+      "Boil water with ginger and cardamom for 3–5 minutes.",
+      "Add tea and simmer for another 2 minutes.",
+      "Add milk and bring to a gentle boil.",
+      "Add sugar and stir.",
+      "Strain and serve hot."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Kenyan", "Tea", "Hot Drink"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "kenyan_chai.jpg"
+  },
+  {
+    "id": 116,
+    "title": "Black Coffee (Kahawa Chungu)",
+    "description": "Strong unsweetened black coffee served hot, often with mandazi or bread.",
+    "ingredients": [
+      "2 tsp ground coffee",
+      "2 cups water",
+      "Optional: cardamom or cinnamon"
+    ],
+    "steps": [
+      "Bring water to a boil.",
+      "Add ground coffee and optional spices.",
+      "Simmer for 3–5 minutes.",
+      "Strain and serve hot — no sugar needed."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "3 min",
+    "cookTime": "5 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Kenyan", "Hot Drink", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "black_coffee.jpg"
+  },
+  {
+    "id": 117,
+    "title": "Fried Eggs and Toast",
+    "description": "Classic breakfast plate with sunny-side-up eggs and toasted bread.",
+    "ingredients": [
+      "2 eggs",
+      "1 tsp oil or butter",
+      "Salt and pepper",
+      "2 slices of bread"
+    ],
+    "steps": [
+      "Heat oil or butter in a pan.",
+      "Crack eggs and fry to desired doneness.",
+      "Season with salt and pepper.",
+      "Toast the bread and serve with the eggs."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "3 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Eggs", "Classic"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "fried_eggs_toast.jpg"
+  },
+  {
+    "id": 118,
+    "title": "Boiled Sweet Potatoes",
+    "description": "Traditional Kenyan breakfast of tender boiled sweet potatoes.",
+    "ingredients": [
+      "2 medium sweet potatoes, peeled or unpeeled",
+      "Water to cover",
+      "Pinch of salt (optional)"
+    ],
+    "steps": [
+      "Wash sweet potatoes thoroughly.",
+      "Place in a pot and cover with water.",
+      "Boil for 20–30 minutes until soft when pierced.",
+      "Drain and serve hot with tea or porridge."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "25 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Kenyan", "Healthy", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "boiled_sweet_potatoes.jpg"
+  },
+  {
+    "id": 119,
+    "title": "Steamed Arrowroots (Nduma)",
+    "description": "Nutritious and filling steamed arrowroots, commonly served for breakfast in Kenya.",
+    "ingredients": [
+      "2 medium arrowroots (nduma)",
+      "Water for steaming"
+    ],
+    "steps": [
+      "Scrub and clean arrowroots well.",
+      "Steam or boil for 30–40 minutes until fork tender.",
+      "Let cool slightly, peel, and serve warm."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "35 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Kenyan", "Traditional", "Vegan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "steamed_arrowroots.jpg"
+  },
+  {
+    "id": 120,
+    "title": "Fluffy Pancakes",
+    "description": "Soft, fluffy pancakes perfect for a quick breakfast or brunch.",
+    "ingredients": [
+      "1 cup all-purpose flour",
+      "1 tbsp sugar",
+      "1 tsp baking powder",
+      "1/2 tsp salt",
+      "1 egg",
+      "1 cup milk",
+      "1 tbsp oil or melted butter"
+    ],
+    "steps": [
+      "In a bowl, whisk together dry ingredients.",
+      "Add egg, milk, and oil. Mix until smooth.",
+      "Heat a lightly oiled pan over medium heat.",
+      "Pour 1/4 cup batter and cook until bubbles form.",
+      "Flip and cook other side until golden."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "15 min",
+    "servings": 3,
+    "tags": ["Breakfast", "Pancakes", "Sweet", "Classic"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "fluffy_pancakes.jpg"
+  },
+  {
+    "id": 121,
+    "title": "French Toast",
+    "description": "Golden slices of bread dipped in a cinnamon-vanilla egg mixture and pan-fried to perfection.",
+    "ingredients": [
+      "4 slices of bread",
+      "2 eggs",
+      "1/4 cup milk",
+      "1/2 tsp cinnamon",
+      "1/2 tsp vanilla essence",
+      "1 tsp butter or oil for frying"
+    ],
+    "steps": [
+      "Whisk eggs, milk, cinnamon, and vanilla together in a bowl.",
+      "Dip each slice of bread into the mixture.",
+      "Heat butter or oil in a pan over medium heat.",
+      "Fry each slice until golden brown on both sides.",
+      "Serve hot with syrup, fruit, or honey."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 2,
+    "tags": ["Breakfast", "Sweet", "Egg", "Quick"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "french_toast.jpg"
+  },
+  {
+    "id": 122,
+    "title": "Egg and Spinach Breakfast Wrap",
+    "description": "A healthy wrap filled with scrambled eggs and sautéed spinach — quick and nourishing.",
+    "ingredients": [
+      "2 eggs",
+      "1 handful fresh spinach",
+      "1 small onion, chopped",
+      "1 tortilla or chapati",
+      "1 tsp oil",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Sauté onions and spinach in oil until wilted.",
+      "Scramble eggs in the pan with spinach and season.",
+      "Warm the tortilla or chapati.",
+      "Fill with egg-spinach mixture, roll up, and serve warm."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Wrap", "Egg", "Healthy"],
+    "vegetarian": true,
+    "vegan": false,
+    "image": "egg_spinach_wrap.jpg"
+  },
+  {
+    "id": 123,
+    "title": "Avocado and Bean Wrap",
+    "description": "Vegan-friendly wrap packed with creamy avocado and spiced beans.",
+    "ingredients": [
+      "1/2 avocado, mashed",
+      "1/2 cup cooked beans",
+      "1 tsp chili sauce or tomato paste",
+      "Salt and pepper",
+      "1 chapati or flatbread"
+    ],
+    "steps": [
+      "Warm beans and mix with chili sauce, salt, and pepper.",
+      "Spread mashed avocado on chapati.",
+      "Add beans and roll up the wrap.",
+      "Slice and serve warm or chilled."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "5 min",
+    "cookTime": "5 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Wrap", "Vegan", "Protein"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "avocado_bean_wrap.jpg"
+  },
+  {
+    "id": 124,
+    "title": "Sausage and Tomato Breakfast Wrap",
+    "description": "Hearty wrap with sausage, eggs, and tomatoes — great for a filling start.",
+    "ingredients": [
+      "1 sausage, cooked and sliced",
+      "1 egg",
+      "1/2 tomato, chopped",
+      "1 chapati or tortilla",
+      "Salt and oil"
+    ],
+    "steps": [
+      "Scramble the egg with tomatoes and season.",
+      "Add cooked sausage slices.",
+      "Place the mixture in a warm chapati and wrap tightly.",
+      "Serve hot with a side of sauce."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "5 min",
+    "cookTime": "10 min",
+    "servings": 1,
+    "tags": ["Breakfast", "Wrap", "Kenyan", "Protein"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "sausage_egg_wrap.jpg"
+  },
+  {
+    "id": 125,
+    "title": "Kenyan Beef Stew",
+    "description": "Hearty and flavorful beef stew cooked with tomatoes, onions, and spices.",
+    "ingredients": [
+      "500g beef, cubed",
+      "2 tomatoes, chopped",
+      "1 onion, chopped",
+      "1 clove garlic, minced",
+      "1 tsp tomato paste",
+      "1 tsp oil",
+      "Salt",
+      "1tsp of Spices; curry powder, royco powder, royco beef cubes, black pepper, garam masala)",
+      "2 cups water or broth"
+    ],
+    "steps": [
+      "Sauté onion and garlic in oil until golden.",
+      "Add beef and brown on all sides.",
+      "Add tomatoes, paste, and spices, cook until soft.",
+      "Pour in water or broth, cover, and simmer for 45 minutes or until tender.",
+      "Adjust seasoning and serve hot."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "45 min",
+    "servings": 4,
+    "tags": ["Stew", "Beef", "Kenyan", "Main Dish"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "kenyan_beef_stew.jpg"
+  },
+  {
+    "id": 126,
+    "title": "Potato Stew",
+    "description": "Simple potato stew simmered in a tomato-onion sauce — perfect as a main or side dish.",
+    "ingredients": [
+      "3 large potatoes, peeled and cubed",
+      "2 tomatoes, chopped",
+      "1 onion, chopped",
+      "1/2 tsp turmeric",
+      "1 tsp curry powder",
+      "Salt and pepper",
+      "1 1/2 cups water",
+      "1 tbsp oil"
+    ],
+    "steps": [
+      "Heat oil and sauté onion until soft.",
+      "Add tomatoes and spices, cook until tomatoes break down.",
+      "Add potatoes and stir to coat.",
+      "Pour in water and simmer until potatoes are tender (20–25 min).",
+      "Serve hot with chapati or rice."
+    ],
+    "difficulty": "Easy",
+    "prepTime": "10 min",
+    "cookTime": "25 min",
+    "servings": 3,
+    "tags": ["Stew", "Potato", "Vegetarian", "Kenyan"],
+    "vegetarian": true,
+    "vegan": true,
+    "image": "potato_stew.jpg"
+  },
+  {
+    "id": 127,
+    "title": "Kenyan Chicken Stew",
+    "description": "Juicy chicken pieces simmered in a spiced tomato-onion base — a homestyle Kenyan favorite.",
+    "ingredients": [
+      "500g chicken pieces (with bone or boneless)",
+      "2 tomatoes, chopped",
+      "1 onion, chopped",
+      "1 tsp tomato paste",
+      "1 tsp garlic-ginger paste",
+      "1 tsp oil",
+      "Salt, curry powder, royco or chicken masala",
+      "2 cups water or broth"
+    ],
+    "steps": [
+      "Sauté onions until soft, then add garlic-ginger paste.",
+      "Add chicken and brown all sides.",
+      "Stir in tomatoes, paste, and spices; cook until soft.",
+      "Add water or broth and simmer for 30–40 min until chicken is tender.",
+      "Serve with ugali, rice, or chapati."
+    ],
+    "difficulty": "Medium",
+    "prepTime": "10 min",
+    "cookTime": "40 min",
+    "servings": 4,
+    "tags": ["Stew", "Chicken", "Kenyan", "Main"],
+    "vegetarian": false,
+    "vegan": false,
+    "image": "kenyan_chicken_stew.jpg"
+  }
+
+
+
+]
+
+
+
+
+
+
+
+}
