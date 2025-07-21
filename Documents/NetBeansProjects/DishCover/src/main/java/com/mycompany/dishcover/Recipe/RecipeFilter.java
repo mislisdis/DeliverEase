@@ -5,43 +5,56 @@ import java.util.List;
 public class RecipeFilter {
     private String name;
     private List<String> ingredients;
-    private Integer maxPrepTime;
-    private Integer maxCookTime;
+    private int maxCookTime;  // in minutes
     private String difficulty;
-    private Boolean vegetarian;
-    private Boolean vegan;
+    private boolean vegetarian;
+    private boolean vegan;
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    // Getter and setter for name
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public List<String> getIngredients() { return ingredients; }
-    public void setIngredients(List<String> ingredients) { this.ingredients = ingredients; }
+    // Getter and setter for ingredients
+    public List<String> getIngredients() {
+        return ingredients;
+    }
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
+    }
 
-    public Integer getMaxPrepTime() { return maxPrepTime; }
-    public void setMaxPrepTime(Integer maxPrepTime) { this.maxPrepTime = maxPrepTime; }
+    // Getter and setter for maxCookTime
+    public int getMaxCookTime() {
+        return maxCookTime;
+    }
+    public void setMaxCookTime(int maxCookTime) {
+        this.maxCookTime = maxCookTime;
+    }
 
-    public Integer getMaxCookTime() { return maxCookTime; }
-    public void setMaxCookTime(Integer maxCookTime) { this.maxCookTime = maxCookTime; }
+    // Getter and setter for difficulty
+    public String getDifficulty() {
+        return difficulty;
+    }
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
 
-    public String getDifficulty() { return difficulty; }
-    public void setDifficulty(String difficulty) { this.difficulty = difficulty; }
+    // Getter and setter for vegetarian
+    public boolean isVegetarian() {
+        return vegetarian;
+    }
+    public void setVegetarian(boolean vegetarian) {
+        this.vegetarian = vegetarian;
+    }
 
-    public Boolean getVegetarian() { return vegetarian; }
-    public void setVegetarian(Boolean vegetarian) { this.vegetarian = vegetarian; }
-
-    public Boolean getVegan() { return vegan; }
-    public void setVegan(Boolean vegan) { this.vegan = vegan; }
-
-    @Override
-    public String toString() {
-        return "RecipeFilter{" +
-                "name='" + name + '\'' +
-                ", ingredients=" + ingredients +
-                ", maxPrepTime=" + maxPrepTime +
-                ", maxCookTime=" + maxCookTime +
-                ", difficulty='" + difficulty + '\'' +
-                ", vegetarian=" + vegetarian +
-                ", vegan=" + vegan +
-                '}';
+    // Getter and setter for vegan
+    public boolean isVegan() {
+        return vegan;
+    }
+    public void setVegan(boolean vegan) {
+        this.vegan = vegan;
     }
 }
