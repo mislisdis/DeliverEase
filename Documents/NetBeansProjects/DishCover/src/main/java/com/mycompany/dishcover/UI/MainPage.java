@@ -5,6 +5,7 @@ import com.mycompany.dishcover.Recipe.RecipeFilter;
 import com.mycompany.dishcover.Recipe.RecipeService;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import com.mycompany.dishcover.UI.Component.*;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -37,7 +38,7 @@ public class MainPage extends VBox {
         showSearchComponents();
         showFindRecipesButton();
 
-        // Create scrollable recipe grid
+        // Scrollable recipe grid
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setFitToWidth(true);
         scrollPane.setStyle("-fx-background-color: transparent; -fx-background: transparent;");
@@ -48,6 +49,7 @@ public class MainPage extends VBox {
         VBox.setVgrow(scrollPane, Priority.ALWAYS);
         this.getChildren().add(scrollPane);
 
+        // Add footer
         Footer ft = new Footer();
         this.getChildren().add(ft);
     }
@@ -58,21 +60,21 @@ public class MainPage extends VBox {
     }
 
     private void showSearchComponents() {
-        // Add search bar
+        // Search bar
         searchBar = new SearchBar();
         searchBar.setPadding(new Insets(15, 15, 5, 15));
-        searchBar.setOnAction(event -> performSearch());  // press Enter to search
+        searchBar.setOnAction(event -> performSearch());  // search on Enter key
         this.getChildren().add(searchBar);
 
-        // Add filter component
+        // Filter section
         filterComponent = new FilterComponent();
         this.getChildren().add(filterComponent);
 
-        // Add cook time selector
+        // Cook time slider/input
         cookTimeSelector = new CookTimeSelector();
         this.getChildren().add(cookTimeSelector);
 
-        // Add ingredient search component
+        // Ingredient tab
         ingredientSearchTab = new IngredientSearchTab();
         ingredientSearchTab.setPadding(new Insets(5, 15, 15, 15));
         this.getChildren().add(ingredientSearchTab);
@@ -92,17 +94,20 @@ public class MainPage extends VBox {
     }
 
     private void performSearch() {
-        List<String> ingredients = ingredientSearchTab.getIngredients().stream()
-                .filter(ingredient -> !ingredient.isEmpty())
-                .collect(Collectors.toList());
-
-        int cookTime = cookTimeSelector.getCookTimeMinutes();
+        // Get input from UI
         String searchQuery = searchBar.getText();
+        List<String> ingredients = ingredientSearchTab.getIngredients().stream()
+                .filter(i -> !i.isEmpty())
+                .collect(Collectors.toList());
+        int cookTime = cookTimeSelector.getCookTimeMinutes();
+        String difficulty = filterComponent.getDifficulty();
+        boolean vegetarian = filterComponent.isVegetarianChecked();
+        boolean vegan = filterComponent.isVeganChecked();
 
-        // Build the filter
+        // Build recipe filter
         RecipeFilter filter = new RecipeFilter();
 
-        if (!searchQuery.isEmpty()) {
+        if (!searchQuery.isBlank()) {
             filter.setName(searchQuery);
         }
 
@@ -114,12 +119,19 @@ public class MainPage extends VBox {
             filter.setMaxCookTime(cookTime);
         }
 
-        // You can also add filter.setMaxPrepTime(...) if you have prep time input
+        if (difficulty != null && !difficulty.isBlank()) {
+            filter.setDifficulty(difficulty);
+        }
 
-        // Get filtered results
+        filter.setVegetarian(vegetarian);
+        filter.setVegan(vegan);
+
+        System.out.println("🔍 Search Filter: " + filter);
+
+        // Perform search
         List<Recipe> searchResults = recipeService.searchByFilter(filter);
 
-        // Display results
+        // Display search results
         recipeGrid.displayRecipes(searchResults);
     }
 }

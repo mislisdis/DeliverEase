@@ -11,7 +11,6 @@ public class RecipeFilter {
     private Boolean vegetarian;
     private Boolean vegan;
 
-    
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
@@ -32,4 +31,17 @@ public class RecipeFilter {
 
     public Boolean getVegan() { return vegan; }
     public void setVegan(Boolean vegan) { this.vegan = vegan; }
+
+    @Override
+    public String toString() {
+        return "RecipeFilter{" +
+                "name='" + name + '\'' +
+                ", ingredients=" + ingredients +
+                ", maxPrepTime=" + maxPrepTime +
+                ", maxCookTime=" + maxCookTime +
+                ", difficulty='" + difficulty + '\'' +
+                ", vegetarian=" + vegetarian +
+                ", vegan=" + vegan +
+                '}';
+    }
 }

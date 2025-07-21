@@ -16,13 +16,30 @@ public class RecipeService {
 
     public RecipeService() {
         loadRecipes();
+        System.out.println("Loaded " + recipes.size() + " recipes");
+recipes.forEach(r -> System.out.println("🔸 " + r.getName()));
     }
 
     private void loadRecipes() {
+        System.out.println("Attempting to load recipes from: " + RECIPE_JSON_PATH);
         try (InputStream inputStream = getClass().getResourceAsStream(RECIPE_JSON_PATH)) {
+
+            if (inputStream == null) {
+                System.err.println("Could not find 'recipes.json' at path: " + RECIPE_JSON_PATH);
+                recipes = new ArrayList<>();
+                return;
+            }
+
             ObjectMapper mapper = new ObjectMapper();
             recipes = mapper.readValue(inputStream, new TypeReference<List<Recipe>>() {});
-        } catch (IOException | NullPointerException e) {
+            System.out.println("Successfully loaded " + recipes.size() + " recipes.");
+
+            // Log first few recipe names
+            recipes.stream().limit(5).forEach(r ->
+                System.out.println("Loaded recipe: " + r.getName())
+            );
+
+        } catch (IOException e) {
             System.err.println("Error loading recipes: " + e.getMessage());
             recipes = new ArrayList<>();
         }
@@ -100,7 +117,7 @@ public class RecipeService {
                 .collect(Collectors.toList());
     }
 
-    // ✅ Corrected time parser: handles "1 hr 15 min", "45 min", etc.
+    // ✅ Parses strings like "1 hr 15 min", "45 min", etc.
     private int parseTimeString(String timeStr) {
         if (timeStr == null || timeStr.isEmpty()) return Integer.MAX_VALUE;
 
@@ -125,7 +142,7 @@ public class RecipeService {
                 totalMinutes += Integer.parseInt(minutePart);
             }
         } catch (NumberFormatException e) {
-            System.err.println("Error parsing time string: " + timeStr);
+            System.err.println("⚠️ Error parsing time string: " + timeStr);
             return Integer.MAX_VALUE;
         }
 
