@@ -22,9 +22,9 @@ public class RecipeCard extends StackPane {
         ThemeManager.getInstance().registerComponent(this);
         this.getStyleClass().add("recipe-card");
 
-        // Set dimensions
-        this.setPrefSize(150, 150);
-        this.setMaxSize(150, 150);
+        // Updated dimensions for better visibility
+        this.setPrefSize(220, 220);
+        this.setMaxSize(220, 220);
         this.setPadding(new Insets(5));
 
         createCardContent();
@@ -35,20 +35,16 @@ public class RecipeCard extends StackPane {
     }
 
     private void createCardContent() {
-        // Load recipe image
         ImageView recipeImageView = createRecipeImageView();
-
-        // Overlay with name and dietary tags
         VBox overlay = createOverlay();
-
         this.getChildren().addAll(recipeImageView, overlay);
     }
 
     private ImageView createRecipeImageView() {
         ImageView imageView = new ImageView();
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
+        imageView.setFitWidth(220);
+        imageView.setFitHeight(220);
+        imageView.setPreserveRatio(false);
 
         try {
             String imagePath = "/images/recipes/" + recipe.getImage_path();
@@ -65,7 +61,7 @@ public class RecipeCard extends StackPane {
             }
         }
 
-        Rectangle clip = new Rectangle(150, 150);
+        Rectangle clip = new Rectangle(220, 220);
         clip.setArcWidth(20);
         clip.setArcHeight(20);
         imageView.setClip(clip);

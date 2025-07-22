@@ -1,6 +1,4 @@
-
 package com.mycompany.dishcover.UI.Component;
-
 
 import com.mycompany.dishcover.MainApplication;
 import com.mycompany.dishcover.Recipe.Recipe;
@@ -13,18 +11,21 @@ import java.util.List;
 
 public class RecipeGrid extends VBox {
 
-    private FlowPane flowPane;
+    private final FlowPane flowPane;
 
     public RecipeGrid() {
-
         ThemeManager.getInstance().registerComponent(this);
+
+        this.setFillWidth(true); // Ensure VBox expands to fill width
 
         // Initialize the flow pane for recipe cards
         flowPane = new FlowPane();
         flowPane.setPadding(new Insets(20));
         flowPane.setHgap(15);
         flowPane.setVgap(15);
-        flowPane.setPrefWrapLength(400); // Set preferred wrap width
+        flowPane.setPrefWrapLength(1000); // Responsive wrapping
+        flowPane.setMaxWidth(Double.MAX_VALUE);
+        flowPane.prefWidthProperty().bind(this.widthProperty()); // Bind to VBox width
 
         this.getChildren().add(flowPane);
     }
@@ -33,19 +34,11 @@ public class RecipeGrid extends VBox {
      * Clear existing recipe cards and display new ones
      */
     public void displayRecipes(List<Recipe> recipes) {
-        // Clear existing cards
         flowPane.getChildren().clear();
 
-        // Add recipe cards for each recipe
         for (Recipe recipe : recipes) {
             RecipeCard recipeCard = new RecipeCard(recipe);
-
-            // Make cards clickable to show details
-            recipeCard.setOnMouseClicked(event -> {
-                // Trigger recipe detail view (to be implemented)
-                showRecipeDetails(recipe);
-            });
-
+            recipeCard.setOnMouseClicked(event -> showRecipeDetails(recipe));
             flowPane.getChildren().add(recipeCard);
         }
     }
@@ -54,9 +47,7 @@ public class RecipeGrid extends VBox {
      * Show details for a specific recipe
      */
     private void showRecipeDetails(Recipe recipe) {
-        // This would open a recipe detail page
         System.out.println("Show details for recipe: " + recipe.getName());
-        // Implementation of detailed view would go here
         MainApplication.getInstance().showRecipeDisplay(recipe);
     }
 }

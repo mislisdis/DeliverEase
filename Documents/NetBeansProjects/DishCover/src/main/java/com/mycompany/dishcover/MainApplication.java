@@ -41,8 +41,9 @@ public class MainApplication extends Application {
         ScrollPane sp = new ScrollPane(mp);
         sp.setFitToWidth(true);
         sp.setFitToHeight(true);
+        sp.setStyle("-fx-background-color: transparent;");
 
-        Scene scene = new Scene(sp);
+        Scene scene = new Scene(sp, 1280, 800); // Optional: fixed scene size for testing
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -63,7 +64,6 @@ public class MainApplication extends Application {
     public void start(Stage primaryStage) {
         instance = this;
         this.primaryStage = primaryStage;
-
         primaryStage.setTitle("DishCovery");
         showLogin();
     }

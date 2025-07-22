@@ -9,7 +9,6 @@ import com.mycompany.dishcover.UI.Component.*;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
@@ -37,15 +36,9 @@ public class MainPage extends VBox {
         showSearchComponents();
         showFindRecipesButton();
 
-        ScrollPane scrollPane = new ScrollPane();
-        scrollPane.setFitToWidth(true);
-        scrollPane.setStyle("-fx-background-color: transparent; -fx-background: transparent;");
-
         recipeGrid = new RecipeGrid();
-        scrollPane.setContent(recipeGrid);
-
-        VBox.setVgrow(scrollPane, Priority.ALWAYS);
-        this.getChildren().add(scrollPane);
+        this.getChildren().add(recipeGrid);
+        VBox.setVgrow(recipeGrid, Priority.ALWAYS);
 
         this.getChildren().add(new Footer());
     }
