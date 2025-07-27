@@ -393,4 +393,75 @@
 .status-success {
     -fx-text-fill: #69f0ae;
     -fx-font-weight: bold;
+} 
+
+.difficulty-dropdown {
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-border-color: #a64dff;
+    -fx-border-radius: 10;
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-family: Calibri;
+}
+/* Signup Page Styles - Dark Theme */
+.signup-container {
+    -fx-background-color: linear-gradient(to bottom, #2b1b3d 50%, #4a0080 100%);
+}
+
+.signup-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #a64dff;
+    -fx-text-fill: #a64dff;
+}
+
+.signup-form {
+    -fx-background-color: #3a2b55;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+    -fx-padding: 20;
+}
+
+.signup-label {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+}
+
+.signup-input {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-background-color: #2d2041;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #4e3d6b;
+    -fx-border-width: 1;
+    -fx-padding: 8px 15px;
+    -fx-prompt-text-fill: #9c9c9c;
+}
+
+.signup-input:focused {
+    -fx-border-color: #a64dff;
+    -fx-border-width: 2;
+}
+
+.signup-button {
+    -fx-font-family: Calibri;
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #8a2be2;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 1);
 }

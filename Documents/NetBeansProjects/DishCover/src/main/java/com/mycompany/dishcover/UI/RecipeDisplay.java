@@ -11,10 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
-import javafx.scene.text.Text;
 
 import java.util.List;
-import java.util.Objects;
 
 public class RecipeDisplay extends VBox {
 
@@ -75,27 +73,45 @@ public class RecipeDisplay extends VBox {
         Label prepTimeLabel = new Label("Prep Time: " + recipe.getPrep_time());
         prepTimeLabel.getStyleClass().add("recipe-prep-time");
 
+        // 🔧 Robust cook time icon loading
+        ImageView clockIcon = new ImageView();
+        try {
+            var iconStream = getClass().getResourceAsStream("/images/icons/time.png");
+            if (iconStream != null) {
+                clockIcon.setImage(new Image(iconStream));
+                clockIcon.setFitWidth(16);
+                clockIcon.setFitHeight(16);
+            } else {
+                System.err.println("⚠️ time.png not found in /images/icons/");
+            }
+        } catch (Exception e) {
+            System.err.println("⚠️ Error loading time.png: " + e.getMessage());
+        }
+
         Label cookTimeLabel = new Label("Cook Time: " + recipe.getCook_time());
         cookTimeLabel.getStyleClass().add("recipe-prep-time");
 
-        Label difficultyLabel = new Label("Difficulty: " + recipe.getDifficulty());
-        difficultyLabel.getStyleClass().add("recipe-difficulty");
+        HBox cookTimeBox = new HBox(5, clockIcon, cookTimeLabel);
+        cookTimeBox.setAlignment(Pos.CENTER_LEFT);
 
-        // Add vegetarian and vegan labels
+        // Difficulty tag
+        Label difficultyLabel = new Label(recipe.getDifficulty());
+        difficultyLabel.getStyleClass().add("recipe-tag");
+
+        // Dietary tags
         if (recipe.isVegetarian()) {
-            Label vegetarianLabel = new Label("Vegetarian ✅");
+            Label vegetarianLabel = new Label("🥗 Vegetarian");
             vegetarianLabel.getStyleClass().add("recipe-tag");
             titleBox.getChildren().add(vegetarianLabel);
         }
 
         if (recipe.isVegan()) {
-            Label veganLabel = new Label("Vegan 🌱");
+            Label veganLabel = new Label("🌱 Vegan");
             veganLabel.getStyleClass().add("recipe-tag");
             titleBox.getChildren().add(veganLabel);
         }
 
-        titleBox.getChildren().addAll(titleLabel, prepTimeLabel, cookTimeLabel, difficultyLabel);
-
+        titleBox.getChildren().addAll(titleLabel, prepTimeLabel, cookTimeBox, difficultyLabel);
         headerBox.getChildren().addAll(recipeImage, titleBox);
         this.getChildren().add(headerBox);
     }

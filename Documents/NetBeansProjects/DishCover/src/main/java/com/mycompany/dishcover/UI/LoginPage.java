@@ -1,19 +1,21 @@
-
 package com.mycompany.dishcover.UI;
 
-
 import com.mycompany.dishcover.MainApplication;
+import com.mycompany.dishcover.Util.DatabaseUtil;
+import com.mycompany.dishcover.Util.HashUtil;
+import com.mycompany.dishcover.Util.Session;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class LoginPage extends VBox {
     private TextField usernameField;
@@ -23,22 +25,17 @@ public class LoginPage extends VBox {
     private Button toggleButton;
 
     public LoginPage() {
-        // Register with theme manager
         ThemeManager.getInstance().registerComponent(this);
-
         this.setWidth(300);
 
-        // Layout setup
         setAlignment(Pos.CENTER);
         setPadding(new Insets(20));
         setSpacing(20);
         getStyleClass().add("login-container");
 
-        // Title
         Text title = new Text("Login");
         title.getStyleClass().add("login-title");
 
-        // Create the form
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
@@ -46,7 +43,6 @@ public class LoginPage extends VBox {
         grid.setPadding(new Insets(20));
         grid.getStyleClass().add("login-form");
 
-        // Username field
         Label usernameLabel = new Label("Username:");
         usernameLabel.getStyleClass().add("login-label");
         usernameField = new TextField();
@@ -55,7 +51,6 @@ public class LoginPage extends VBox {
         grid.add(usernameLabel, 0, 0);
         grid.add(usernameField, 1, 0);
 
-        // Password field
         Label passwordLabel = new Label("Password:");
         passwordLabel.getStyleClass().add("login-label");
         passwordField = new PasswordField();
@@ -64,7 +59,6 @@ public class LoginPage extends VBox {
         grid.add(passwordLabel, 0, 1);
         grid.add(passwordField, 1, 1);
 
-        // Login button
         loginButton = new Button("Login");
         loginButton.getStyleClass().add("rainbow-button");
         HBox buttonBox = new HBox(10);
@@ -72,26 +66,24 @@ public class LoginPage extends VBox {
         buttonBox.getChildren().add(loginButton);
         grid.add(buttonBox, 1, 2);
 
-        // Status label for displaying messages
         statusLabel = new Label();
         statusLabel.getStyleClass().add("status-label");
         statusLabel.setWrapText(true);
 
-        // Theme toggle button
+        // Toggle Theme Button
         toggleButton = new Button();
         toggleButton.getStyleClass().add("toggle-button");
         updateToggleButtonText(ThemeManager.getInstance().isBrightMode());
-
-        // Create a binding to update button text when the theme changes
         ThemeManager.getInstance().brightModeProperty().addListener(
                 (observable, oldValue, newValue) -> updateToggleButtonText(newValue));
-
         toggleButton.setOnAction(event -> ThemeManager.getInstance().toggleTheme());
 
-        // Add components to the layout
-        getChildren().addAll(title, grid, statusLabel, toggleButton);
+        // Sign up link
+        Text signupLink = new Text("Don't have an account? Sign Up");
+        signupLink.getStyleClass().add("footer-link");
+        signupLink.setOnMouseClicked(e -> MainApplication.getInstance().showSignupPage());
 
-        // Set up action handlers
+        getChildren().addAll(title, grid, statusLabel, signupLink, toggleButton);
         setupEventHandlers();
     }
 
@@ -108,38 +100,40 @@ public class LoginPage extends VBox {
         String username = usernameField.getText().trim();
         String password = passwordField.getText().trim();
 
-        if (username.isEmpty()) {
-            statusLabel.setText("Please enter your username");
-            statusLabel.getStyleClass().remove("status-success");
-            statusLabel.getStyleClass().add("status-error");
+        if (username.isEmpty() || password.isEmpty()) {
+            showError("Please enter both username and password");
             return;
         }
 
-        if (password.isEmpty()) {
-            statusLabel.setText("Please enter your password");
-            statusLabel.getStyleClass().remove("status-success");
-            statusLabel.getStyleClass().add("status-error");
-            return;
-        }
+        try (Connection conn = DatabaseUtil.getConnection()) {
+            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setString(1, username);
+            stmt.setString(2, HashUtil.hashPassword(password));
 
-        // Simple credential check for prototype
-        if (username.equals("johnexample") && password.equals("example")) {
-            statusLabel.setText("Login Successful");
-            statusLabel.getStyleClass().remove("status-error");
-            statusLabel.getStyleClass().add("status-success");
+            ResultSet rs = stmt.executeQuery();
 
-            // Navigate to splash screen
-            try {
+            if (rs.next()) {
+                Session.setCurrentUsername(username);
+                showSuccess("Login successful!");
                 MainApplication.getInstance().showSplashScreen();
-            } catch (Exception e) {
-                statusLabel.setText("Error navigating to splash screen");
-                statusLabel.getStyleClass().remove("status-success");
-                statusLabel.getStyleClass().add("status-error");
+            } else {
+                showError("Invalid username or password.");
             }
-        } else {
-            statusLabel.setText("Login Failed, please try again");
-            statusLabel.getStyleClass().remove("status-success");
-            statusLabel.getStyleClass().add("status-error");
+        } catch (Exception ex) {
+            showError("Database error: " + ex.getMessage());
         }
+    }
+
+    private void showError(String msg) {
+        statusLabel.setText(msg);
+        statusLabel.getStyleClass().remove("status-success");
+        statusLabel.getStyleClass().add("status-error");
+    }
+
+    private void showSuccess(String msg) {
+        statusLabel.setText(msg);
+        statusLabel.getStyleClass().remove("status-error");
+        statusLabel.getStyleClass().add("status-success");
     }
 }

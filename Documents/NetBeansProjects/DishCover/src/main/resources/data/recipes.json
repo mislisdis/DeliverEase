@@ -498,7 +498,7 @@
       ],
       "vegetarian": true,
       "vegan": false,
-      "image_path": "dal_tadka.jpg",
+      "image_path": "dai_tadka.jpg",
       "calories": 411
     },
     {
@@ -1103,7 +1103,7 @@
       ],
       "vegetarian": true,
       "vegan": true,
-      "image_path": "potato_salad_german.jpg",
+      "image_path": "german_potato_salad.jpg",
       "calories": 244
     },
     {
@@ -1168,7 +1168,7 @@
       ],
       "vegetarian": true,
       "vegan": true,
-      "image_path": "cucumber_salad_swedish.jpg",
+      "image_path": "swedish_cucumber_salad.jpg",
       "calories": 446
     },
     {
@@ -1231,7 +1231,7 @@
       ],
       "vegetarian": true,
       "vegan": false,
-      "image_path": "cabbage_noodles.jpg",
+      "image_path": "hungarian_cabbage_noodles.jpg",
       "calories": 202
     },
     {
@@ -1262,7 +1262,7 @@
       ],
       "vegetarian": true,
       "vegan": false,
-      "image_path": "endive_gratin.jpg",
+      "image_path": "belgian_endive_gratin.jpg",
       "calories": 551
     },
     {
@@ -1330,7 +1330,7 @@
       ],
       "vegetarian": true,
       "vegan": false,
-      "image_path": "mac_and_cheese.jpg",
+      "image_path": "mac_n_cheese.jpg",
       "calories": 313
     },
     {
@@ -1395,7 +1395,7 @@
       ],
       "vegetarian": true,
       "vegan": true,
-      "image_path": "sloppy_joe_lentil.jpg",
+      "image_path": "sloppy_joe_lentil_sandwiches.jpg",
       "calories": 206
     },
     {
@@ -1451,7 +1451,7 @@
       ],
       "vegetarian": true,
       "vegan": false,
-      "image_path": "grilled_cheese.jpg",
+      "image_path": "grilled_cheese_sandwich.jpg",
       "calories": 218
     },
     {
@@ -1666,7 +1666,7 @@
       ],
       "vegetarian": true,
       "vegan": true,
-      "image_path": "vegetarian_dumplings.jpg",
+      "image_path": "veg_dumplings.jpg",
       "calories": 512
     },
     {

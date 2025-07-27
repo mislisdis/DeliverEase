@@ -1,6 +1,5 @@
 package com.mycompany.dishcover.Theme;
 
-import com.mycompany.dishcover.Session.AppSession;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.Parent;
@@ -11,24 +10,22 @@ import java.util.Objects;
 
 public class ThemeManager {
 
-    // ✅ Use resource-relative paths (must be under src/main/resources)
+    // ✅ Resource-relative CSS paths
     private static final String LIGHT_STYLE = "/CSS/styles.css";
     private static final String DARK_STYLE = "/CSS/dark-styles.css";
 
     private static ThemeManager instance;
+
     private final BooleanProperty brightModeProperty;
     private final List<Parent> registeredComponents;
 
     private ThemeManager() {
-        // Initialize the bright mode property from AppSession
-        brightModeProperty = new SimpleBooleanProperty(AppSession.getInstance().isBrightMode());
+        // ✅ Start in bright mode by default (you can toggle later)
+        brightModeProperty = new SimpleBooleanProperty(true);
         registeredComponents = new ArrayList<>();
 
-        // Update components when the theme changes
-        brightModeProperty.addListener((observable, oldValue, newValue) -> {
-            AppSession.getInstance().setBrightMode(newValue);
-            applyThemeToAllComponents();
-        });
+        // Update components when theme changes
+        brightModeProperty.addListener((observable, oldValue, newValue) -> applyThemeToAllComponents());
     }
 
     public static synchronized ThemeManager getInstance() {

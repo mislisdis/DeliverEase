@@ -36,6 +36,13 @@
             <version>2.19.1</version>
         </dependency>
 
+        <!-- MySQL JDBC Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
         <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -53,16 +60,16 @@
 
     <build>
         <resources>
-    <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-            <include>**/*.json</include>
-            <include>**/*.png</include>
-            <include>**/*.jpg</include>
-            <include>**/*.css</include> 
-        </includes>
-    </resource>
-</resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.json</include>
+                    <include>**/*.png</include>
+                    <include>**/*.jpg</include>
+                    <include>**/*.css</include>
+                </includes>
+            </resource>
+        </resources>
 
         <plugins>
             <!-- Compiler plugin -->

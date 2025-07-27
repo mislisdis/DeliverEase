@@ -32,7 +32,7 @@ public class HeaderCard extends HBox {
         try {
             // Load the DishCovery logo
             Image logoImage = new Image(Objects.requireNonNull(
-                    getClass().getResourceAsStream("/com/hci/javafx/image/logos/DishCovery.png")));
+                    getClass().getResourceAsStream("/images/logos/DishCovery.png")));
 
             ImageView logoView = new ImageView(logoImage);
             logoView.setFitHeight(40);
