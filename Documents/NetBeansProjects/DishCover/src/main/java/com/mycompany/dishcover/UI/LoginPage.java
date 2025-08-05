@@ -70,7 +70,6 @@ public class LoginPage extends VBox {
         statusLabel.getStyleClass().add("status-label");
         statusLabel.setWrapText(true);
 
-        // Toggle Theme Button
         toggleButton = new Button();
         toggleButton.getStyleClass().add("toggle-button");
         updateToggleButtonText(ThemeManager.getInstance().isBrightMode());
@@ -78,7 +77,6 @@ public class LoginPage extends VBox {
                 (observable, oldValue, newValue) -> updateToggleButtonText(newValue));
         toggleButton.setOnAction(event -> ThemeManager.getInstance().toggleTheme());
 
-        // Sign up link
         Text signupLink = new Text("Don't have an account? Sign Up");
         signupLink.getStyleClass().add("footer-link");
         signupLink.setOnMouseClicked(e -> MainApplication.getInstance().showSignupPage());
@@ -114,7 +112,8 @@ public class LoginPage extends VBox {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
-                Session.setCurrentUsername(username);
+                int userId = rs.getInt("id");
+               Session.setSession(userId, username);
                 showSuccess("Login successful!");
                 MainApplication.getInstance().showSplashScreen();
             } else {

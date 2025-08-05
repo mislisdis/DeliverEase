@@ -76,7 +76,7 @@ public class RecipeDisplay extends VBox {
         // 🔧 Robust cook time icon loading
         ImageView clockIcon = new ImageView();
         try {
-            var iconStream = getClass().getResourceAsStream("/images/icons/time.png");
+            var iconStream = getClass().getResourceAsStream("/assets/icons/time.png");
             if (iconStream != null) {
                 clockIcon.setImage(new Image(iconStream));
                 clockIcon.setFitWidth(16);

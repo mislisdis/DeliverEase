@@ -1,10 +1,16 @@
 package com.mycompany.dishcover.Util;
 
 public class Session {
+    private static int userId;
     private static String currentUsername;
 
-    public static void setCurrentUsername(String username) {
+    public static void setSession(int id, String username) {
+        userId = id;
         currentUsername = username;
+    }
+
+    public static int getUserId() {
+        return userId;
     }
 
     public static String getCurrentUsername() {
@@ -12,6 +18,7 @@ public class Session {
     }
 
     public static void clear() {
+        userId = 0;
         currentUsername = null;
     }
 }

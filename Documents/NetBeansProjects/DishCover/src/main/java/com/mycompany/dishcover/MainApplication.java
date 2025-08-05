@@ -6,6 +6,7 @@ import com.mycompany.dishcover.UI.MainPage;
 import com.mycompany.dishcover.UI.RecipeDisplay;
 import com.mycompany.dishcover.UI.SignupPage;
 import com.mycompany.dishcover.UI.SplashScreen;
+import com.mycompany.dishcover.UI.FavoritesPage;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
@@ -21,7 +22,6 @@ public class MainApplication extends Application {
         return instance;
     }
 
-    // ✅ Show Login Page
     public void showLoginPage() {
         LoginPage loginPage = new LoginPage();
         Scene scene = new Scene(loginPage);
@@ -30,10 +30,9 @@ public class MainApplication extends Application {
     }
 
     public void showLogin() {
-        showLoginPage(); // optional: delegate to new method
+        showLoginPage(); // optional
     }
 
-    // ✅ Show Signup Page
     public void showSignupPage() {
         SignupPage signupPage = new SignupPage();
         Scene scene = new Scene(signupPage);
@@ -57,7 +56,7 @@ public class MainApplication extends Application {
         scrollPane.setFitToHeight(true);
         scrollPane.setStyle("-fx-background-color: transparent;");
 
-        Scene scene = new Scene(scrollPane, 1280, 800); // Optional: fixed scene size
+        Scene scene = new Scene(scrollPane, 1280, 800);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -74,13 +73,25 @@ public class MainApplication extends Application {
         primaryStage.show();
     }
 
+    public void showFavoritesPage() {
+        FavoritesPage favoritesPage = new FavoritesPage(); // ✅ Now pulls userId from Session
+        ScrollPane scrollPane = new ScrollPane(favoritesPage);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
+
+        Scene scene = new Scene(scrollPane, 1280, 800);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
     @Override
     public void start(Stage primaryStage) {
         instance = this;
         this.primaryStage = primaryStage;
         primaryStage.setTitle("DishCovery");
 
-        showLogin(); // or showSplashScreen(); if you want intro first
+        showLogin(); // or showSplashScreen()
     }
 
     public static void main(String[] args) {

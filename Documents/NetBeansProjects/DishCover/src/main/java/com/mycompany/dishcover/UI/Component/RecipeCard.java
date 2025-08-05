@@ -2,8 +2,13 @@ package com.mycompany.dishcover.UI.Component;
 
 import com.mycompany.dishcover.Recipe.Recipe;
 import com.mycompany.dishcover.Theme.ThemeManager;
+import com.mycompany.dishcover.Util.ApiService;
+import com.mycompany.dishcover.Util.Session;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,7 +27,6 @@ public class RecipeCard extends StackPane {
         ThemeManager.getInstance().registerComponent(this);
         this.getStyleClass().add("recipe-card");
 
-        // Updated dimensions for better visibility
         this.setPrefSize(220, 220);
         this.setMaxSize(220, 220);
         this.setPadding(new Insets(5));
@@ -96,10 +100,37 @@ public class RecipeCard extends StackPane {
             tags.getChildren().add(vegTag);
         }
 
+        Button saveBtn = new Button("♥ Save");
+        saveBtn.setStyle("-fx-font-size: 10px; -fx-background-color: #e74c3c; -fx-text-fill: white;");
+
+        saveBtn.setOnAction(e -> {
+    int userId = Session.getUserId();
+
+    ApiService.saveRecipeToFavoritesAsync(recipe.getId(), userId).thenAccept(status -> {
+        Platform.runLater(() -> {
+            Alert alert;
+            switch (status) {
+                case "success" -> {
+                    alert = new Alert(Alert.AlertType.INFORMATION, "Recipe saved successfully!");
+                    saveBtn.setDisable(true);
+                }
+                case "duplicate" -> {
+                    alert = new Alert(Alert.AlertType.INFORMATION, "Recipe is already in your favorites.");
+                    saveBtn.setDisable(true);
+                }
+                default -> alert = new Alert(Alert.AlertType.ERROR, "Failed to save recipe. Please try again.");
+            }
+            alert.showAndWait();
+        });
+    });
+});
+
+
         overlay.getChildren().add(nameLabel);
         if (!tags.getChildren().isEmpty()) {
             overlay.getChildren().add(tags);
         }
+        overlay.getChildren().add(saveBtn);
 
         return overlay;
     }

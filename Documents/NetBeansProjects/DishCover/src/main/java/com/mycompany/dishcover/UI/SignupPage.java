@@ -4,6 +4,7 @@ import com.mycompany.dishcover.Util.HashUtil;
 import com.mycompany.dishcover.MainApplication;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import com.mycompany.dishcover.Util.DatabaseUtil;
+import com.mycompany.dishcover.Util.Session;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
@@ -82,7 +83,6 @@ public class SignupPage extends VBox {
             updateToggleText(toggleButton, ThemeManager.getInstance().isBrightMode());
         });
 
-        // Login Link
         Text loginLink = new Text("Already have an account? Log in");
         loginLink.getStyleClass().add("footer-link");
         loginLink.setOnMouseClicked(e -> MainApplication.getInstance().showLoginPage());
@@ -128,8 +128,23 @@ public class SignupPage extends VBox {
             insertStmt.setString(3, HashUtil.hashPassword(password));
             insertStmt.executeUpdate();
 
-            showSuccess("Signup successful! You can now login.");
-            MainApplication.getInstance().showLoginPage();
+            // Get the inserted user ID
+            String fetchIdQuery = "SELECT id FROM users WHERE username = ?";
+            PreparedStatement fetchIdStmt = conn.prepareStatement(fetchIdQuery);
+            fetchIdStmt.setString(1, username);
+            ResultSet idResult = fetchIdStmt.executeQuery();
+
+            if (idResult.next()) {
+                int userId = idResult.getInt("id");
+
+                // ✅ Store session immediately
+                Session.setSession(userId, username);
+
+                showSuccess("Signup successful!");
+                MainApplication.getInstance().showSplashScreen(); // Go to app directly
+            } else {
+                showError("Signup failed. Please try logging in.");
+            }
 
         } catch (Exception e) {
             showError("Error: " + e.getMessage());
