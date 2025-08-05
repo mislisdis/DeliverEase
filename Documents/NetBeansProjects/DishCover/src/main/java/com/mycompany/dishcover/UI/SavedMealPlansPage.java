@@ -4,26 +4,22 @@ import com.mycompany.dishcover.MainApplication;
 import com.mycompany.dishcover.Util.ApiService;
 import com.mycompany.dishcover.Util.Session;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.List;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.TextInputDialog;
-
 
 public class SavedMealPlansPage extends BorderPane {
 
     public SavedMealPlansPage() {
+        this.getStyleClass().add("mealplan-container");
         this.setPadding(new Insets(20));
 
         Button backBtn = new Button("← Back to Meal Plan Page");
+        backBtn.getStyleClass().add("minor-button");
         backBtn.setOnAction(e -> MainApplication.getInstance().showMealPlanPage());
 
         VBox listContainer = new VBox(15);
@@ -37,8 +33,8 @@ public class SavedMealPlansPage extends BorderPane {
         } else {
             for (ApiService.SavedMealPlan saved : savedPlans) {
                 VBox card = new VBox(10);
+                card.getStyleClass().add("mealplan-box");
                 card.setPadding(new Insets(15));
-                card.setStyle("-fx-border-color: #ccc; -fx-background-color: #fdfdfd; -fx-background-radius: 8; -fx-border-radius: 8;");
 
                 Label name = new Label("Name: " + saved.getPlanName());
                 name.setFont(Font.font(16));
@@ -48,10 +44,18 @@ public class SavedMealPlansPage extends BorderPane {
 
                 HBox buttons = new HBox(10);
                 Button viewBtn = new Button("View");
-                Button renameBtn = new Button("Rename");
-                Button deleteBtn = new Button("Delete");
+                viewBtn.getStyleClass().add("minor-button");
 
-                viewBtn.setOnAction(e -> MainApplication.getInstance().showMealPlanDetailPage(saved.getMealPlans()));
+                Button renameBtn = new Button("Rename");
+                renameBtn.getStyleClass().add("minor-button");
+
+                Button deleteBtn = new Button("Delete");
+                deleteBtn.getStyleClass().add("minor-button");
+
+                viewBtn.setOnAction(e -> {
+                    Runnable backAction = () -> MainApplication.getInstance().showSavedMealPlansPage();
+                    MainApplication.getInstance().showMealPlanDetailPage(saved.getMealPlans(), backAction);
+                });
 
                 renameBtn.setOnAction(e -> {
                     TextInputDialog dialog = new TextInputDialog(saved.getPlanName());
@@ -60,7 +64,7 @@ public class SavedMealPlansPage extends BorderPane {
                     dialog.setContentText("Enter new plan name:");
                     dialog.showAndWait().ifPresent(newName -> {
                         ApiService.renameMealPlan(saved.getPlanSetId(), newName);
-                        MainApplication.getInstance().showSavedMealPlansPage(); // Refresh
+                        MainApplication.getInstance().showSavedMealPlansPage();
                     });
                 });
 
@@ -69,19 +73,20 @@ public class SavedMealPlansPage extends BorderPane {
                     confirm.showAndWait().ifPresent(result -> {
                         if (result.getButtonData().isDefaultButton()) {
                             ApiService.deleteSavedMealPlan(saved.getPlanSetId());
-                            MainApplication.getInstance().showSavedMealPlansPage(); // Refresh
+                            MainApplication.getInstance().showSavedMealPlansPage();
                         }
                     });
                 });
 
                 buttons.getChildren().addAll(viewBtn, renameBtn, deleteBtn);
-
                 card.getChildren().addAll(name, date, buttons);
                 listContainer.getChildren().add(card);
             }
         }
 
         this.setTop(backBtn);
-        this.setCenter(new ScrollPane(listContainer));
+        ScrollPane scroll = new ScrollPane(listContainer);
+        scroll.setFitToWidth(true);
+        this.setCenter(scroll);
     }
 }

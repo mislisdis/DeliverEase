@@ -122,7 +122,12 @@ public class MainApplication extends Application {
     }
 
     public void showMealPlanDetailPage(List<MealPlan> planList) {
-        MealPlanDetailPage detailPage = new MealPlanDetailPage(planList);
+        // Provide default back behavior to go to saved plans
+        showMealPlanDetailPage(planList, () -> showSavedMealPlansPage());
+    }
+
+    public void showMealPlanDetailPage(List<MealPlan> planList, Runnable backAction) {
+        MealPlanDetailPage detailPage = new MealPlanDetailPage(planList, backAction);
         ScrollPane scrollPane = new ScrollPane(detailPage);
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(true);
@@ -140,7 +145,7 @@ public class MainApplication extends Application {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("DishCovery");
 
-        showLogin(); // Or showSplashScreen() depending on preference
+        showLogin(); // You can change to showSplashScreen() if needed
     }
 
     public static void main(String[] args) {

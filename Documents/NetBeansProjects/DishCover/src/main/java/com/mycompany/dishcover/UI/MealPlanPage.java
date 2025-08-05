@@ -33,6 +33,7 @@ public class MealPlanPage extends BorderPane {
 
     public MealPlanPage() {
         ThemeManager.getInstance().registerComponent(this);
+        this.getStyleClass().add("mealplan-container");
         this.setPadding(new Insets(20));
 
         // --- Top Controls ---
@@ -40,22 +41,29 @@ public class MealPlanPage extends BorderPane {
         topControls.setAlignment(Pos.CENTER_LEFT);
 
         Button backButton = new Button("← Back");
+        backButton.getStyleClass().add("minor-button");
         backButton.setOnAction(e -> MainApplication.getInstance().showMainPage());
 
         planDurationBox = new ComboBox<>();
         planDurationBox.getItems().addAll("Daily", "3-Day", "Weekly");
         planDurationBox.setValue("Daily");
+        planDurationBox.getStyleClass().add("difficulty-dropdown");
 
         vegetarianCheck = new CheckBox("Vegetarian");
         veganCheck = new CheckBox("Vegan");
 
         planNameField = new TextField();
         planNameField.setPromptText("Enter Plan Name");
+        planNameField.getStyleClass().add("search-bar");
 
         generateBtn = new Button("Generate Plan");
+        generateBtn.getStyleClass().add("minor-button");
+
         saveBtn = new Button("Save Plan");
+        saveBtn.getStyleClass().add("minor-button");
 
         Button viewSavedBtn = new Button("View Saved Plans");
+        viewSavedBtn.getStyleClass().add("minor-button");
         viewSavedBtn.setOnAction(e -> MainApplication.getInstance().showSavedMealPlansPage());
 
         topControls.getChildren().addAll(
@@ -71,25 +79,23 @@ public class MealPlanPage extends BorderPane {
         // --- Meal Plan Content ---
         mealPlanContainer = new VBox(20);
         mealPlanContainer.setPadding(new Insets(20));
+        mealPlanContainer.getStyleClass().add("mealplan-box");
+
         ScrollPane scrollPane = new ScrollPane(mealPlanContainer);
         scrollPane.setFitToWidth(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
         this.setCenter(scrollPane);
 
         updateMealPlanUI(1); // initial view
 
         // --- Actions ---
-        planDurationBox.setOnAction(e -> {
-            int days = getSelectedDays();
-            updateMealPlanUI(days);
-        });
+        planDurationBox.setOnAction(e -> updateMealPlanUI(getSelectedDays()));
 
         generateBtn.setOnAction(e -> {
             int days = getSelectedDays();
-
             List<Recipe> all = ApiService.getAllRecipes();
             boolean veg = vegetarianCheck.isSelected();
             boolean vegan = veganCheck.isSelected();
-
             mealPlans = MealPlanGenerator.generate(days, all, veg, vegan);
             updateMealPlanUI(days);
         });
@@ -135,7 +141,7 @@ public class MealPlanPage extends BorderPane {
         for (MealPlan plan : mealPlans) {
             VBox dayBox = new VBox(10);
             dayBox.setPadding(new Insets(10));
-            dayBox.setStyle("-fx-border-color: #ccc; -fx-border-radius: 8; -fx-background-radius: 8; -fx-background-color: #f9f9f9;");
+            dayBox.getStyleClass().add("mealplan-box");
 
             Text dayTitle = new Text(plan.getDayOfWeek());
             dayTitle.setFont(Font.font(18));

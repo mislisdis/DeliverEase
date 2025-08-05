@@ -1,4 +1,4 @@
-/* Recipe App JavaFX CSS - DishCovery - Enhanced Original Theme */
+/*DishCovery - Original Theme */
 
 /* Main Background Gradient */
 .gradient-background {
@@ -594,4 +594,17 @@
     -fx-fill: #d81b60;
     -fx-scale-x: 1.2;
     -fx-scale-y: 1.2;
+}
+/* Main background style - assuming this is what your MainPage uses */
+.mealplan-container {
+    -fx-background-color: linear-gradient(to bottom, #ffe6e6 50%, #d81b60 100%);
+}
+
+/* White containers for meal plan boxes */
+.mealplan-box {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 8, 0.2, 0, 3);
+    -fx-border-radius: 12;
 }
