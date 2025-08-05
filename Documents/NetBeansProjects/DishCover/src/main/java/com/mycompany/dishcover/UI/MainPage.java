@@ -1,4 +1,3 @@
-
 package com.mycompany.dishcover.UI;
 
 import com.mycompany.dishcover.MainApplication;
@@ -38,7 +37,7 @@ public class MainPage extends VBox {
 
         recipeService = new RecipeService();
 
-        showFavoritesButton();
+        showTopButtons(); // shows both Favorites and Meal Plan
         showHeader();
         showSearchComponents();
         showFindRecipesButton();
@@ -50,10 +49,10 @@ public class MainPage extends VBox {
         this.getChildren().add(new Footer());
     }
 
-    private void showFavoritesButton() {
-        VBox favContainer = new VBox();
-        favContainer.setAlignment(Pos.TOP_RIGHT);
-        favContainer.setPadding(new Insets(10, 20, 0, 0));
+    private void showTopButtons() {
+        VBox topButtonContainer = new VBox(8);
+        topButtonContainer.setAlignment(Pos.TOP_RIGHT);
+        topButtonContainer.setPadding(new Insets(10, 20, 0, 0));
 
         Button favButton = new Button("♥ Favorites");
         favButton.getStyleClass().add("favorites-button");
@@ -66,8 +65,19 @@ public class MainPage extends VBox {
             MainApplication.getInstance().showFavoritesPage();
         });
 
-        favContainer.getChildren().add(favButton);
-        this.getChildren().add(favContainer);
+        Button mealPlanButton = new Button("📅 Meal Plan");
+        mealPlanButton.getStyleClass().add("mealplan-button");
+        mealPlanButton.setOnAction(e -> {
+            int userId = Session.getUserId();
+            if (userId == 0) {
+                System.out.println("⚠ No user is logged in.");
+                return;
+            }
+            MainApplication.getInstance().showMealPlanPage();
+        });
+
+        topButtonContainer.getChildren().addAll(favButton, mealPlanButton);
+        this.getChildren().add(topButtonContainer);
     }
 
     private void showHeader() {

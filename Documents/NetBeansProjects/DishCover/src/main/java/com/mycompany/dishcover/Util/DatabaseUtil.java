@@ -2,14 +2,19 @@ package com.mycompany.dishcover.Util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DatabaseUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/dishcovery_db"; // update if db name is different
-    private static final String USER = "root"; // your phpMyAdmin username
-    private static final String PASSWORD = ""; // your phpMyAdmin password (can be empty)
+    private static final String URL = "jdbc:mysql://localhost:3306/dishcovery_db";
+    private static final String USER = "root";
+    private static final String PASSWORD = "";
 
-    public static Connection getConnection() throws Exception {
-        Class.forName("com.mysql.cj.jdbc.Driver");
+    public static Connection getConnection() throws SQLException {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("MySQL JDBC driver not found", e);
+        }
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 }

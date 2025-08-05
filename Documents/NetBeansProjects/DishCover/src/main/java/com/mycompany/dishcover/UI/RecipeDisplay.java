@@ -1,5 +1,6 @@
 package com.mycompany.dishcover.UI;
 
+import com.mycompany.dishcover.MainApplication;
 import com.mycompany.dishcover.Recipe.Recipe;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import com.mycompany.dishcover.UI.Component.Footer;
@@ -17,15 +18,18 @@ import java.util.List;
 public class RecipeDisplay extends VBox {
 
     private final Recipe recipe;
+    private final String source;
 
-    public RecipeDisplay(Recipe recipe) {
+    public RecipeDisplay(Recipe recipe, String source) {
         this.recipe = recipe;
+        this.source = source;
 
         ThemeManager.getInstance().registerComponent(this);
-
         this.getStyleClass().add("recipe-display");
-        this.setPadding(new Insets(20));
+        this.setPadding(new Insets(20, 20, 60, 20)); // Increased bottom padding
         this.setSpacing(15);
+        this.setFillWidth(true);
+        VBox.setVgrow(this, Priority.ALWAYS);
 
         createHeader();
         createDetailsSection();
@@ -33,8 +37,11 @@ public class RecipeDisplay extends VBox {
         createInstructionsSection();
         createBackButton();
 
-        Footer ft = new Footer();
-        this.getChildren().add(ft);
+        this.getChildren().add(new Footer());
+    }
+
+    public RecipeDisplay(Recipe recipe) {
+        this(recipe, "mainPage");
     }
 
     private void createHeader() {
@@ -53,11 +60,9 @@ public class RecipeDisplay extends VBox {
             var imageStream = getClass().getResourceAsStream(imagePath);
             if (imageStream != null) {
                 recipeImage.setImage(new Image(imageStream));
-            } else {
-                System.err.println("Image not found: " + imagePath);
             }
         } catch (Exception e) {
-            System.err.println("Error loading image: " + e.getMessage());
+            // Silent fail
         }
 
         recipeImage.setFitWidth(150);
@@ -73,7 +78,6 @@ public class RecipeDisplay extends VBox {
         Label prepTimeLabel = new Label("Prep Time: " + recipe.getPrep_time());
         prepTimeLabel.getStyleClass().add("recipe-prep-time");
 
-        // 🔧 Robust cook time icon loading
         ImageView clockIcon = new ImageView();
         try {
             var iconStream = getClass().getResourceAsStream("/assets/icons/time.png");
@@ -81,11 +85,9 @@ public class RecipeDisplay extends VBox {
                 clockIcon.setImage(new Image(iconStream));
                 clockIcon.setFitWidth(16);
                 clockIcon.setFitHeight(16);
-            } else {
-                System.err.println("⚠️ time.png not found in /images/icons/");
             }
         } catch (Exception e) {
-            System.err.println("⚠️ Error loading time.png: " + e.getMessage());
+            // Silent fail
         }
 
         Label cookTimeLabel = new Label("Cook Time: " + recipe.getCook_time());
@@ -94,11 +96,9 @@ public class RecipeDisplay extends VBox {
         HBox cookTimeBox = new HBox(5, clockIcon, cookTimeLabel);
         cookTimeBox.setAlignment(Pos.CENTER_LEFT);
 
-        // Difficulty tag
         Label difficultyLabel = new Label(recipe.getDifficulty());
         difficultyLabel.getStyleClass().add("recipe-tag");
 
-        // Dietary tags
         if (recipe.isVegetarian()) {
             Label vegetarianLabel = new Label("🥗 Vegetarian");
             vegetarianLabel.getStyleClass().add("recipe-tag");
@@ -171,6 +171,7 @@ public class RecipeDisplay extends VBox {
         VBox instructionsBox = new VBox();
         instructionsBox.setSpacing(10);
         instructionsBox.getStyleClass().add("instructions-section");
+        VBox.setVgrow(instructionsBox, Priority.ALWAYS);
 
         Label instructionsTitle = new Label("Instructions");
         instructionsTitle.getStyleClass().add("section-title");
@@ -205,10 +206,21 @@ public class RecipeDisplay extends VBox {
         buttonBox.setAlignment(Pos.CENTER_LEFT);
         buttonBox.setPadding(new Insets(15, 0, 0, 0));
 
-        Button backButton = new Button("Back to Recipes");
+        String label = switch (source) {
+            case "mealPlan" -> "← Back to Meal Plan";
+            case "savedPlans" -> "← Back to Saved Plans";
+            default -> "← Back to Recipes";
+        };
+
+        Button backButton = new Button(label);
         backButton.getStyleClass().add("minor-button");
+
         backButton.setOnAction(event -> {
-            com.mycompany.dishcover.MainApplication.getInstance().showMainPage();
+            switch (source) {
+                case "mealPlan" -> MainApplication.getInstance().showMealPlanPage();
+                case "savedPlans" -> MainApplication.getInstance().showSavedMealPlansPage();
+                default -> MainApplication.getInstance().showMainPage();
+            }
         });
 
         buttonBox.getChildren().add(backButton);

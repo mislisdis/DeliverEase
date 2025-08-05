@@ -1,17 +1,16 @@
 package com.mycompany.dishcover;
 
+import com.mycompany.dishcover.Recipe.MealPlan;
 import com.mycompany.dishcover.Recipe.Recipe;
-import com.mycompany.dishcover.UI.LoginPage;
-import com.mycompany.dishcover.UI.MainPage;
-import com.mycompany.dishcover.UI.RecipeDisplay;
-import com.mycompany.dishcover.UI.SignupPage;
-import com.mycompany.dishcover.UI.SplashScreen;
-import com.mycompany.dishcover.UI.FavoritesPage;
+import com.mycompany.dishcover.Theme.ThemeManager;
+import com.mycompany.dishcover.UI.*;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class MainApplication extends Application {
 
@@ -25,17 +24,19 @@ public class MainApplication extends Application {
     public void showLoginPage() {
         LoginPage loginPage = new LoginPage();
         Scene scene = new Scene(loginPage);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public void showLogin() {
-        showLoginPage(); // optional
+        showLoginPage();
     }
 
     public void showSignupPage() {
         SignupPage signupPage = new SignupPage();
         Scene scene = new Scene(signupPage);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -43,6 +44,7 @@ public class MainApplication extends Application {
     public void showSplashScreen() {
         SplashScreen splashScreen = new SplashScreen();
         Scene scene = new Scene(splashScreen);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -57,30 +59,77 @@ public class MainApplication extends Application {
         scrollPane.setStyle("-fx-background-color: transparent;");
 
         Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public void showRecipeDisplay(Recipe recipe) {
-        RecipeDisplay recipeDisplay = new RecipeDisplay(recipe);
+        showRecipeDisplay(recipe, "mainPage");
+    }
+
+    public void showRecipeDisplay(Recipe recipe, String source) {
+        RecipeDisplay recipeDisplay = new RecipeDisplay(recipe, source);
 
         ScrollPane scrollPane = new ScrollPane(recipeDisplay);
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
 
-        Scene scene = new Scene(scrollPane);
+        Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public void showFavoritesPage() {
-        FavoritesPage favoritesPage = new FavoritesPage(); // ✅ Now pulls userId from Session
+        FavoritesPage favoritesPage = new FavoritesPage();
         ScrollPane scrollPane = new ScrollPane(favoritesPage);
         scrollPane.setFitToWidth(true);
         scrollPane.setFitToHeight(true);
         scrollPane.setStyle("-fx-background-color: transparent;");
 
         Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void showMealPlanPage() {
+        MealPlanPage mealPlanPage = new MealPlanPage();
+        ScrollPane scrollPane = new ScrollPane(mealPlanPage);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
+
+        Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void showSavedMealPlansPage() {
+        SavedMealPlansPage savedPage = new SavedMealPlansPage();
+        ScrollPane scrollPane = new ScrollPane(savedPage);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
+
+        Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void showMealPlanDetailPage(List<MealPlan> planList) {
+        MealPlanDetailPage detailPage = new MealPlanDetailPage(planList);
+        ScrollPane scrollPane = new ScrollPane(detailPage);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(true);
+        scrollPane.setStyle("-fx-background-color: transparent;");
+
+        Scene scene = new Scene(scrollPane, 1280, 800);
+        ThemeManager.getInstance().applySavedTheme(scene);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -91,7 +140,7 @@ public class MainApplication extends Application {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("DishCovery");
 
-        showLogin(); // or showSplashScreen()
+        showLogin(); // Or showSplashScreen() depending on preference
     }
 
     public static void main(String[] args) {

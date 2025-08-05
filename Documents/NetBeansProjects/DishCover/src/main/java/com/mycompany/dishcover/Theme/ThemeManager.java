@@ -18,13 +18,17 @@ public class ThemeManager {
 
     private final BooleanProperty brightModeProperty;
     private final List<Parent> registeredComponents;
+    private final List<Scene> registeredScenes;
 
     private ThemeManager() {
         brightModeProperty = new SimpleBooleanProperty(true); // Default to light theme
         registeredComponents = new ArrayList<>();
+        registeredScenes = new ArrayList<>();
 
-        // Whenever the theme changes, re-apply it to all registered UI components
-        brightModeProperty.addListener((obs, oldVal, newVal) -> applyThemeToAllComponents());
+        brightModeProperty.addListener((obs, oldVal, newVal) -> {
+            applyThemeToAllComponents();
+            applyThemeToAllScenes();
+        });
     }
 
     public static synchronized ThemeManager getInstance() {
@@ -34,7 +38,7 @@ public class ThemeManager {
         return instance;
     }
 
-    // Used to track reusable UI components like reusable containers
+    // Register UI containers like VBox/HBox
     public void registerComponent(Parent component) {
         if (!registeredComponents.contains(component)) {
             registeredComponents.add(component);
@@ -46,7 +50,18 @@ public class ThemeManager {
         registeredComponents.remove(component);
     }
 
-    // Switch the theme boolean and trigger stylesheet changes
+    // Register entire Scene objects for full theme support
+    public void registerScene(Scene scene) {
+        if (!registeredScenes.contains(scene)) {
+            registeredScenes.add(scene);
+            applyThemeToScene(scene);
+        }
+    }
+
+    public void unregisterScene(Scene scene) {
+        registeredScenes.remove(scene);
+    }
+
     public void toggleTheme() {
         brightModeProperty.set(!brightModeProperty.get());
     }
@@ -65,6 +80,12 @@ public class ThemeManager {
         }
     }
 
+    private void applyThemeToAllScenes() {
+        for (Scene scene : registeredScenes) {
+            applyThemeToScene(scene);
+        }
+    }
+
     private void applyThemeToComponent(Parent component) {
         String styleResource = brightModeProperty.get() ? LIGHT_STYLE : DARK_STYLE;
         component.getStylesheets().clear();
@@ -73,18 +94,23 @@ public class ThemeManager {
         );
     }
 
-    // ✅ Apply current theme to a Scene (e.g. during app start or screen transitions)
-    public void applySavedTheme(Scene scene) {
-        String styleResource = isBrightMode() ? LIGHT_STYLE : DARK_STYLE;
+    private void applyThemeToScene(Scene scene) {
+        String styleResource = brightModeProperty.get() ? LIGHT_STYLE : DARK_STYLE;
         scene.getStylesheets().clear();
         scene.getStylesheets().add(
             Objects.requireNonNull(getClass().getResource(styleResource)).toExternalForm()
         );
     }
 
-    // ✅ Toggle and apply theme directly to a Scene
+    // Use during app startup or scene switch
+    public void applySavedTheme(Scene scene) {
+        applyThemeToScene(scene);
+        registerScene(scene); // Ensure future toggles affect it
+    }
+
+    // Toggle and apply to one scene
     public void toggleTheme(Scene scene) {
         toggleTheme();
-        applySavedTheme(scene);
+        applyThemeToScene(scene);
     }
 }
