@@ -20,9 +20,10 @@ public class ThemeManager {
     private final List<Parent> registeredComponents;
 
     private ThemeManager() {
-        brightModeProperty = new SimpleBooleanProperty(true);
+        brightModeProperty = new SimpleBooleanProperty(true); // Default to light theme
         registeredComponents = new ArrayList<>();
 
+        // Whenever the theme changes, re-apply it to all registered UI components
         brightModeProperty.addListener((obs, oldVal, newVal) -> applyThemeToAllComponents());
     }
 
@@ -33,6 +34,7 @@ public class ThemeManager {
         return instance;
     }
 
+    // Used to track reusable UI components like reusable containers
     public void registerComponent(Parent component) {
         if (!registeredComponents.contains(component)) {
             registeredComponents.add(component);
@@ -44,6 +46,7 @@ public class ThemeManager {
         registeredComponents.remove(component);
     }
 
+    // Switch the theme boolean and trigger stylesheet changes
     public void toggleTheme() {
         brightModeProperty.set(!brightModeProperty.get());
     }
@@ -70,17 +73,18 @@ public class ThemeManager {
         );
     }
 
-    // ✅ NEW METHODS
+    // ✅ Apply current theme to a Scene (e.g. during app start or screen transitions)
     public void applySavedTheme(Scene scene) {
         String styleResource = isBrightMode() ? LIGHT_STYLE : DARK_STYLE;
+        scene.getStylesheets().clear();
         scene.getStylesheets().add(
             Objects.requireNonNull(getClass().getResource(styleResource)).toExternalForm()
         );
     }
 
+    // ✅ Toggle and apply theme directly to a Scene
     public void toggleTheme(Scene scene) {
-        toggleTheme();  // flip value
-        scene.getStylesheets().clear(); // clear old
-        applySavedTheme(scene); // add new
+        toggleTheme();
+        applySavedTheme(scene);
     }
 }

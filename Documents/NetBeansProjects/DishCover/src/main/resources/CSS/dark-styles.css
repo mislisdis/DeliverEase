@@ -503,3 +503,133 @@
     -fx-scale-x: 1.2;
     -fx-scale-y: 1.2;
 }
+/* Favorites Button on Main Page */
+.favorites-button {
+    -fx-background-color: #d81b60;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-family: Calibri;
+    -fx-font-weight: bold;
+    -fx-padding: 6 15;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0, 0, 2);
+}
+
+.favorites-button:hover {
+    -fx-background-color: #e91e63;
+}
+
+/*Difficulty Dropdown (already declared, just ensure it's applied via getStyleClass().add("difficulty-dropdown")) */
+.difficulty-dropdown {
+    -fx-background-color: #3a2b55;
+    -fx-text-fill: #f0f0f0;
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-border-color: #a64dff;
+    -fx-border-radius: 10;
+}
+
+.filter-tag {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #f0f0f0;
+    -fx-background-color: #3a2b55;
+    -fx-padding: 6 10;
+    -fx-border-color: #a64dff;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+.difficulty-label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Fix: Difficulty Label & Dropdown in Dark Mode */
+.filter-text, .cook-time-text {
+    -fx-text-fill: #e0e0e0;
+}
+
+/* Fix: Difficulty Dropdown */
+.difficulty-dropdown {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-border-color: #d81b60;
+    -fx-border-radius: 10;
+}
+
+/* Fix: Dietary Preference Label */
+.dietary-label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Hide unused label */
+.cooktime-label {
+    -fx-text-fill: transparent;
+}
+
+/* Favorites Button styled like Add Ingredient in Dark Mode */
+.favorites-button {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #9c27b0;
+    -fx-background-radius: 15;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 1);
+}
+
+.favorites-button:hover {
+    -fx-background-color: #ba68c8;
+}
+
+.favorites-button:pressed {
+    -fx-background-color: #7b1fa2;
+}
+.favorites-container {
+    -fx-background-color: linear-gradient(to bottom, #2c2c2c 50%, #1a1a1a 100%);
+    -fx-padding: 20px;
+}
+
+.favorite-card {
+    -fx-background-color: #2b2b2b;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.1), 4, 0, 0, 1);
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+.favorite-title {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f06292;
+}
+
+.favorite-description {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-text-fill: #cccccc;
+}
+
+.favorite-icon {
+    -fx-cursor: hand;
+    -fx-fill: #ff8a65;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+    -fx-transition: all 0.3s ease;
+}
+
+.favorite-icon:hover {
+    -fx-fill: #f06292;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+.filter-text {
+    -fx-font-family: Calibri;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;  /* Adjust brightness if needed */
+}

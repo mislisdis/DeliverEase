@@ -5,6 +5,7 @@ import com.mycompany.dishcover.Recipe.Recipe;
 import com.mycompany.dishcover.UI.Component.RecipeCard;
 import com.mycompany.dishcover.Util.ApiService;
 import com.mycompany.dishcover.Util.Session;
+import com.mycompany.dishcover.Theme.ThemeManager;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -22,31 +23,36 @@ public class FavoritesPage extends VBox {
     private final int userId;
 
     public FavoritesPage() {
-        this.userId = Session.getUserId();
-
-        this.setPadding(new Insets(20));
+        ThemeManager.getInstance().registerComponent(this);
+        this.getStyleClass().add("favorites-container");
+        this.setPadding(new Insets(0, 0, 20, 0));
         this.setSpacing(10);
+
+        // Back button styled like minor button / add ingredient button
+        Button backButton = new Button("← Back to Main");
+        backButton.getStyleClass().add("minor-button"); // changed from back-button
+        backButton.setOnAction(e -> MainApplication.getInstance().showMainPage());
 
         Label title = new Label("Your Favorite Recipes 💖");
         title.getStyleClass().add("section-title");
 
-        Button backButton = new Button("← Back to Main");
-        backButton.setOnAction(e -> MainApplication.getInstance().showMainPage());
+        VBox header = new VBox(5, backButton, title);
+        header.setAlignment(Pos.TOP_LEFT);
+        header.setPadding(new Insets(10, 20, 0, 20));
 
         recipePane = new FlowPane();
         recipePane.setHgap(15);
         recipePane.setVgap(15);
-        recipePane.setPadding(new Insets(10));
+        recipePane.setPadding(new Insets(10, 20, 20, 20));
 
         ScrollPane scrollPane = new ScrollPane(recipePane);
         scrollPane.setFitToWidth(true);
         scrollPane.setPrefHeight(600);
         scrollPane.setStyle("-fx-background-color: transparent;");
 
-        VBox header = new VBox(5, backButton, title);
-        header.setAlignment(Pos.TOP_LEFT);
-
         this.getChildren().addAll(header, scrollPane);
+
+        userId = Session.getUserId();
         loadFavorites();
     }
 
@@ -61,6 +67,7 @@ public class FavoritesPage extends VBox {
 
         if (recipes == null || recipes.isEmpty()) {
             Label emptyLabel = new Label("You haven’t saved any recipes yet 😢");
+            emptyLabel.getStyleClass().add("favorite-description");
             recipePane.getChildren().add(emptyLabel);
         } else {
             for (Recipe recipe : recipes) {

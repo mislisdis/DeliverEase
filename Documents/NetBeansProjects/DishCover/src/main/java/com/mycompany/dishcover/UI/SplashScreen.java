@@ -4,6 +4,7 @@ import com.mycompany.dishcover.MainApplication;
 import com.mycompany.dishcover.Theme.ThemeManager;
 import com.mycompany.dishcover.Util.Session;
 import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -18,7 +19,6 @@ public class SplashScreen extends VBox {
 
     public SplashScreen() {
         ThemeManager.getInstance().registerComponent(this);
-
         this.setPrefWidth(400);
         this.setPrefHeight(500);
         this.setMaxHeight(600);
@@ -69,7 +69,14 @@ public class SplashScreen extends VBox {
         ThemeManager.getInstance().brightModeProperty().addListener(
                 (observable, oldValue, newValue) -> updateToggleButtonText(newValue));
 
-        toggleButton.setOnAction(event -> ThemeManager.getInstance().toggleTheme());
+        toggleButton.setOnAction(event -> {
+            Scene scene = this.getScene();
+            if (scene != null) {
+                ThemeManager.getInstance().toggleTheme(scene);
+            } else {
+                ThemeManager.getInstance().toggleTheme(); // fallback
+            }
+        });
 
         this.getChildren().add(toggleButton);
     }
@@ -78,7 +85,6 @@ public class SplashScreen extends VBox {
         toggleButton.setText(isBrightMode ? "Dark Mode" : "Light Mode");
     }
 
-    // Optional helper to capitalize the username
     private String capitalize(String name) {
         if (name == null || name.isEmpty()) return "";
         return name.substring(0, 1).toUpperCase() + name.substring(1);

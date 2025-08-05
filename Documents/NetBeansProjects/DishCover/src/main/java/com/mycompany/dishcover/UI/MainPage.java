@@ -1,3 +1,4 @@
+
 package com.mycompany.dishcover.UI;
 
 import com.mycompany.dishcover.MainApplication;
@@ -55,13 +56,14 @@ public class MainPage extends VBox {
         favContainer.setPadding(new Insets(10, 20, 0, 0));
 
         Button favButton = new Button("♥ Favorites");
+        favButton.getStyleClass().add("favorites-button");
         favButton.setOnAction(e -> {
             int userId = Session.getUserId();
             if (userId == 0) {
                 System.out.println("⚠ No user is logged in.");
                 return;
             }
-            MainApplication.getInstance().showFavoritesPage(); // ✅ No argument needed anymore
+            MainApplication.getInstance().showFavoritesPage();
         });
 
         favContainer.getChildren().add(favButton);
@@ -82,26 +84,21 @@ public class MainPage extends VBox {
         this.getChildren().add(filterComponent);
 
         cookTimeSelector = new CookTimeSelector();
-        this.getChildren().add(createCookTimeWithIcon());
+        this.getChildren().add(createCookTimeWithInputOnly());
 
         ingredientSearchTab = new IngredientSearchTab();
         ingredientSearchTab.setPadding(new Insets(5, 15, 15, 15));
         this.getChildren().add(ingredientSearchTab);
     }
 
-    private HBox createCookTimeWithIcon() {
-        HBox container = new HBox(8);
+    private HBox createCookTimeWithInputOnly() {
+        HBox container = new HBox(10);
         container.setAlignment(Pos.CENTER_LEFT);
         container.setPadding(new Insets(10, 15, 0, 15));
+        container.getStyleClass().add("cooktime-container");
 
-        ImageView clockIcon = new ImageView(new Image(getClass().getResourceAsStream("/assets/icons/time.png")));
-        clockIcon.setFitHeight(20);
-        clockIcon.setFitWidth(20);
-
-        Text label = new Text("Max Cook Time:");
-        label.getStyleClass().add("cooktime-label");
-
-        container.getChildren().addAll(clockIcon, label, cookTimeSelector);
+        cookTimeSelector.getStyleClass().add("cooktime-input");
+        container.getChildren().add(cookTimeSelector);
         return container;
     }
 

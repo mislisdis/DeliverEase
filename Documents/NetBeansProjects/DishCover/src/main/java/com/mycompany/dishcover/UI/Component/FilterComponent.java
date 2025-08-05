@@ -52,11 +52,12 @@ public class FilterComponent extends VBox {
 
     private void createDifficultySelector() {
         Label label = new Label("Difficulty:");
+        label.getStyleClass().add("filter-text"); // 🔧 Added style class
 
         difficultyDropdown = new ComboBox<>();
         difficultyDropdown.getItems().addAll("", "Easy", "Medium", "Hard");
-        difficultyDropdown.setValue(""); // Default to none selected
-        difficultyDropdown.getStyleClass().add("filter-tag");
+        difficultyDropdown.setValue("");
+        difficultyDropdown.getStyleClass().add("filter-dropdown");
 
         VBox container = new VBox(5, label, difficultyDropdown);
         container.setPadding(new Insets(0, 0, 5, 0));
@@ -65,6 +66,7 @@ public class FilterComponent extends VBox {
 
     private void createDietaryFilters() {
         Label label = new Label("Dietary Preferences:");
+        label.getStyleClass().add("filter-text"); // 🔧 Added style class
 
         vegetarianCheckBox = new CheckBox("🥗 Vegetarian");
         vegetarianCheckBox.getStyleClass().add("filter-tag");
@@ -76,10 +78,6 @@ public class FilterComponent extends VBox {
         container.setPadding(new Insets(0, 0, 5, 0));
         this.getChildren().add(container);
     }
-
-    // ------------------------
-    // Getters for MainPage
-    // ------------------------
 
     public String getDifficulty() {
         String selected = difficultyDropdown.getValue();
