@@ -1,0 +1,24 @@
+{{> header}}
+
+<div class="container mt-5">
+  <h2>Delivery Details</h2>
+
+  <ul class="list-group">
+    <li class="list-group-item"><strong>ID:</strong> {{delivery.id}}</li>
+    <li class="list-group-item"><strong>Pickup Location:</strong> {{delivery.pickupLocation}}</li>
+    <li class="list-group-item"><strong>Dropoff Location:</strong> {{delivery.dropoffLocation}}</li>
+    <li class="list-group-item"><strong>Package Details:</strong> {{delivery.packageDetails}}</li>
+    <li class="list-group-item"><strong>Status:</strong> 
+      <span class="badge 
+        {{#if (eq delivery.status "delivered")}}bg-success{{else if (eq delivery.status "in_transit")}}bg-info{{else}}bg-secondary{{/if}}">
+        {{delivery.status}}
+      </span>
+    </li>
+    <li class="list-group-item"><strong>Assigned Driver:</strong> {{delivery.assignedDriver}}</li>
+    <li class="list-group-item"><strong>Requested At:</strong> {{delivery.createdAt}}</li>
+  </ul>
+
+  <a href="/consumer/deliveries" class="btn btn-primary mt-3">Back to My Deliveries</a>
+</div>
+
+{{> footer}}

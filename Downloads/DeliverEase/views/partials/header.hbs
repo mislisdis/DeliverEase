@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <video class="logo-video" autoplay loop muted playsinline>
+        <source src="/videos/logo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <span class="brand-text ms-2">DeliverEase</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        {{#if user}}
+          <!-- Manager Links -->
+          {{#if (eq user.role "manager")}}
+            <li class="nav-item">
+              <a class="nav-link" href="/manager/dashboard">Dashboard</a>
+            </li>
+          {{/if}}
+
+          <!-- Driver Links -->
+          {{#if (eq user.role "driver")}}
+            <li class="nav-item">
+              <a class="nav-link" href="/delivery/dashboard">My Deliveries</a>
+            </li>
+          {{/if}}
+
+          <!-- Consumer Links -->
+          {{#if (eq user.role "consumer")}}
+            <li class="nav-item">
+              <a class="nav-link" href="/consumer/request-form">Request Delivery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/consumer/deliveries">My Deliveries</a>
+            </li>
+          {{/if}}
+
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+        {{/if}}
+
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "d_1001",
+    "reference": "DHQ-1001",
+    "pickup_address": "12 Industrial Ave, Nairobi",
+    "dropoff_address": "45 Green St, Westlands, Nairobi",
+    "package": {
+      "weight_kg": 2.4,
+      "description": "Documents"
+    },
+    "status": "assigned",
+    "requested_by": "u_003",
+    "assigned_to": "u_002",
+    "assigned_by": "u_001",
+    "requested_at": "2025-10-05T19:50:00Z",
+    "assigned_at": "2025-10-05T20:00:00Z",
+    "picked_at": null,
+    "delivered_at": null,
+    "notes": "Handle with care"
+  },
+  {
+    "id": "b7b2c070-fe8e-4848-ba26-50aeb49bb9c7",
+    "consumerId": "u_006",
+    "pickupLocation": "Garden Estate",
+    "dropoffLocation": "Thindigua",
+    "packageDetails": "Flowers",
+    "status": "assigned",
+    "assignedDriver": null,
+    "createdAt": "2025-10-06T08:32:15.388Z",
+    "driver_id": "u_004",
+    "driver_email": "pauline@deliverease.com",
+    "assigned_at": "2025-10-07T09:36:50.466Z"
+  },
+  {
+    "id": "d_7791",
+    "consumer_email": "gracemag@deliverease.com",
+    "packageDetails": "Chocolates",
+    "pickup_address": "Garden Estate",
+    "delivery_address": "Runda",
+    "status": "assigned",
+    "created_at": "2025-10-07T09:29:30.934Z",
+    "driver_id": "u_004",
+    "driver_email": "pauline@deliverease.com",
+    "assigned_at": "2025-10-07T10:06:51.992Z"
+  },
+  {
+    "id": "d_2597",
+    "consumer_email": "gracemag@deliverease.com",
+    "packageDetails": "Books",
+    "pickup_address": "USIU",
+    "delivery_address": "Roasters",
+    "status": "delivered",
+    "assigned_to": "pauline@deliverease.com",
+    "created_at": "2025-10-07T10:30:59.614Z",
+    "assigned_at": "2025-10-07T10:31:34.751Z",
+    "in_transit_at": "2025-10-07T10:37:13.543Z",
+    "delivered_at": "2025-10-08T16:55:19.901Z"
+  },
+  {
+    "id": "d_1569",
+    "consumer_email": "gracemag@deliverease.com",
+    "packageDetails": "Laptop",
+    "pickup_address": "Garden Estate",
+    "delivery_address": "Thindigua",
+    "status": "delivered",
+    "assigned_to": "pauline@deliverease.com",
+    "created_at": "2025-10-07T14:02:55.563Z",
+    "assigned_at": "2025-10-07T14:03:57.588Z",
+    "in_transit_at": "2025-10-07T14:06:53.005Z",
+    "delivered_at": "2025-10-08T16:55:17.376Z"
+  },
+  {
+    "id": "d_6418",
+    "consumer_email": "gracemag@deliverease.com",
+    "packageDetails": "Makeup",
+    "pickup_address": "Nairobi CBD ",
+    "delivery_address": "UON",
+    "status": "delivered",
+    "assigned_to": "pauline@deliverease.com",
+    "created_at": "2025-10-08T16:56:05.545Z",
+    "assigned_at": "2025-10-08T16:56:28.079Z",
+    "in_transit_at": "2025-10-08T16:56:48.168Z",
+    "arrived_at": "2025-10-08T16:56:54.013Z",
+    "delivered_at": "2025-10-08T16:57:06.980Z"
+  },
+  {
+    "id": "d_2588",
+    "consumer_email": "gracemag@deliverease.com",
+    "packageDetails": "Books",
+    "pickup_address": "USIU",
+    "delivery_address": "CBD",
+    "status": "arrived",
+    "assigned_to": "pauline@deliverease.com",
+    "created_at": "2025-10-09T14:05:37.895Z",
+    "assigned_at": "2025-10-09T14:08:20.694Z",
+    "in_transit_at": "2025-10-09T14:08:40.794Z",
+    "arrived_at": "2025-10-09T14:08:44.317Z"
+  }
+]

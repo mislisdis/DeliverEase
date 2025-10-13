@@ -1,0 +1,26 @@
+{{> header}}
+
+<div class="container mt-5">
+  <h2>Request a New Delivery</h2>
+
+  <form action="/consumer/request" method="POST">
+    <div class="mb-3">
+      <label for="pickupLocation" class="form-label">Pickup Location</label>
+      <input type="text" class="form-control" name="pickupLocation" id="pickupLocation" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="dropoffLocation" class="form-label">Dropoff Location</label>
+      <input type="text" class="form-control" name="dropoffLocation" id="dropoffLocation" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="packageDetails" class="form-label">Package Details</label>
+      <textarea class="form-control" name="packageDetails" id="packageDetails" rows="3" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit Delivery Request</button>
+  </form>
+</div>
+
+{{> footer}}

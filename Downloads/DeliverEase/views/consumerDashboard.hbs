@@ -1,0 +1,45 @@
+{{> header }} 
+
+<div class="container mt-5">
+  <h1>{{title}}</h1>
+
+  <div class="mb-3">
+    <a href="/consumer/request-form" class="btn btn-primary">Request New Delivery</a>
+  </div>
+
+  {{#if deliveries.length}}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>Pickup</th>
+          <th>Dropoff</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each deliveries}}
+          <tr>
+            <td>{{packageDetails}}</td>
+            <td>{{pickup_address}}</td>
+            <td>{{delivery_address}}</td>
+            <td>{{status}}</td>
+            <td>
+              <a href="/consumer/deliveries/{{id}}" class="btn btn-sm btn-info">View</a>
+              {{#ifCond status "pending"}}
+                <form action="/consumer/deliveries/{{id}}/cancel" method="POST" style="display:inline;">
+                  <button type="submit" class="btn btn-sm btn-danger">Cancel</button>
+                </form>
+              {{/ifCond}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p>No deliveries yet. <a href="/consumer/request-form">Request one now!</a></p>
+  {{/if}}
+</div>
+
+{{> footer }}

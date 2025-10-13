@@ -1,0 +1,61 @@
+{{> header user=user}}
+
+<div class="container mt-5">
+  <h2>{{title}}</h2>
+
+  <table class="table table-bordered mt-4">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Consumer</th>
+        <th>Driver</th>
+        <th>Pickup Address</th>
+        <th>Delivery Address</th>
+        <th>Status</th>
+        <th>Assign</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each deliveries}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.consumer_email}}</td>
+        <td>{{this.assigned_to}}</td>
+        <td>{{this.pickup_address}}</td>
+        <td>{{this.delivery_address}}</td>
+        <td>
+          {{#if (eq this.status "pending")}}
+            <span class="badge bg-warning text-dark">Pending</span>
+          {{else if (eq this.status "assigned")}}
+            <span class="badge bg-info">Assigned</span>
+          {{else if (eq this.status "delivered")}}
+            <span class="badge bg-success">Delivered</span>
+          {{else if (eq this.status "cancelled")}}
+            <span class="badge bg-danger">Cancelled</span>
+          {{else}}
+            {{this.status}}
+          {{/if}}
+        </td>
+        <td>
+          {{#if (eq this.status "pending")}}
+          <form action="/manager/assign" method="POST">
+            <input type="hidden" name="deliveryId" value="{{this.id}}">
+            <select name="driverId" class="form-select form-select-sm mb-1" required>
+              <option value="">Select Driver</option>
+              {{#each ../drivers}}
+              <option value="{{this.id}}">{{this.username}} ({{this.email}})</option>
+              {{/each}}
+            </select>
+            <button class="btn btn-primary btn-sm">Assign</button>
+          </form>
+          {{else}}
+          <span class="text-muted">Assigned</span>
+          {{/if}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{> footer}}

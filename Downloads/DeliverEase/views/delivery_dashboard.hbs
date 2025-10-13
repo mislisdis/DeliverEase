@@ -1,0 +1,70 @@
+{{> header}}
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">{{title}}</h2>
+
+  {{#if deliveries.length}}
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle">
+      <thead class="table-dark text-center">
+        <tr>
+          <th>ID</th>
+          <th>Consumer</th>
+          <th>Pickup Address</th>
+          <th>Delivery Address</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each deliveries}}
+        <tr>
+          <td class="text-center">{{this.id}}</td>
+          <td>{{this.consumer_email}}</td>
+          <td>{{this.pickup_address}}</td>
+          <td>{{this.delivery_address}}</td>
+          <td class="text-center">
+            <span class="badge 
+              {{#if (eq this.status 'pending')}}bg-secondary{{/if}}
+              {{#if (eq this.status 'assigned')}}bg-info text-dark{{/if}}
+              {{#if (eq this.status 'picked')}}bg-warning text-dark{{/if}}
+              {{#if (eq this.status 'in_transit')}}bg-primary{{/if}}
+              {{#if (eq this.status 'delivered')}}bg-success{{/if}}">
+              {{this.status}}
+            </span>
+          </td>
+          <td class="text-center">
+            {{!-- ✅ Update Status Form --}}
+            <form action="/delivery/update-status" method="POST" class="d-inline">
+              <input type="hidden" name="deliveryId" value="{{this.id}}">
+              <select name="status" class="form-select form-select-sm d-inline w-auto" required>
+                <option value="">Select</option>
+                <option value="assigned" {{#if (eq this.status "assigned")}}selected{{/if}}>Assigned</option>
+                <option value="picked" {{#if (eq this.status "picked")}}selected{{/if}}>Picked</option>
+                <option value="in_transit" {{#if (eq this.status "in_transit")}}selected{{/if}}>In Transit</option>
+                <option value="delivered" {{#if (eq this.status "delivered")}}selected{{/if}}>Delivered</option>
+              </select>
+              <button class="btn btn-success btn-sm ms-2">Update</button>
+            </form>
+
+            {{!-- ✅ Mark as Arrived Form (only shows when delivery is in_transit) --}}
+            {{#if (eq this.status "in_transit")}}
+            <form action="/delivery/mark-arrived" method="POST" class="d-inline">
+              <input type="hidden" name="deliveryId" value="{{this.id}}">
+              <button type="submit" class="btn btn-primary btn-sm ms-2">Mark as Arrived</button>
+            </form>
+            {{/if}}
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  {{else}}
+  <div class="alert alert-info text-center mt-4">
+    No deliveries assigned yet.
+  </div>
+  {{/if}}
+</div>
+
+{{> footer}}
