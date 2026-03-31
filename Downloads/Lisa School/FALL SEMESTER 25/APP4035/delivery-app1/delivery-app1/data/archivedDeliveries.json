@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1759931719793,
+    "recipient": "Your sister",
+    "address": "Funky Town",
+    "item": "Breath mints",
+    "driver": "driver1",
+    "status": "delivered",
+    "createdAt": "2025-10-08T13:55:19.793Z",
+    "updatedAt": "2025-10-08T14:27:25.812Z",
+    "archivedAt": "2025-10-08T14:27:25.813Z"
+  },
+  {
+    "id": 1759929932543,
+    "recipient": "Alice",
+    "address": "1 Main St",
+    "item": "Parcel A",
+    "driver": "driver1",
+    "status": "delivered",
+    "createdAt": "2025-10-08T13:25:32.543Z",
+    "updatedAt": "2025-10-08T14:45:22.360Z",
+    "archivedAt": "2025-10-08T14:45:22.360Z"
+  },
+  {
+    "id": 1759934771272,
+    "recipient": "Your mom",
+    "address": "123 Ushindi Drive",
+    "item": "Breath mints",
+    "driver": "driver1",
+    "status": "delivered",
+    "createdAt": "2025-10-08T14:46:11.272Z",
+    "updatedAt": "2025-10-14T10:28:55.989Z",
+    "archivedAt": "2025-10-14T10:28:55.989Z"
+  },
+  {
+    "id": 1760440463469,
+    "recipient": "Paddington Bear",
+    "address": "32 Windsor Garderns",
+    "item": "Marmalade",
+    "driver": "driver1",
+    "status": "delivered",
+    "createdAt": "2025-10-14T11:14:23.469Z",
+    "updatedAt": "2025-10-14T13:55:23.134Z",
+    "archivedAt": "2025-10-14T13:55:23.134Z"
+  }
+]

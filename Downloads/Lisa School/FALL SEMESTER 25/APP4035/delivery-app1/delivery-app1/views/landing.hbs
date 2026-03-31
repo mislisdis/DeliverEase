@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeliverEase | Move Better, Deliver Faster</title>
+
+  <!-- Bootstrap + Animate + AOS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body class="landing-body">
+  
+
+ <!-- 🌍 Full-Screen Hero -->
+<section class="hero d-flex align-items-center justify-content-center">
+<div class="row align-items-center gx-0 w-100" style="min-height: 100vh;">
+    <!-- Left Text Section -->
+    <div class="col-lg-6 text-light text-center text-lg-start ps-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+      <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown">
+        Move Smarter with <span style="color: var(--highlight)">DeliverEase</span>
+      </h1>
+      <p class="lead mb-4 animate__animated animate__fadeInUp">
+        Simplify your delivery operations with speed, transparency, and ease — built for managers, drivers, and consumers.
+      </p>
+      <a href="/login" class="btn btn-light btn-lg me-3 px-4 py-2 fw-semibold">Get Started</a>
+      <a href="#about" class="btn btn-outline-light btn-lg px-4 py-2 fw-semibold">Learn More</a>
+    </div>
+
+    <!-- Right Animated Image -->
+    <div class="col-lg-6 text-center pe-lg-5" data-aos="fade-left">
+      <img src="/images/hero-delivery.jpg" class="img-fluid animate__animated animate__zoomIn" alt="Delivery illustration">
+    </div>
+  </div>
+</section>
+
+<!-- ⚙️ Features Section -->
+<section id="about" class="features-section text-center py-5">
+  <h2 class="fw-bold mb-5" data-aos="fade-up">Built for Every Delivery</h2>
+  <div class="row g-4 justify-content-center m-0">
+    <div class="col-md-4" data-aos="fade-right">
+      <div class="p-4 rounded shadow feature-card">
+        <i class="bi bi-person-check-fill fs-1 text-primary"></i>
+        <h5 class="mt-3 fw-bold">For Managers</h5>
+        <p>Assign deliveries instantly and track driver performance.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="zoom-in">
+      <div class="p-4 rounded shadow feature-card">
+        <i class="bi bi-truck fs-1 text-primary"></i>
+        <h5 class="mt-3 fw-bold">For Drivers</h5>
+        <p>Get real-time updates, accept deliveries, and complete with ease.</p>
+      </div>
+    </div>
+    <div class="col-md-4" data-aos="fade-left">
+      <div class="p-4 rounded shadow feature-card">
+        <i class="bi bi-box2-heart-fill fs-1 text-primary"></i>
+        <h5 class="mt-3 fw-bold">For Consumers</h5>
+        <p>Track your package from pickup to doorstep in real-time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="text-center py-4 mt-5" style="background: var(--primary); color: var(--text-light);">
+    © 2025 DeliverEase | Move Better, Deliver Faster
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".landing-navbar");
+    if (window.scrollY > 50) navbar.classList.add("scrolled");
+    else navbar.classList.remove("scrolled");
+  });
+</script>
+<script>
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".landing-navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+</body>
+</html>

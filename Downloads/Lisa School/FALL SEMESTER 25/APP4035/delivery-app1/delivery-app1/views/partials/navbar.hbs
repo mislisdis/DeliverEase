@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm dashboard-navbar">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+      <!-- Animated Logo Video -->
+      <video autoplay loop muted playsinline class="logo-video me-2" style="height: 40px; width: auto;">
+        <source src="/videos/logo-animation.mp4" type="video/mp4">
+        <!-- Fallback image if video doesn't load -->
+        <img src="/images/logo-static.png" alt="DeliverEase Logo" style="height: 40px;">
+      </video>
+      DeliverEase
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        {{#if session.user}}
+          <li class="nav-item">
+            <a class="nav-link {{#if (eq activePage 'dashboard')}}active{{/if}}" href="/dashboard">
+              <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+            </a>
+          </li>
+
+          {{!-- Deliveries link --}}
+          {{#ifIn session.role "admin,manager"}}
+            <li class="nav-item">
+              <a class="nav-link {{#if (eq activePage 'deliveries')}}active{{/if}}" href="/deliveries">
+                <i class="fas fa-truck me-1"></i>Deliveries
+              </a>
+            </li>
+          {{else}}
+            {{#if (gt assignedCount 0)}}
+              <li class="nav-item">
+                <a class="nav-link {{#if (eq activePage 'deliveries')}}active{{/if}}" href="/deliveries">
+                  <i class="fas fa-truck me-1"></i>Deliveries
+                </a>
+              </li>
+            {{/if}}
+          {{/ifIn}}
+
+          {{!-- Archived --}}
+          {{#ifIn session.role "admin,manager"}}
+            <li class="nav-item">
+              <a class="nav-link {{#if (eq activePage 'archived')}}active{{/if}}" href="/archived">
+                <i class="fas fa-archive me-1"></i>Archived
+              </a>
+            </li>
+          {{/ifIn}}
+
+          {{!-- Assign --}}
+          {{#ifIn session.role "admin,manager"}}
+            <li class="nav-item">
+              <a class="nav-link {{#if (eq activePage 'assign-delivery')}}active{{/if}}" href="/assign-delivery">
+                <i class="fas fa-plus-circle me-1"></i>Assign
+              </a>
+            </li>
+          {{/ifIn}}
+
+          {{!-- Manage-users --}}
+          {{#ifEquals session.role "admin"}}
+            <li class="nav-item">
+              <a class="nav-link {{#if (eq activePage 'manage-users')}}active{{/if}}" href="/manage-users">
+                <i class="fas fa-users-cog me-1"></i>Manage Users
+              </a>
+            </li>
+          {{/ifEquals}}
+
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="/logout">
+              <i class="fas fa-sign-out-alt me-1"></i>Logout
+              <small class="ms-2 opacity-75">({{session.user}})</small>
+            </a>
+          </li>
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link {{#if (eq activePage 'login')}}active{{/if}}" href="/login">
+              <i class="fas fa-sign-in-alt me-1"></i>Login
+            </a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

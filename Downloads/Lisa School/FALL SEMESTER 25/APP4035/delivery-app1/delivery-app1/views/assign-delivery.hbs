@@ -1,0 +1,61 @@
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-success text-white">
+        <h1 class="h3 mb-0">
+          <i class="fas fa-plus-circle me-2"></i>Assign New Delivery
+        </h1>
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/assign-delivery">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="fas fa-user text-primary me-1"></i>Recipient
+                </label>
+                <input name="recipient" class="form-control" required placeholder="Enter recipient name" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="fas fa-map-marker-alt text-danger me-1"></i>Address
+                </label>
+                <input name="address" class="form-control" required placeholder="Enter delivery address" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="fas fa-box text-warning me-1"></i>Item
+                </label>
+                <input name="item" class="form-control" required placeholder="Enter item description" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label class="form-label fw-bold">
+                  <i class="fas fa-id-card text-info me-1"></i>Driver
+                </label>
+                <input name="driver" class="form-control" placeholder="Enter driver username" />
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a href="/deliveries" class="btn btn-secondary me-md-2">
+              <i class="fas fa-arrow-left me-1"></i>Cancel
+            </a>
+            <button class="btn btn-success" type="submit">
+              <i class="fas fa-paper-plane me-1"></i>Assign Delivery
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

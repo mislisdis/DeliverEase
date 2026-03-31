@@ -1,0 +1,566 @@
+/* ---------------------------------------------------
+🎨 GOOGLE FONTS
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Quicksand:wght@400;600&display=swap');
+
+/* ---------------------------------------------------
+🌈 THEME VARIABLES
+--------------------------------------------------- */
+:root {
+  --primary: #1C2B82;
+  --secondary: #3B38A0;
+  --tertiary: #7A85C1;
+  --highlight: #B2B0E8;
+  --text-light: #ffffff;
+  --text-dark: #1a1a1a;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+}
+
+/* ---------------------------------------------------
+🌍 GLOBAL BASE STYLES
+--------------------------------------------------- */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  background-color: var(--primary);
+  animation: fadeInPage 0.6s ease-in-out;
+}
+
+/* Smooth page load */
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------------------------------
+🧭 NAVBAR STYLING
+--------------------------------------------------- */
+.navbar-dark.bg-dark {
+  background: linear-gradient(90deg, var(--primary), var(--secondary)) !important;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--text-light) !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 1.4rem;
+}
+
+.navbar-dark .navbar-brand i {
+  color: var(--highlight);
+}
+
+.navbar-dark .nav-link {
+  color: var(--text-light) !important;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+  border-radius: 6px;
+  margin: 0 2px;
+  padding: 0.5rem 1rem !important;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+  color: var(--highlight) !important;
+  background-color: rgba(178, 176, 232, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-dark .nav-link.active {
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border-color: var(--highlight) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------------------------------------------------
+⚡ BUTTON STYLING
+--------------------------------------------------- */
+.btn {
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--highlight) !important;
+  color: var(--primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--tertiary) !important;
+  color: var(--text-light) !important;
+  transform: scale(1.03);
+}
+
+.btn-success {
+  background-color: var(--success) !important;
+}
+
+.btn-danger {
+  background-color: var(--danger) !important;
+}
+
+.btn-warning {
+  background-color: var(--warning) !important;
+  color: var(--text-dark) !important;
+}
+
+.btn-secondary {
+  background-color: var(--tertiary) !important;
+  color: var(--text-light) !important;
+}
+
+.btn-outline-danger,
+.btn-outline-success,
+.btn-outline-primary {
+  border-width: 2px;
+}
+
+/* Button hover effects */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------------------------
+🧱 CARD STYLING
+--------------------------------------------------- */
+.card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(26, 42, 128, 0.25);
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Card headers */
+.card-header {
+  border-radius: 14px 14px 0 0 !important;
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.bg-dark {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, var(--secondary), var(--tertiary)) !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, var(--success), #20c997) !important;
+}
+
+.bg-secondary {
+  background: linear-gradient(135deg, var(--tertiary), var(--highlight)) !important;
+  color: var(--text-dark) !important;
+}
+
+/* ---------------------------------------------------
+📊 STATS CARDS & DASHBOARD ELEMENTS
+--------------------------------------------------- */
+.stat-card {
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f8f9fa, #e8ebff);
+  transition: all 0.3s ease;
+  color: var(--primary);
+  padding: 1.5rem;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(26, 42, 128, 0.2);
+}
+
+.stat-card h1,
+.stat-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover h1,
+.stat-card:hover h3 {
+  color: var(--primary);
+}
+
+.dashboard-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: var(--highlight);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------------------------------------------------
+📋 TABLE STYLING
+--------------------------------------------------- */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table-dark {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(178, 176, 232, 0.1);
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}
+
+.table-responsive {
+  border-radius: 10px;
+}
+
+/* ---------------------------------------------------
+🎯 BADGE STYLING
+--------------------------------------------------- */
+.badge {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 0.5rem 0.8rem;
+}
+
+.bg-danger {
+  background: linear-gradient(135deg, #dc3545, #c82333) !important;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, var(--secondary), var(--tertiary)) !important;
+}
+
+.bg-secondary {
+  background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #28a745, #218838) !important;
+}
+
+.bg-warning {
+  background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+  color: var(--text-dark) !important;
+}
+
+.bg-info {
+  background: linear-gradient(135deg, #17a2b8, #138496) !important;
+}
+
+.bg-light {
+  background: linear-gradient(135deg, #f8f9fa, #e8ebff) !important;
+  color: var(--text-dark) !important;
+}
+
+/* ---------------------------------------------------
+📝 FORM STYLING
+--------------------------------------------------- */
+.form-control,
+.form-select {
+  border-radius: 6px;
+  border: 2px solid #e8ebff;
+  transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 0.25rem rgba(178, 176, 232, 0.25);
+  transform: translateY(-2px);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.input-group-text {
+  background-color: #f8f9fa;
+  border: 2px solid #e8ebff;
+  border-right: none;
+}
+
+/* ---------------------------------------------------
+🦶 FOOTER STYLING
+--------------------------------------------------- */
+.bg-dark.footer,
+footer.bg-dark {
+  background-color: var(--secondary) !important;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  border-top: 2px solid var(--highlight);
+  margin-top: auto;
+}
+
+.footer-brand {
+  color: var(--highlight);
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------
+🔔 ALERT STYLING
+--------------------------------------------------- */
+.alert {
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  color: #155724;
+}
+
+/* ---------------------------------------------------
+🌠 LANDING PAGE SPECIFIC STYLING
+--------------------------------------------------- */
+.landing-body {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🔷 Full-screen hero styling */
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--primary);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 5%;
+}
+/* Add this to your style.css for even more control */
+.hero img {
+  max-width: 95% !important;
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+}
+/* Features Section - White Background */
+.features-section {
+  background: #ffffff !important;
+  padding: 80px 5% !important;
+}
+
+.features-section h2 {
+  color: var(--primary) !important;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.feature-card {
+  background: #ffffff;
+  border: 2px solid #e8ebff;
+  color: var(--text-dark);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(26, 42, 128, 0.15);
+  border-color: var(--highlight);
+}
+
+.feature-card h5 {
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.feature-card .bi {
+  color: var(--primary) !important;
+}
+
+/* Make sure image fits nicely */
+.hero img {
+  max-width: 90%;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Remove white backgrounds from inherited containers */
+section, .row {
+  background: transparent !important;
+}
+
+/* Landing navbar tweaks */
+.landing-navbar {
+  background: transparent !important;
+  transition: background 0.3s ease;
+}
+
+.landing-navbar.scrolled {
+  background: rgba(26, 42, 128, 0.9) !important;
+}
+
+/* ---------------------------------------------------
+🔧 UTILITY CLASSES
+--------------------------------------------------- */
+.text-muted {
+  color: #6c757d !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded {
+  border-radius: 10px !important;
+}
+
+/* Login page specific styling */
+.min-vh-50 {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Main content area */
+main.container-fluid {
+  background-color: var(--primary);
+  padding: 2rem 0;
+}
+
+main .container {
+  background-color: white;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Icon styling */
+.fas, .fab {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .fas,
+.card:hover .fab {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------------------
+📱 RESPONSIVE DESIGN
+--------------------------------------------------- */
+@media (max-width: 992px) {
+  .navbar-brand { font-size: 1.2rem; }
+  .card-body { padding: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  .table-responsive { font-size: 0.9rem; }
+  .features-section { padding: 60px 5% !important; }
+}
+
+@media (max-width: 576px) {
+  .nav-link, .btn {
+    font-size: 0.9rem;
+  }
+  .btn {
+    padding: 0.4rem 0.8rem;
+  }
+  .card-header h1,
+  .card-header h2,
+  .card-header h3 {
+    font-size: 1.2rem;
+  }
+  .features-section { padding: 40px 5% !important; }
+}
+
+@media (max-width: 400px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 0.9rem; }
+  .container { padding-left: 10px; padding-right: 10px; }
+}
+/* Logo Video Styling */
+.logo-video {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logo-video:hover {
+  transform: scale(1.05);
+}
+
+/* Ensure video doesn't cause layout shifts */
+.logo-video {
+  display: block;
+  object-fit: contain;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .navbar-brand .logo-video {
+    height: 30px !important;
+  }
+  
+  .footer .logo-video {
+    height: 25px !important;
+  }
+  
+  .login-page .logo-video {
+    height: 60px !important;
+  }
+}

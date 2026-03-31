@@ -1,0 +1,18 @@
+{
+  "admin": {
+    "role": "admin",
+    "password": "$2b$10$jAroOaTesaFDtaoVSSdjTe9pUGwO5jYQSg1mkldNUPTQyxn.CV95e"
+  },
+  "manager1": {
+    "role": "manager",
+    "password": "$2b$10$fn.DMLyXAKM8ScAc.repoOdH7AGIyy34DfyeBDVQL39jSy48.q/kq"
+  },
+  "driver1": {
+    "role": "driver",
+    "password": "$2b$10$rufuwbiwPpV0kyP.2xFuT.K6zN0KUG2VAKPEQVldgDz9e8bUlacqy"
+  },
+  "driver2": {
+    "role": "driver",
+    "password": "$2b$10$xdkU09UiVoNQsx.I5PPiO.mC.QKPBukyIqrr/8bXDKwp1Cq/oUNXe"
+  }
+}

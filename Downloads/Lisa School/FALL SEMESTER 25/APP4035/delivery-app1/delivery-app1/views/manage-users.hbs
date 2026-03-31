@@ -1,0 +1,112 @@
+<div class="card shadow-sm border-0">
+  <div class="card-header bg-dark text-white">
+    <h2 class="h4 mb-0">
+      <i class="fas fa-users-cog me-2"></i>Manage Users
+    </h2>
+  </div>
+  <div class="card-body">
+    {{#if users}}
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th><i class="fas fa-user me-1"></i>Username</th>
+            <th><i class="fas fa-user-tag me-1"></i>Role</th>
+            <th class="text-end"><i class="fas fa-cogs me-1"></i>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#eachObject users}}
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-user-circle text-muted me-2"></i>
+                <strong>{{key}}</strong>
+              </div>
+            </td>
+            <td>
+              {{#ifEquals role "admin"}}
+                <span class="badge bg-danger">
+                  <i class="fas fa-crown me-1"></i>Admin
+                </span>
+              {{/ifEquals}}
+              {{#ifEquals role "manager"}}
+                <span class="badge bg-primary">
+                  <i class="fas fa-user-shield me-1"></i>Manager
+                </span>
+              {{/ifEquals}}
+              {{#ifEquals role "driver"}}
+                <span class="badge bg-secondary">
+                  <i class="fas fa-truck me-1"></i>Driver
+                </span>
+              {{/ifEquals}}
+            </td>
+            <td class="text-end">
+              {{#ifEquals ../session.role "admin"}}
+                {{#ifEquals key "admin"}}
+                  <span class="text-muted small">
+                    <i class="fas fa-shield-alt me-1"></i>Protected
+                  </span>
+                {{else}}
+                  <form method="POST" action="/delete-user/{{key}}" class="d-inline">
+                    <button type="submit" class="btn btn-sm btn-outline-danger" 
+                      onclick="return confirm('Delete user {{key}}? This action cannot be undone.')">
+                      <i class="fas fa-trash me-1"></i>Delete
+                    </button>
+                  </form>
+                {{/ifEquals}}
+              {{else}}
+                <span class="small text-muted">
+                  <i class="fas fa-lock me-1"></i>No actions available
+                </span>
+              {{/ifEquals}}
+            </td>
+          </tr>
+          {{/eachObject}}
+        </tbody>
+      </table>
+    </div>
+    {{else}}
+    <div class="text-center py-4">
+      <i class="fas fa-users fa-3x text-muted mb-3"></i>
+      <h4 class="text-muted">No Users Found</h4>
+      <p class="text-muted">There are no users in the system.</p>
+    </div>
+    {{/if}}
+
+    {{!-- Add new user (only visible to admin) --}}
+    {{#ifEquals session.role "admin"}}
+    <div class="card mt-4 shadow-sm">
+      <div class="card-header bg-success text-white">
+        <i class="fas fa-user-plus me-2"></i>Add New User
+      </div>
+      <div class="card-body">
+        <form method="POST" action="/manage-users">
+          <div class="row g-3 align-items-end">
+            <div class="col-md-3">
+              <label class="form-label fw-bold">Username</label>
+              <input name="username" class="form-control" placeholder="Enter username" required />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label fw-bold">Password</label>
+              <input name="password" type="password" class="form-control" placeholder="Enter password" required />
+            </div>
+            <div class="col-md-3">
+              <label class="form-label fw-bold">Role</label>
+              <select name="role" class="form-select" required>
+                <option value="manager">Manager</option>
+                <option value="driver">Driver</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-success w-100">
+                <i class="fas fa-plus me-1"></i>Add User
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    {{/ifEquals}}
+  </div>
+</div>

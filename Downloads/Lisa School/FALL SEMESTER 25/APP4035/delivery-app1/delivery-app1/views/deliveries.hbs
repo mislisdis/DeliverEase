@@ -1,0 +1,152 @@
+<div class="card shadow-sm border-0">
+  <div class="card-header bg-dark text-white">
+    <h1 class="h3 mb-0">
+      <i class="fas fa-truck me-2"></i>Deliveries
+    </h1>
+  </div>
+  <div class="card-body">
+    {{!-- Filter Form --}}
+    <div class="card mb-4 bg-light">
+      <div class="card-body">
+        <form method="GET" action="/deliveries" class="row g-3 align-items-end">
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">ID</label>
+            <input type="text" name="id" value="{{query.id}}" class="form-control form-control-sm" placeholder="ID">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Recipient</label>
+            <input type="text" name="recipient" value="{{query.recipient}}" class="form-control form-control-sm" placeholder="Recipient">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Address</label>
+            <input type="text" name="address" value="{{query.address}}" class="form-control form-control-sm" placeholder="Address">
+          </div>
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Item</label>
+            <input type="text" name="item" value="{{query.item}}" class="form-control form-control-sm" placeholder="Item">
+          </div>
+
+          {{#if (ne role "driver")}}
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Driver</label>
+            <input type="text" name="driver" value="{{query.driver}}" class="form-control form-control-sm" placeholder="Driver">
+          </div>
+          {{/if}}
+
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Status</label>
+            <select name="status" class="form-select form-select-sm">
+              <option value="">All Statuses</option>
+              <option value="assigned" {{#if (eq query.status "assigned")}}selected{{/if}}>Assigned</option>
+              <option value="in transit" {{#if (eq query.status "in transit")}}selected{{/if}}>In Transit</option>
+
+            </select>
+          </div>
+
+          <div class="col-md-2">
+            <label class="form-label small fw-bold">Date</label>
+            <input type="date" name="date" value="{{query.date}}" class="form-control form-control-sm">
+          </div>
+
+          <div class="col-md-2">
+            <button class="btn btn-primary w-100" type="submit">
+              <i class="fas fa-filter me-1"></i>Filter
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    {{!-- Deliveries Table --}}
+    {{#if deliveries.length}}
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-hover align-middle mb-0">
+        <thead class="table-dark">
+          <tr>
+            <th><i class="fas fa-hashtag me-1"></i>ID</th>
+            <th><i class="fas fa-user me-1"></i>Recipient</th>
+            <th><i class="fas fa-map-marker-alt me-1"></i>Address</th>
+            <th><i class="fas fa-box me-1"></i>Item</th>
+            <th><i class="fas fa-id-card me-1"></i>Driver</th>
+            <th><i class="fas fa-status me-1"></i>Status</th>
+            <th><i class="fas fa-calendar me-1"></i>Created At</th>
+            <th class="text-center"><i class="fas fa-cogs me-1"></i>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each deliveries}}
+          <tr>
+            <td><span class="badge bg-secondary">#{{id}}</span></td>
+            <td class="fw-bold">{{recipient}}</td>
+            <td>
+              <small class="text-muted">
+                <i class="fas fa-map-pin me-1"></i>{{address}}
+              </small>
+            </td>
+            <td>{{item}}</td>
+            <td>
+              <span class="badge bg-light text-dark">
+                <i class="fas fa-user me-1"></i>{{driver}}
+              </span>
+            </td>
+
+            <td>
+              {{#if (eq ../role "driver")}}
+                <form action="/update-status/{{id}}" method="POST" class="d-flex align-items-center gap-2">
+                  <select name="status" class="form-select form-select-sm w-auto">
+                    {{#if (eq status "assigned")}}
+                      <option value="assigned" selected>Assigned</option>
+                      <option value="in transit">In Transit</option>
+                    {{else if (eq status "in transit")}}
+                      <option value="in transit" selected>In Transit</option>
+                      <option value="delivered">Delivered</option>
+                    {{else}}
+                      <option value="delivered" selected>Delivered</option>
+                    {{/if}}
+                  </select>
+                  {{#unless (eq status "delivered")}}
+                  <button class="btn btn-sm btn-success" type="submit" title="Update Status">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  {{/unless}}
+                </form>
+              {{else}}
+                {{#if (eq status "assigned")}}
+                  <span class="badge bg-warning text-dark">
+                    <i class="fas fa-clock me-1"></i>Assigned
+                  </span>
+                {{else if (eq status "in transit")}}
+                  <span class="badge bg-info text-dark">
+                    <i class="fas fa-truck-moving me-1"></i>In Transit
+                  </span>
+                {{else}}
+                  <span class="badge bg-success">
+                    <i class="fas fa-check-circle me-1"></i>Delivered
+                  </span>
+                {{/if}}
+              {{/if}}
+            </td>
+
+            <td>
+              <small class="text-muted">{{formatDate createdAt}}</small>
+            </td>
+
+            <td class="text-center">
+              <a href="/deliveries/{{id}}" class="btn btn-sm btn-outline-primary" title="View Details">
+                <i class="fas fa-eye"></i>
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    {{else}}
+    <div class="text-center py-5">
+      <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+      <h4 class="text-muted">No deliveries found</h4>
+      <p class="text-muted">There are no deliveries matching your criteria.</p>
+    </div>
+    {{/if}}
+  </div>
+</div>

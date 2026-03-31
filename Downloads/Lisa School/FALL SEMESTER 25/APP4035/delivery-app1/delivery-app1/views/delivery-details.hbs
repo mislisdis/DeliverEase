@@ -1,0 +1,90 @@
+<div class="card shadow-sm border-0">
+  <div class="card-header bg-primary text-white">
+    <h1 class="h3 mb-0">
+      <i class="fas fa-truck me-2"></i>
+      {{#if del}}Delivery #{{del.id}}{{else}}Delivery Not Found{{/if}}
+    </h1>
+  </div>
+  
+  {{#if del}}
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="list-group">
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-user text-primary me-2"></i>
+              <strong>Recipient:</strong>
+            </div>
+            <span class="fw-bold">{{del.recipient}}</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-map-marker-alt text-danger me-2"></i>
+              <strong>Address:</strong>
+            </div>
+            <span>{{del.address}}</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-box text-warning me-2"></i>
+              <strong>Item:</strong>
+            </div>
+            <span>{{del.item}}</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-id-card text-info me-2"></i>
+              <strong>Driver:</strong>
+            </div>
+            <span class="badge bg-light text-dark">{{del.driver}}</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-status text-success me-2"></i>
+              <strong>Status:</strong>
+            </div>
+            <span class="badge 
+              {{#if (eq del.status 'assigned')}}bg-warning text-dark
+              {{else if (eq del.status 'in transit')}}bg-info text-dark
+              {{else}}bg-success{{/if}}">
+              {{del.status}}
+            </span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+              <i class="fas fa-calendar text-secondary me-2"></i>
+              <strong>Created:</strong>
+            </div>
+            <span class="text-muted">{{formatDate del.createdAt}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <div class="card-body text-center">
+            <i class="fas fa-truck fa-3x text-primary mb-3"></i>
+            <h5>Delivery Information</h5>
+            <p class="text-muted small">This delivery is currently {{del.status}}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-4">
+      <a href="/deliveries" class="btn btn-secondary">
+        <i class="fas fa-arrow-left me-1"></i>Back to Deliveries
+      </a>
+    </div>
+  </div>
+  {{else}}
+  <div class="card-body text-center py-5">
+    <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+    <h4 class="text-warning">Delivery Not Found</h4>
+    <p class="text-muted">The requested delivery could not be found.</p>
+    <a href="/deliveries" class="btn btn-primary">
+      <i class="fas fa-arrow-left me-1"></i>Back to Deliveries
+    </a>
+  </div>
+  {{/if}}
+</div>
