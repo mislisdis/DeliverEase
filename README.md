@@ -109,9 +109,10 @@ JSON (Delivery + User Data)
 
 ---
 
-##  Author
+##  Authors
 
 **Lisa Adisa Magada**
+
 **Shawn Kathuri**
 
 
