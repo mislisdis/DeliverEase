@@ -2,7 +2,9 @@
 
 # DeliverEase – Delivery Management Web Application
 
-A web-based logistics management system designed to streamline delivery operations by enabling task assignment, tracking, and real-time status updates.
+DeliverEase is a role-based web application built as part of a university software development project. It was designed to improve coordination between logistics managers and delivery personnel by centralizing delivery assignment and tracking.
+
+The system demonstrates the ability to design and implement a real-world workflow solution using modern web technologies.
 
 
 
